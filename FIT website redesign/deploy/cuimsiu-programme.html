@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cuimsi&uacute; is FIT's inclusive programme for neurodivergent and disabled people, offering mentoring, events and employer connections that open routes into tech work.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FIT — Fastrack into Information Technology">
+  <meta property="og:title" content="Cuimsi&uacute; Programme &mdash; FIT">
+  <meta property="og:description" content="An inclusive FIT programme for neurodivergent and disabled people who want practical support, confidence and routes into tech work.">
+  <meta property="og:image" content="https://fit.ie/wp-content/uploads/2023/06/cropped-FIT-RGB-scaled-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cuimsi&uacute; Programme &mdash; FIT">
+  <meta name="twitter:description" content="An inclusive FIT programme for neurodivergent and disabled people who want practical support, confidence and routes into tech work.">
+  <meta name="twitter:image" content="https://fit.ie/wp-content/uploads/2023/06/cropped-FIT-RGB-scaled-1.png">
+  <title>Cuimsi&uacute; Programme &mdash; FIT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ============================================================
+       Cuimsiú Programme — page-specific styles, scoped under .cuim
+       so they cannot collide with the site chrome in styles.css.
+       ============================================================ */
+    .cuim {
+      --navy: #002957;
+      --deep: #001a38;
+      --blue: #006ca3;
+      --fit-blue: #0073a8;
+      --yellow: #ffce34;
+      --teal: #1fb0bc;
+      --grey: #edeeef;
+      --soft: #f6f8fb;
+      --white: #ffffff;
+      --muted: #46617d;
+      --shadow: 0 22px 50px rgba(0, 41, 87, .16);
+      --radius: 8px;
+      font-family: "Rubik", Arial, sans-serif;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    .cuim *,
+    .cuim *::before,
+    .cuim *::after { box-sizing: border-box; }
+    .cuim img { display: block; max-width: 100%; }
+    .cuim a { color: inherit; text-decoration: none; }
+    .cuim h1, .cuim h2, .cuim h3, .cuim p { margin-top: 0; }
+    /* Headings inherit their container's colour (white on dark, navy on light) —
+       overrides the site-wide `h1,h2,h3 { color: var(--fit-navy) }` in styles.css
+       that would otherwise render hero/dark-section titles navy-on-navy. */
+    .cuim h1, .cuim h2, .cuim h3, .cuim h4, .cuim h5, .cuim h6 { color: inherit; }
+    .cuim ul { margin: 0; padding: 0; list-style: none; }
+
+    .cuim .container {
+      width: min(1180px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .cuim .eyebrow {
+      display: block;
+      margin: 0 0 14px;
+      font-family: "Work Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      line-height: 1.3;
+      text-transform: uppercase;
+      color: var(--yellow);
+    }
+
+    .cuim .section-kicker {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-family: "Work Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .cuim .section-kicker.light { color: var(--yellow); }
+
+    .cuim .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .cuim .fit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 54px;
+      padding: 15px 24px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      transition: transform .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+    }
+
+    .cuim .fit-btn span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .cuim .fit-btn.yellow { background: var(--yellow); color: var(--navy); }
+    .cuim .fit-btn.yellow:hover { background: #ffd75c; transform: translateY(-2px); }
+    .cuim .fit-btn.blue { background: var(--blue); color: var(--white); }
+    .cuim .fit-btn.blue:hover { background: var(--navy); transform: translateY(-2px); }
+    .cuim .fit-btn.ghost { border-color: rgba(255, 255, 255, .72); color: var(--white); background: transparent; }
+    .cuim .fit-btn.ghost:hover { background: rgba(255, 255, 255, .12); }
+    .cuim .fit-btn.outline { border-color: var(--navy); color: var(--navy); background: var(--white); }
+    .cuim .fit-btn.outline:hover { background: var(--navy); color: var(--white); }
+
+    .cuim .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 600px;
+      isolation: isolate;
+      overflow: hidden;
+      color: var(--white);
+      border-bottom: 5px solid var(--blue);
+      background-color: var(--deep);
+      background-repeat: no-repeat;
+      background-position: center, center;
+      background-size: cover, cover;
+      background-image:
+        linear-gradient(90deg, rgba(0, 15, 33, .97) 0%, rgba(0, 26, 56, .92) 42%, rgba(0, 41, 87, .5) 72%, rgba(0, 41, 87, .14) 100%),
+        url("https://fit.ie/wp-content/uploads/2025/02/Young-man-looking-at-laptop-screen-in-office.webp");
+    }
+
+    .cuim .hero-inner {
+      display: flex;
+      align-items: center;
+      min-height: 600px;
+      padding: 108px 0 72px;
+    }
+
+    .cuim .hero-copy { width: min(660px, 58%); }
+
+    .cuim .hero h1 {
+      max-width: 17ch;
+      margin: 0 0 16px;
+      color: var(--white);
+      font-size: clamp(40px, 5vw, 60px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      text-wrap: balance;
+    }
+
+    .cuim .hero h1 span { color: var(--yellow); }
+
+    .cuim .hero-lead {
+      max-width: 48ch;
+      margin: 0 0 12px;
+      color: rgba(255, 255, 255, .9);
+      font-size: clamp(18px, 2.1vw, 21px);
+      font-weight: 600;
+      line-height: 1.4;
+      text-wrap: pretty;
+    }
+
+    .cuim .hero-promise {
+      margin: 0;
+      color: rgba(255, 255, 255, .86);
+      font-family: "Work Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    .cuim .hero .btn-row { gap: 12px; margin-top: 18px; }
+
+    .cuim .funding {
+      padding: 40px 0;
+      background: var(--grey);
+      border-top: 1px solid rgba(0, 41, 87, .1);
+    }
+
+    .cuim .funding-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .cuim .funding-grid p { margin: 0; max-width: 56ch; color: var(--navy); font-weight: 500; }
+
+    .cuim .logo-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 36px;
+    }
+
+    .cuim .logo-row img { height: 52px; width: auto; flex: none; }
+
+    .cuim .jump-band {
+      position: relative;
+      z-index: 5;
+      padding: 16px 0;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(0, 41, 87, .12);
+    }
+
+    .cuim .jump-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 15px 18px;
+      border-radius: 12px;
+      background: transparent;
+      border: 0;
+    }
+
+    .cuim .jump-nav__label {
+      flex: none;
+      color: var(--navy);
+      font-family: "Work Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .cuim .jump-nav ul {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .cuim .jump-nav a {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border: 1px solid rgba(0, 41, 87, .18);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 600;
+      transition: border-color .18s ease, background-color .18s ease, color .18s ease;
+    }
+
+    .cuim .jump-nav a:hover,
+    .cuim .jump-nav a:focus-visible {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: #edeeef;
+    }
+
+    .cuim .section { padding: 86px 0; }
+    .cuim .section.soft { background: var(--soft); }
+    .cuim .section.dark { background: var(--navy); color: var(--white); }
+
+    .cuim .section h2 {
+      margin-bottom: 18px;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.02;
+    }
+
+    .cuim .section-lead {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 21px;
+      font-weight: 500;
+    }
+
+    .cuim .section.dark .section-lead { color: rgba(255, 255, 255, .78); }
+
+    .cuim .overview-grid,
+    .cuim .journey-grid,
+    .cuim .employer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 54px;
+      align-items: center;
+    }
+
+    .cuim .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .cuim .fact {
+      padding: 22px;
+      border-left: 6px solid var(--yellow);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .cuim .fact strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      color: var(--blue);
+    }
+
+    .cuim .fact span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .cuim .objective-grid,
+    .cuim .route-grid,
+    .cuim .team-grid,
+    .cuim .partner-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .cuim .objective-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .cuim .card {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .cuim .card h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      line-height: 1.18;
+    }
+
+    .cuim .card p { color: var(--muted); margin-bottom: 0; }
+
+    .cuim .journey-media img {
+      width: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .cuim .step-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .cuim .step-list li {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .cuim .step-list span {
+      display: inline-grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--navy);
+      font-family: "Work Sans", sans-serif;
+      font-size: 15px;
+    }
+
+    .cuim .route-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .cuim .route-card {
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 8px solid var(--yellow);
+    }
+
+    .cuim .route-card.dark-card { background: var(--navy); color: var(--white); }
+    .cuim .route-card.dark-card p,
+    .cuim .route-card.dark-card li { color: rgba(255, 255, 255, .8); }
+
+    .cuim .check-list {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 26px;
+    }
+
+    .cuim .check-list li {
+      position: relative;
+      padding-left: 28px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .cuim .check-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .55em;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 0 0 0 5px rgba(255, 206, 52, .2);
+    }
+
+    .cuim .team-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .cuim .team-card {
+      overflow: hidden;
+      padding: 0;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .cuim .team-card img,
+    .cuim .initials {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background: var(--blue);
+    }
+
+    .cuim .initials {
+      display: grid;
+      place-items: center;
+      color: var(--yellow);
+      font-size: 66px;
+      font-weight: 800;
+      font-family: "Work Sans", sans-serif;
+    }
+
+    .cuim .team-card div:last-child { padding: 26px; }
+    .cuim .team-card h3 { margin-bottom: 8px; font-size: 24px; }
+    .cuim .team-card p { margin: 0; color: var(--muted); }
+
+    .cuim .partner-grid { grid-template-columns: repeat(4, 1fr); }
+
+    .cuim .partner-grid.logos { grid-template-columns: repeat(3, 1fr); margin-top: 32px; }
+
+    .cuim .partner-card.logo { padding: 18px; min-height: 130px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+
+    .cuim .partner-card.logo img { width: 100%; height: 110px; object-fit: contain; }
+
+    .cuim a.partner-card.logo:hover,
+    .cuim a.partner-card.logo:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(4, 34, 74, 0.16); }
+
+    .cuim .partner-card {
+      display: grid;
+      place-items: center;
+      min-height: 110px;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--navy);
+      font-family: "Work Sans", sans-serif;
+      font-weight: 800;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cuim .resource-card {
+      padding: 34px;
+      border-radius: var(--radius);
+      background: var(--yellow);
+      color: var(--navy);
+      box-shadow: var(--shadow);
+    }
+
+    .cuim .resource-card h3 { margin: 12px 0; font-size: 26px; line-height: 1.16; }
+    .cuim .resource-card p { margin: 0; font-weight: 500; }
+
+    .cuim .cta {
+      padding: 70px;
+      border-radius: var(--radius);
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .cuim .cta h2 { max-width: 780px; color: var(--white); }
+    .cuim .cta .section-lead { color: rgba(255, 255, 255, .82); }
+
+    @media (max-width: 980px) {
+      .cuim .overview-grid,
+      .cuim .journey-grid,
+      .cuim .employer-grid,
+      .cuim .funding-grid { grid-template-columns: 1fr; }
+
+      .cuim .hero-copy { width: 100%; }
+
+      .cuim .facts,
+      .cuim .objective-grid,
+      .cuim .route-grid,
+      .cuim .team-grid,
+      .cuim .partner-grid { grid-template-columns: 1fr 1fr; }
+
+      .cuim .logo-row { justify-content: flex-start; flex-wrap: wrap; gap: 24px; }
+      .cuim .logo-row img { height: 44px; }
+    }
+
+    @media (max-width: 560px) {
+      .cuim .jump-nav { flex-direction: column; align-items: stretch; gap: 12px; }
+      .cuim .jump-nav__label { text-align: center; }
+      .cuim .jump-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; }
+      .cuim .jump-nav li { min-width: 0; }
+      .cuim .jump-nav a { width: 100%; padding-inline: 10px; white-space: normal; text-align: center; }
+    }
+
+    @media (max-width: 640px) {
+      .cuim .container { width: min(100% - 32px, 1180px); }
+      .cuim .btn-row, .cuim .fit-btn { width: 100%; }
+
+      .cuim .facts,
+      .cuim .objective-grid,
+      .cuim .route-grid,
+      .cuim .team-grid,
+      .cuim .partner-grid { grid-template-columns: 1fr; }
+
+      .cuim .section { padding: 58px 0; }
+      .cuim .section h2 { font-size: 38px; }
+      .cuim .hero, .cuim .hero-inner { min-height: 620px; }
+      .cuim .hero {
+        background-image:
+          linear-gradient(180deg, rgba(0, 15, 33, .9) 0%, rgba(0, 26, 56, .88) 55%, rgba(0, 41, 87, .8) 100%),
+          url("https://fit.ie/wp-content/uploads/2025/02/Young-man-looking-at-laptop-screen-in-office.webp");
+      }
+      .cuim .step-list li { grid-template-columns: 48px 1fr; font-size: 18px; }
+      .cuim .step-list span { width: 44px; height: 44px; }
+      .cuim .cta { padding: 34px 24px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cuim *, .cuim *::before, .cuim *::after {
+        transition-duration: .001ms !important;
+      }
+      .cuim .fit-btn:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="fit-ai">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============================ SITE HEADER ============================ -->
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="FIT — home">
+          <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+          <!-- Learners -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-learners">Learners <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-learners">
+              <a class="nav-menu__head" href="learners.html" data-match="learners.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Learners hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Apprenticeships</p>
+              <ul class="nav-menu__list">
+                <li><a href="tech-apprenticeships.html">Tech Apprenticeships</a></li>
+                <li><a href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeships</a></li>
+                <li><a href="i-fit.html">I-FIT</a></li>
+              </ul>
+              <p class="nav-menu__group">Courses &amp; skills</p>
+              <ul class="nav-menu__list">
+                <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+                <li><a href="courses.html">Courses &amp; Course Search</a></li>
+                <li><a href="learners.html#paths">Free Digital Skills Platforms</a></li>
+                <li><a href="green-skills-learners.html">Green Skills</a></li>
+              </ul>
+              <p class="nav-menu__group">Community &amp; support</p>
+              <ul class="nav-menu__list">
+                <li><a href="career-progression.html">Learner Support &amp; Alumni</a></li>
+                <li><a href="faq.html">Learner FAQs</a></li>
+                <li><a href="fit-northern-ireland.html">FIT Northern Ireland</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Employers -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-employers">Employers <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu" id="menu-employers">
+              <a class="nav-menu__head" href="employers.html" data-match="employers.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Employers hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <ul class="nav-menu__list">
+                <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
+                <li><a href="employers.html#develop">Upskill Your Team</a></li>
+                <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+                <li><a href="employers.html#hire">Benefits, Grants &amp; Supports</a></li>
+                <li><a href="green-skills-employers.html">Green Skills</a></li>
+                <li><a href="employers.html#story">Case Studies</a></li>
+                <li><a href="employers.html#resources">Employer Resources</a></li>
+                <li><a href="fit-northern-ireland.html">FIT Northern Ireland</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Funders &amp; Partners -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-funders">Funders &amp; Partners <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-funders">
+              <a class="nav-menu__head" href="funders.html" data-match="funders.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Funders &amp; Partners hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Funders</p>
+              <ul class="nav-menu__list">
+                <li><a href="funders.html#funders">Who funds FIT</a></li>
+                <li><a href="funders.html#impact">Impact &amp; Outcomes</a></li>
+                <li><a href="funders.html#projects">Funding Opportunities</a></li>
+                <li><a href="publications.html">Publications &amp; Reports</a></li>
+                <li><a href="board-of-directors.html">Governance &amp; Board</a></li>
+              </ul>
+              <p class="nav-menu__group">Partners</p>
+              <ul class="nav-menu__list">
+                <li><a href="funders.html#partners">Our Partners</a></li>
+                <li><a href="funders.html#projects">Irish Projects</a></li>
+                <li><a href="funders.html#projects">EU Projects</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Schools -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-schools">Schools &amp; Colleges <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-schools">
+              <a class="nav-menu__head" href="choosetech.html" data-match="choosetech.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Schools &amp; Colleges hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Schools</p>
+              <ul class="nav-menu__list">
+                <li><a href="choosetech.html">Choose Tech</a></li>
+                <li><a href="hero-in-tech.html">HERo in Tech</a></li>
+                <li><a href="choosetech.html#educators">Teacher &amp; Guidance Resources</a></li>
+                <li><a href="choosetech.html#register">School Enquiry</a></li>
+              </ul>
+              <p class="nav-menu__group">Colleges &amp; training centres</p>
+              <ul class="nav-menu__list">
+                <li><a href="courses.html">Courses &amp; Course Search</a></li>
+                <li><a href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeships</a></li>
+                <li><a href="skills-for-jobs.html">Skills for Jobs</a></li>
+                <li><a href="stepin2tech.html">Step In2 Tech</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- About & News -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-about">About &amp; News <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-about">
+              <a class="nav-menu__head" href="about.html" data-match="about.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">About &amp; News hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">About</p>
+              <ul class="nav-menu__list">
+                <li><a href="about.html">About FIT</a></li>
+                <li><a href="board-of-directors.html">Team &amp; Governance</a></li>
+                <li><a href="careers.html">Careers at FIT</a></li>
+                <li><a href="about.html#fit-eu">FIT EU</a></li>
+                <li><a href="publications.html">Publications &amp; Reports</a></li>
+                <li><a href="safeguarding.html">Policies Hub</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+              </ul>
+              <p class="nav-menu__group">News &amp; events</p>
+              <ul class="nav-menu__list">
+                <li><a href="news-and-events.html#stories">Latest News</a></li>
+                <li><a href="news-and-events.html#events">Events</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+
+        <a class="header-arena" data-arena-layout="horizontal" href="https://fitknowledgearena.com/" target="_blank" rel="noopener" aria-label="FIT Knowledge Arena"><img class="header-arena__logo" src="assets/img/ka/brain-horizontal-reversed.png" alt="FIT Knowledge Arena"></a>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="cuim">
+        <section class="hero" id="top" aria-labelledby="cuim-hero-title">
+          <div class="container hero-inner">
+            <div class="hero-copy">
+              <span class="eyebrow">Cuimsi&uacute; Programme</span>
+              <h1 id="cuim-hero-title">Celebrating neurodiversity,<br><span>supporting inclusive employment.</span></h1>
+
+              <div class="btn-row">
+                <a class="fit-btn ghost" href="#employers">Employer network <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn blue" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/CuimsiuRegistrationFormCandidates/formperma/krFYvbvcmB7SQk1hgD097gSlJJgvUggS2ppeKyUSPW0">Candidate form <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="jump-band" aria-label="Jump to page section">
+          <div class="container">
+            <nav class="jump-nav" aria-label="Jump to section">
+              <span class="jump-nav__label">Jump to:</span>
+              <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#sign-up">Sign up</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#advisory">Advisory council</a></li>
+                <li><a href="#employers">Employers</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <section class="funding" aria-label="Co-funded programme">
+          <div class="container funding-grid">
+            <div>
+              <span class="section-kicker">Co-funded programme</span>
+              <p>This project is co-funded by the Government of Ireland through the Department of Social Protection and the European Union.</p>
+            </div>
+
+            <div class="logo-row" aria-label="Funding partners">
+              <img src="https://fit.ie/wp-content/uploads/2025/02/Government-Ireland-Logo.svg" alt="Government of Ireland">
+              <img src="https://fit.ie/wp-content/uploads/2025/02/Co-funded-European-Union-Logo.svg" alt="Co-funded by the European Union">
+              <img src="https://fit.ie/wp-content/uploads/2025/02/Pobal-Logo.svg" alt="Pobal">
+            </div>
+          </div>
+        </section>
+
+        <section class="section soft" id="overview">
+          <div class="container overview-grid">
+            <div>
+              <span class="section-kicker">WorkAbility programme</span>
+              <h2>Flexible support for disabled and neurodivergent people.</h2>
+              <p class="section-lead">Cuimsi&uacute; helps people build confidence, explore technology careers, meet employers and access practical supports at a pace that works for them.</p>
+            </div>
+
+            <div class="facts">
+              <div class="fact"><strong>16+</strong><span>Open to people aged sixteen and over.</span></div>
+              <div class="fact"><strong>60</strong><span>Programme places available each year.</span></div>
+              <div class="fact"><strong>Mar-Nov</strong><span>Events, mentoring and employer connections.</span></div>
+            </div>
+          </div>
+
+          <div class="container" style="margin-top:48px">
+            <div class="objective-grid">
+              <article class="card">
+                <h3>Build confidence</h3>
+                <p>Support participants to understand their strengths, interests and practical next steps.</p>
+              </article>
+
+              <article class="card">
+                <h3>Explore tech careers</h3>
+                <p>Introduce training routes, workplace expectations and realistic opportunities in technology.</p>
+              </article>
+
+              <article class="card">
+                <h3>Connect with employers</h3>
+                <p>Create inclusive employer links through events, mentoring, advice and workplace preparation.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section dark" id="journey">
+          <div class="container journey-grid">
+            <figure class="journey-media">
+              <img src="https://fit.ie/wp-content/uploads/2026/06/MG_4062-1024x683.jpg" alt="Cuimsi&uacute; programme participants and mentors together">
+            </figure>
+
+            <div>
+              <span class="section-kicker light">Your journey</span>
+              <h2>A flexible support path.</h2>
+              <p class="section-lead">From March to November, the Cuimsi&uacute; team runs events, workshops and training while providing one-to-one support through Employability Mentors.</p>
+
+              <ul class="step-list">
+                <li><span>01</span>Tech training, platforms and practical workshops</li>
+                <li><span>02</span>CV, interview and workplace preparation</li>
+                <li><span>03</span>Assistive technology and self-advocacy support</li>
+                <li><span>04</span>Employer networking and career exploration</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section soft" id="sign-up">
+          <div class="container">
+            <span class="section-kicker">Sign-up routes</span>
+            <h2>Choose the route that fits.</h2>
+
+            <div class="route-grid">
+              <article class="card route-card">
+                <div>
+                  <h3>Candidates</h3>
+                  <p>For people who want to explore technology pathways with mentoring, events and practical support.</p>
+                  <ul class="check-list">
+                    <li>Career guidance and confidence building</li>
+                    <li>One-to-one employability support</li>
+                    <li>Employer events and networking</li>
+                  </ul>
+                </div>
+                <a class="fit-btn blue" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/CuimsiuRegistrationFormCandidates/formperma/krFYvbvcmB7SQk1hgD097gSlJJgvUggS2ppeKyUSPW0">Register as a candidate <span aria-hidden="true">&nearr;</span></a>
+              </article>
+
+              <article class="card route-card dark-card">
+                <div>
+                  <h3>Employers</h3>
+                  <p>For organisations that want to support inclusive employment and connect with emerging tech talent.</p>
+                  <ul class="check-list">
+                    <li>Inclusive employer networking</li>
+                    <li>Disability inclusion resources</li>
+                    <li>Talent pipeline connections</li>
+                  </ul>
+                </div>
+                <a class="fit-btn yellow" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/CuimsiuRegistrationFormEmployers/formperma/S1YWVR4SORsS5ljgtRiWJbRbjhV_IFAg3c0TTbKIrgI">Register as an employer <span aria-hidden="true">&nearr;</span></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="team">
+          <div class="container">
+            <span class="section-kicker">Programme team</span>
+            <h2>Meet the Cuimsi&uacute; team.</h2>
+
+            <div class="team-grid">
+              <article class="team-card">
+                <img src="https://fit.ie/wp-content/uploads/2025/08/ch1.jpg" alt="Claire Hayes">
+                <div><h3>Claire Hayes</h3><p>Cuimsi&uacute; Employability Mentor</p></div>
+              </article>
+
+              <article class="team-card">
+                <div class="initials" aria-hidden="true">AG</div>
+                <div><h3>Alanna Geraghty</h3><p>Cuimsi&uacute; Employability Mentor</p></div>
+              </article>
+
+              <article class="team-card">
+                <img src="assets/img/clodagh-kearns.png" alt="Clodagh Kearns">
+                <div><h3>Clodagh Kearns</h3><p>Wellbeing, Diversity and Inclusion Manager</p></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section soft" id="advisory">
+          <div class="container">
+            <span class="section-kicker">Advisory council</span>
+            <h2>Built with partners.</h2>
+            <p class="section-lead">Guided by an Advisory Council of candidates with lived experience, advocacy organisations, employers and experts in the field.</p>
+
+            <div class="partner-grid logos">
+              <a class="partner-card logo" href="https://ausometraining.com/"><img src="assets/council/ausome-training.png" alt="AUsome Training"></a>
+              <a class="partner-card logo" href="https://digitaltechnologyskills.ie/"><img src="assets/council/digital-technology-skills.png" alt="Digital Technology Skills"></a>
+              <a class="partner-card logo" href="https://dyslexia.ie/"><img src="assets/council/dyslexia-ireland.png" alt="Dyslexia Ireland"></a>
+              <a class="partner-card logo" href="https://gheel.ie/"><img src="assets/council/gheel-autism-services.png" alt="Gheel Autism Services"></a>
+              <a class="partner-card logo" href="https://vvi.ie/"><img src="assets/council/voice-of-vision-impairment.png" alt="VVI &mdash; Voice of Vision Impairment"></a>
+              <a class="partner-card logo" href="https://www.wicys.org/"><img src="assets/council/wicys-uki.png" alt="Women in CyberSecurity (WiCyS) UK+I Affiliate"></a>
+              <a class="partner-card logo" href="https://mindseyeeducation.org/"><img src="assets/council/mindseye.png" alt="mindseye"></a>
+              <a class="partner-card logo" href="https://www.ahead.ie/"><img src="assets/council/ahead.png" alt="AHEAD"></a>
+              <a class="partner-card logo" href="https://adhdireland.ie/"><img src="assets/council/adhd-ireland.png" alt="ADHD Ireland"></a>
+              <a class="partner-card logo" href="https://www.dcu.ie/"><img src="assets/council/dcu.png" alt="DCU &mdash; Dublin City University"></a>
+              <a class="partner-card logo" href="https://www.specialisterne.ie/"><img src="assets/council/specialisterne-ireland.png" alt="Specialisterne Ireland"></a>
+              <span class="partner-card logo"><img src="assets/council/nios-fearr-consulting.png" alt="N&iacute;os Fearr Consulting"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section dark" id="employers">
+          <div class="container employer-grid">
+            <div>
+              <span class="section-kicker light">For employers</span>
+              <h2>Make work more inclusive.</h2>
+              <p class="section-lead">Employers can join the Cuimsi&uacute; network, take part in events and access practical guidance on inclusive recruitment and workplace support.</p>
+
+              <div class="btn-row">
+                <a class="fit-btn yellow" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/CuimsiuRegistrationFormEmployers/formperma/S1YWVR4SORsS5ljgtRiWJbRbjhV_IFAg3c0TTbKIrgI">Join employer network <span aria-hidden="true">&nearr;</span></a>
+                <a class="fit-btn ghost" href="https://fit.ie/wp-content/uploads/2025/02/Tips-for-Employers-on-Being-Disability-Inclusive-in-Apprenticeships.pdf">Download employer guide <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+
+            <article class="resource-card">
+              <span class="section-kicker">Employer resource</span>
+              <h3>Tips for employers on disability-inclusive apprenticeships.</h3>
+              <p>Practical guidance for creating inclusive opportunities, supporting candidates and building accessible workplace routes.</p>
+              <div class="btn-row">
+                <a class="fit-btn outline" href="https://fit.ie/wp-content/uploads/2025/02/Tips-for-Employers-on-Being-Disability-Inclusive-in-Apprenticeships.pdf">Download PDF <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="cta">
+              <span class="section-kicker light">Take the next step</span>
+              <h2>Start with the Cuimsi&uacute; route that works for you.</h2>
+              <p class="section-lead">Register as a candidate or connect as an employer to support inclusive pathways into technology employment.</p>
+
+              <div class="btn-row">
+                <a class="fit-btn yellow" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/CuimsiuRegistrationFormCandidates/formperma/krFYvbvcmB7SQk1hgD097gSlJJgvUggS2ppeKyUSPW0">Candidate form <span aria-hidden="true">&nearr;</span></a>
+                <a class="fit-btn outline" href="index.html">Return home <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ============================ SITE FOOTER =========================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand--footer" href="index.html" aria-label="FIT — home">
+              <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
+            </a>
+            <p>Creating inclusive pathways into Ireland's digital economy since 1999.</p>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/fit-fastrack-to-information-technology/" target="_blank" rel="noopener" aria-label="FIT on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
+              <a href="https://x.com/FastrackintoIT" target="_blank" rel="noopener" aria-label="FIT on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.01 4.13H5.05z"/></svg></a>
+              <a href="https://www.facebook.com/fastracktoit/" target="_blank" rel="noopener" aria-label="FIT on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.1 1.48-4.1 4.2v2.34H7.7V13h2.74v8z"/></svg></a>
+              <a href="https://www.youtube.com/@FastrackintoIT" target="_blank" rel="noopener" aria-label="FIT on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7c-.23-.85-.9-1.5-1.75-1.73C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.85.37c-.85.23-1.52.88-1.75 1.73C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.85.9 1.5 1.75 1.73C4.7 18.8 12 18.8 12 18.8s7.3 0 8.85-.37c.85-.23 1.52-.88 1.75-1.73C23 15.2 23 12 23 12zM9.75 15.02V8.98L15 12z"/></svg></a>
+              <a href="https://www.instagram.com/fastrackintoit/" target="_blank" rel="noopener" aria-label="FIT on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.06 1.97.24 2.43.42a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.18.46.36 1.26.42 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.97-.42 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.18-1.26.36-2.43.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.97-.24-2.43-.42a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.18-.46-.36-1.26-.42-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.06-1.17.24-1.97.42-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.61 1.8c.46-.18 1.26-.36 2.43-.42C9.31 1.32 9.69 1.31 12 1.31zm0 3.5a6.3 6.3 0 1 0 0 12.6 6.3 6.3 0 0 0 0-12.6zm0 2a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6zm6.4-3.9a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg></a>
+              <a href="https://www.tiktok.com/@fastrackintoit1" target="_blank" rel="noopener" aria-label="FIT on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.9a3.1 3.1 0 1 1-2.2-3v-3.2a6.3 6.3 0 1 0 5.4 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.4z"/></svg></a>
+            </div>
+          </div>
+
+          <nav class="footer-col" aria-label="Learners footer links">
+            <h2>Learners</h2>
+            <ul>
+              <li><a href="learners.html">Learners hub</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="tech-apprenticeships.html">Tech Apprenticeships</a></li>
+              <li><a href="cuimsiu-programme.html">Cuimsi&uacute; Programme</a></li>
+              <li><a href="hero-in-tech.html">HERo in Tech</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Employers footer links">
+            <h2>Employers</h2>
+            <ul>
+              <li><a href="employers.html">Employers hub</a></li>
+              <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
+              <li><a href="cuimsiu-programme.html">Employer Network</a></li>
+              <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+              <li><a href="https://fit.ie/tech-apprenticeship-policies-and-procedures/" target="_blank" rel="noopener">Policies &amp; Procedures</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Funders footer links">
+            <h2>Funders &amp; Partners</h2>
+            <ul>
+              <li><a href="funders.html">Funders &amp; Partners</a></li>
+              <li><a href="funders.html#partners">Partners</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="funders.html#projects">Projects &amp; Resources</a></li>
+              <li><a href="funders.html#impact">Impact</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Company footer links">
+            <h2>FIT</h2>
+            <ul>
+              <li><a href="about.html">About FIT</a></li>
+              <li><a href="about.html#team">Our Team</a></li>
+              <li><a href="news-and-events.html">News &amp; Events</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col footer-col--connect" aria-label="Get in touch">
+            <h2>Connect</h2>
+            <ul>
+              <li><a href="mailto:info@fit.ie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2.2V17h16V7.2l-8 5.6z"/></svg>info@fit.ie</a></li>
+              <li><a href="tel:+35318825570"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.4 1 1 0 0 1-.25 1z"/></svg>+353 1 882 5570</a></li>
+              <li><a href="contact.html#locations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Our Locations</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 FIT Ltd. FIT is a non-profit organisation and registered charity (RCN 20044572).</p>
+          <div class="footer-legal">
+            <a href="https://fit.ie/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://fit.ie/cookie-policy/" target="_blank" rel="noopener">Cookie Policy</a>
+            <a href="safeguarding.html">Safeguarding</a>
+            <a href="request-a-change.html">Website change requests</a>
+            <a href="https://fit.ie/data-protection-forms/" target="_blank" rel="noopener">Data Protection Forms</a>
+            <a href="https://fit.ie/accessibility-statement/" target="_blank" rel="noopener">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

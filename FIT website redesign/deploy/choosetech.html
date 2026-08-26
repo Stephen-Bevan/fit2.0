@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose Tech, supported by JPMorganChase, is FIT's free programme engaging 15-20 year olds in DEIS schools and Youthreach centres nationwide with pathways into a tech career.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FIT — Fastrack into Information Technology">
+  <meta property="og:title" content="Choose Tech &mdash; FIT">
+  <meta property="og:description" content="Widening access &amp; inclusion toward a tech career for 15-20 year olds in DEIS schools and Youthreach centres nationwide.">
+  <meta property="og:image" content="https://fit.ie/wp-content/uploads/2020/07/CHOOSE-TECH-LOGO-01.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Choose Tech &mdash; FIT">
+  <meta name="twitter:description" content="Widening access &amp; inclusion toward a tech career for 15-20 year olds in DEIS schools and Youthreach centres nationwide.">
+  <meta name="twitter:image" content="https://fit.ie/wp-content/uploads/2020/07/CHOOSE-TECH-LOGO-01.png">
+  <title>Choose Tech &mdash; FIT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Choose Tech — page styles scoped under .ct-page (same widget pattern as FIT NI page) */
+    .ct-page{--blue:#006ca3;--blue-bright:#0b84bd;--navy:#002957;--navy-deep:#001a38;--yellow:#ffce34;--yellow-soft:#fff4bf;--teal:#1fb0bc;--grey:#edeeef;--grey-light:#f7f8fa;--white:#fff;--muted:#46617d;--shadow:0 18px 42px rgba(0,41,87,.16);--shadow-soft:0 10px 30px rgba(0,41,87,.1);width:100%;overflow:hidden;font-size:18px;line-height:1.6;color:var(--navy)}
+    .ct-page *,.ct-page *::before,.ct-page *::after{box-sizing:border-box}
+    .ct-page img{display:block;max-width:100%}
+    .ct-page a{color:inherit;text-decoration:none}
+    .ct-page h1,.ct-page h2,.ct-page h3,.ct-page p,.ct-page ul,.ct-page ol,.ct-page dl,.ct-page blockquote,.ct-page figure{margin-top:0}
+    .ct-page h1,.ct-page h2,.ct-page h3{font-family:"Rubik",Arial,Helvetica,sans-serif;font-weight:600;letter-spacing:0;text-wrap:balance;color:inherit}
+    .ct-page p{text-wrap:pretty}
+    .ct-page ul,.ct-page ol{list-style:none;margin:0;padding:0}
+    .ct-page .container{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+    .ct-page a:focus-visible,.ct-page button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;box-shadow:0 0 0 3px var(--navy);border-radius:3px}
+    .ct-page .fit-btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:12px;padding:12px 22px;border:2px solid var(--blue);border-radius:4px;background:var(--blue);color:#fff;font-family:"Work Sans",sans-serif;font-size:15px;font-weight:600;line-height:1.2;box-shadow:0 8px 18px rgba(0,41,87,.18);transition:transform .18s ease,background-color .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease}
+    .ct-page .fit-btn:hover{transform:translateY(-2px);background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 12px 24px rgba(0,41,87,.25)}
+    .ct-page .fit-btn span{display:inline-flex;min-width:1em;align-items:center;justify-content:center;font-size:1.15em;line-height:1;transform:translateY(1px)}
+    .ct-page .fit-btn--yellow{border-color:var(--yellow);background:var(--yellow);color:var(--navy)}
+    .ct-page .fit-btn--yellow:hover{border-color:#ffd75c;background:#ffd75c;color:var(--navy)}
+    .ct-page .fit-btn--ghost{border-color:#fff;background:transparent;color:#fff;box-shadow:none}
+    .ct-page .fit-btn--ghost:hover{border-color:#fff;background:#fff;color:var(--navy)}
+    .ct-page .fit-btn--dark-outline{border-color:var(--navy);background:transparent;color:var(--navy);box-shadow:none}
+    .ct-page .fit-btn--dark-outline:hover{border-color:var(--navy);background:var(--navy);color:#fff}
+    .ct-page .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .ct-page .eyebrow{display:block;margin:0 0 14px;color:var(--yellow);font-family:"Work Sans",sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;line-height:1.3;text-transform:uppercase}
+    .ct-page .section-kicker{display:inline-block;margin-bottom:14px;color:var(--blue);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;line-height:1.2;text-transform:uppercase}
+    .ct-page .section-kicker::before{content:"";display:inline-block;width:22px;height:2px;margin-right:10px;vertical-align:middle;background:var(--yellow)}
+    .ct-page .ct-link{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+    .ct-page .ct-link:hover{color:var(--navy)}
+    .ct-page .ct-link--light{color:var(--yellow)}
+    .ct-page .ct-link--light:hover{color:#fff}
+    .ct-page .ct-contact .ct-link--light{color:#fff}
+    .ct-page .ct-contact .ct-link--light:hover{color:var(--yellow)}
+    .ct-page em{color:var(--blue);font-style:italic;font-weight:400}
+    .ct-page section[id]{scroll-margin-top:96px}
+    .ct-page h2{margin-bottom:14px;font-size:clamp(28px,3vw,38px);line-height:1.18}
+
+    .ct-hero{position:relative;min-height:600px;display:flex;align-items:center;isolation:isolate;overflow:hidden;border-bottom:5px solid var(--blue);background-color:var(--navy-deep);background-repeat:no-repeat;background-image:linear-gradient(90deg,rgba(0,7,18,.98) 0%,rgba(0,21,47,.92) 42%,rgba(0,41,87,.52) 72%,rgba(0,41,87,.18) 100%),url("assets/img/ict-course-tech-min.jpg");background-position:center,center;background-size:cover,cover;color:#fff}
+    .ct-hero__inner{position:relative;min-height:600px;display:flex;align-items:center;padding-block:108px 72px}
+    .ct-hero__copy{width:min(680px,60%)}
+    .ct-hero h1{max-width:18ch;margin-bottom:16px;color:#fff;font-size:clamp(40px,5vw,60px);font-weight:700;line-height:1.05;letter-spacing:-.01em}
+    .ct-hero h1 span{color:var(--yellow)}
+    .ct-hero__lead{max-width:50ch;margin-bottom:12px;color:rgba(255,255,255,.9);font-size:clamp(18px,2.1vw,21px);font-weight:600;line-height:1.4}
+    .ct-hero__promise{margin-bottom:0;color:rgba(255,255,255,.86);font-family:"Work Sans",sans-serif;font-size:15px;font-weight:400;line-height:1.55}
+
+    .jump-band.ct-jump{position:relative;z-index:5;padding:16px 0;background:#fff;box-shadow:0 8px 24px rgba(0,41,87,.12)}
+    .ct-jump .jump-nav{display:flex;align-items:center;gap:22px;padding:15px 18px;border-radius:12px;background:transparent;border:0}
+    .ct-jump .jump-nav__label{flex:none;color:var(--navy);font-family:"Work Sans",sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .ct-jump .jump-nav ul{display:flex;flex:1;justify-content:space-between;gap:10px}
+    .ct-jump .jump-nav a{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:9px 16px;border:1px solid rgba(0,41,87,.18);border-radius:999px;background:#fff;color:var(--blue);font-size:15px;font-weight:600;transition:border-color .18s ease,background-color .18s ease,color .18s ease}
+    .ct-jump .jump-nav a:hover,.ct-jump .jump-nav a:focus-visible{border-color:var(--navy);background:var(--navy);color:#edeeef}
+    .ct-jump .jump-nav a.jump-nav__register{border-color:var(--yellow);background:var(--yellow);color:var(--navy)}
+    .ct-jump .jump-nav a.jump-nav__register:hover,.ct-jump .jump-nav a.jump-nav__register:focus-visible{border-color:var(--navy);background:var(--navy);color:#fff}
+
+    .ct-about,.ct-involve,.ct-educators,.ct-students,.ct-impact,.ct-contact{padding-block:72px}
+    .ct-about{background:var(--grey)}
+    .ct-about__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:48px;align-items:center}
+    .ct-about__copy p{max-width:620px;margin-bottom:16px;font-size:17px}
+    .ct-about__contact{display:inline-flex;align-items:center;gap:10px;margin-top:6px;padding:10px 16px;border:1px solid rgba(0,41,87,.16);border-radius:999px;background:#fff;color:var(--blue);font-family:"Work Sans",sans-serif;font-size:14px;font-weight:700;transition:background-color .18s ease,color .18s ease,border-color .18s ease}
+    .ct-about__contact:hover{border-color:var(--navy);background:var(--navy);color:#fff}
+    .ct-brandcard{padding:28px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
+    .ct-brandcard>img{width:min(280px,70%);margin:0 auto 20px}
+    .ct-who{display:grid;grid-template-columns:1fr;gap:12px;margin:0}
+    .ct-who>div{display:grid;grid-template-columns:150px 1fr;align-items:center;padding:16px 18px;border:1px solid rgba(0,41,87,.12);border-radius:8px;background:var(--grey-light)}
+    .ct-who dt{color:var(--blue);font-family:"Rubik",Arial,sans-serif;font-size:19px;font-weight:700;line-height:1.2}
+    .ct-who dd{margin:0;padding-left:18px;border-left:1px solid rgba(0,41,87,.16);color:var(--navy);font-size:14px;line-height:1.45}
+    .ct-supporter-band{padding:26px 0;background:var(--navy)}
+    .ct-supporter-band .container{display:flex;justify-content:center}
+    .ct-supporter-band a{display:block;width:min(300px,68%)}
+    .ct-supporter-band img{width:100%}
+    .ct-who>div:nth-child(2) dt{color:var(--teal)}
+    .ct-who>div:nth-child(3) dt{color:var(--navy)}
+
+    .ct-involve{background:#fff}
+    .ct-involve__head{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end;margin-bottom:28px}
+    .ct-involve__head h2{margin-bottom:0}
+    .ct-involve__intro{display:flex;align-items:flex-end;justify-content:flex-end}
+    .ct-benefit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .ct-benefit-grid li{display:flex;flex-direction:column;padding:26px 24px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08);transition:transform .18s ease,box-shadow .18s ease}
+    .ct-benefit-grid li:nth-child(even){border-top-color:var(--navy)}
+    .ct-benefit-grid li:hover{transform:translateY(-7px);box-shadow:0 12px 24px rgba(0,41,87,.14)}
+    .ct-benefit-grid__icon{width:64px;height:64px;display:grid;place-items:center;margin-bottom:16px;border-radius:50%;background:var(--grey-light);border:1px solid rgba(0,41,87,.1)}
+    .ct-benefit-grid__icon img{width:40px;height:40px;object-fit:contain}
+    .ct-benefit-grid h3{margin-bottom:12px;font-size:20px}
+    .ct-benefit-grid p{margin-bottom:0;font-size:15px;line-height:1.5;color:var(--muted)}
+    .ct-benefit-grid p a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .ct-benefit-grid p a:hover{color:var(--navy)}
+    .ct-orgbenefits{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:44px;padding:36px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+    .ct-page .ct-orgbenefits .section-kicker{color:var(--yellow)}
+    .ct-orgbenefits h3{margin-bottom:12px;color:#fff;font-size:clamp(22px,2.4vw,28px);line-height:1.2}
+    .ct-orgbenefits p{color:rgba(255,255,255,.78);font-size:15px}
+    .ct-orgbenefits p:last-of-type{margin-bottom:0}
+    .ct-check{display:grid;gap:12px;margin:0}
+    .ct-check li{position:relative;padding-left:30px;color:#fff;font-weight:600;font-size:16px}
+    .ct-check li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px rgba(255,206,52,.2)}
+
+    .ct-register{padding-block:72px;background:#006CA3;color:#fff}
+    .ct-page .ct-register .section-kicker{color:#fff}
+    .ct-page .ct-register .section-kicker::before{background:var(--yellow)}
+    .ct-register__heading{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end;margin-bottom:34px}
+    .ct-register__heading h2{max-width:760px;margin-bottom:0;color:#fff}
+    .ct-register__heading>p{margin-bottom:0;color:#fff;font-size:17px}
+    .ct-steps{display:grid;grid-template-columns:1fr;margin-bottom:0;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 10px 26px rgba(0,41,87,.12)}
+    .ct-steps li{display:grid;grid-template-columns:48px 1fr;gap:22px;align-items:start;padding:20px 26px;border-top:1px solid rgba(0,41,87,.12)}
+    .ct-steps li:first-child{border-top:0}
+    .ct-steps li>span{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#0079b7;color:#fff;font-family:"Work Sans",sans-serif;font-size:13px;font-weight:700}
+    .ct-steps h3{margin-bottom:6px;color:var(--navy);font-size:17px}
+    .ct-steps p{max-width:74ch;margin-bottom:0;color:var(--muted);font-size:15px;line-height:1.5}
+    .ct-register__note{margin:18px 0 0;color:rgba(255,255,255,.92);font-size:14px}
+    .ct-register h2 em{color:var(--yellow)}
+    .ct-register__cta{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;margin-top:36px;padding:34px;border-radius:10px;background:var(--navy);box-shadow:var(--shadow)}
+    .ct-register__cta h3{margin-bottom:10px;color:#fff;font-size:clamp(22px,2.4vw,28px)}
+    .ct-register__cta p{margin-bottom:0;color:rgba(255,255,255,.78);font-size:15px}
+    .ct-register__cta p a{color:var(--yellow);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .ct-register__actions{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+    .ct-register__actions .fit-btn{width:100%}
+    .ct-track{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+    .ct-track__label{margin:22px 0 0;color:rgba(255,255,255,.92);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .ct-track li{padding:6px 12px;border:1px solid rgba(255,255,255,.35);border-radius:999px;color:#fff;font-size:13px;font-weight:500}
+
+    .ct-educators{background:var(--grey)}
+    .ct-educators__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:48px;align-items:start}
+    .ct-educators__copy p{max-width:620px;margin-bottom:16px;font-size:17px}
+    .ct-educators__side{display:grid;gap:16px;align-content:start}
+    .ct-covers{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .ct-covers a{display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,41,87,.14);box-shadow:0 8px 20px rgba(0,41,87,.08);transition:transform .18s ease,box-shadow .18s ease}
+    .ct-covers a:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,41,87,.16)}
+    .ct-covers img{width:100%;height:100%;object-fit:cover}
+    .ct-ambassador{padding:28px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--yellow);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
+    .ct-ambassador h3{margin-bottom:10px;font-size:21px}
+    .ct-ambassador p{color:var(--muted);font-size:15px;margin-bottom:18px}
+    .ct-badge-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:center}
+    .ct-badge-row img{width:100%;max-width:86px;margin-inline:auto}
+    .ct-ambassador figcaption{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+
+    .ct-students{background:#fff}
+    .ct-students__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:48px;align-items:start}
+    .ct-students__copy p{max-width:640px;margin-bottom:16px;font-size:17px}
+    .ct-startcards{display:grid;gap:16px}
+    .ct-startcard{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;padding:22px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--teal);border-radius:8px;background:var(--grey-light)}
+    .ct-startcard:nth-child(2){border-top-color:var(--blue)}
+    .ct-startcard img{width:96px;height:96px;object-fit:contain}
+    .ct-startcard h3{margin-bottom:6px;font-size:18px}
+    .ct-startcard p{margin-bottom:10px;color:var(--muted);font-size:14px;line-height:1.5}
+    .ct-startcard a.ct-minilink{display:inline-block;color:var(--blue);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;transition:color .18s ease}
+    .ct-startcard a.ct-minilink:hover{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+
+    .ct-paths{padding-block:48px;background:var(--grey)}
+    .ct-paths__shell{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;align-items:center;padding:40px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:0 24px 50px rgba(0,41,87,.25)}
+    .ct-page .ct-paths__copy .section-kicker{color:var(--yellow)}
+    .ct-paths__copy h2{margin-bottom:22px;color:#fff;font-size:clamp(26px,3vw,36px);line-height:1.1}
+    .ct-paths__copy p{margin-bottom:15px;color:rgba(255,255,255,.77);font-size:15px}
+    .ct-paths__cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .ct-path-card{display:flex;flex-direction:column;min-height:210px;padding:24px;border-radius:8px;background:#176ca5;color:#fff;transition:transform .18s ease,background-color .18s ease}
+    .ct-path-card:hover{transform:translateY(-4px);background:#1a78b6}
+    .ct-path-card span{margin-bottom:14px;color:var(--yellow);font-family:"Work Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .ct-path-card h3{margin-bottom:8px;color:#fff;font-size:19px}
+    .ct-path-card p{margin-bottom:16px;color:rgba(255,255,255,.92);font-size:14px;line-height:1.5}
+    .ct-path-card b{margin-top:auto;color:var(--yellow);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+    .ct-impact{background:#fff}
+    .ct-impact__head{max-width:720px;margin-bottom:28px}
+    .ct-impact__head h2{margin-bottom:0}
+    .ct-testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);align-items:start;gap:20px}
+    .ct-testimonial-grid blockquote{position:relative;display:flex;flex-direction:column;margin:0;padding:24px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
+    .ct-testimonial-grid blockquote:nth-child(2){border-top-color:var(--navy)}
+    .ct-testimonial-grid blockquote:nth-child(3){border-top-color:var(--teal)}
+    .ct-testimonial-grid__type{margin-bottom:20px;color:var(--blue-bright);font-family:"Work Sans",sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.2em}
+    .ct-testimonial-grid blockquote>p{margin-bottom:26px;font-size:15px;line-height:1.55}
+    .ct-testimonial-grid footer{margin-top:auto;padding-top:20px;border-top:1px solid var(--navy)}
+    .ct-testimonial-grid footer strong,.ct-testimonial-grid footer span{display:block}
+    .ct-testimonial-grid footer strong{color:var(--blue-bright);font-family:"Work Sans",sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+    .ct-testimonial-grid footer span{color:var(--muted);font-size:12px}
+
+    .ct-gallery{padding-block:64px;background:var(--navy);color:#fff}
+    .ct-page .ct-gallery .section-kicker{color:var(--yellow)}
+    .ct-gallery h2{color:#fff}
+    .ct-gallery__lead{max-width:720px;margin-bottom:30px;color:rgba(255,255,255,.78);font-size:16px}
+    .ct-gallery__strip{display:grid;grid-auto-flow:column;grid-auto-columns:min(300px,78vw);gap:18px;overflow-x:auto;padding:4px 4px 22px;scroll-snap-type:x proximity;scrollbar-color:rgba(255,255,255,.45) rgba(255,255,255,.12)}
+    .ct-gallery__strip figure{margin:0;scroll-snap-align:start;display:flex;flex-direction:column;border-radius:8px;overflow:hidden;background:#0d3a6b;border:1px solid rgba(255,255,255,.14)}
+    .ct-gallery__strip img{width:100%;height:210px;object-fit:cover}
+    .ct-gallery__strip figcaption{padding:14px 16px;color:rgba(255,255,255,.82);font-size:12.5px;line-height:1.5}
+    .ct-gallery__hint{margin:6px 0 0;color:rgba(255,255,255,.78);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+
+    .ct-contact{background:#006CA3;color:#fff;text-align:center}
+    .ct-contact h2,.ct-contact p{color:#fff}
+    .ct-contact h2{margin-bottom:23px}
+    .ct-page .ct-contact .section-kicker{color:#fff}
+    .ct-page .ct-contact .section-kicker::before{background:var(--yellow)}
+    .ct-contact p{max-width:810px;margin:0 auto 16px;font-size:17px}
+    .ct-contact p:last-of-type{margin-bottom:0}
+    .ct-contact__social{color:rgba(255,255,255,.85);font-size:15px}
+    .ct-contact .btn-row{justify-content:center;margin-top:36px}
+    .ct-contact .fit-btn{border-color:#fff;background:#fff;color:#006CA3}
+    .ct-contact .fit-btn:hover{border-color:var(--navy);background:var(--navy);color:#fff}
+    .ct-contact .fit-btn--dark-outline{border-color:rgba(255,255,255,.78);background:transparent;color:#fff}
+
+    @media (max-width:1040px){.ct-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:900px){.ct-about__grid,.ct-involve__head,.ct-orgbenefits,.ct-register__heading,.ct-register__cta,.ct-educators__grid,.ct-students__grid,.ct-paths__shell{grid-template-columns:1fr;gap:32px}.ct-involve__intro{justify-content:flex-start}.ct-testimonial-grid{grid-template-columns:1fr}}
+    @media (max-width:680px){.ct-hero,.ct-hero__inner{min-height:620px}.ct-hero{background-image:linear-gradient(180deg,rgba(0,7,18,.92) 0%,rgba(0,21,47,.94) 56%,rgba(0,41,87,.82) 100%),url("assets/img/ict-course-tech-min.jpg")}.ct-hero__inner{align-items:flex-start;justify-content:center;padding-block:98px 54px}.ct-hero__copy{width:100%}.ct-hero h1{font-size:clamp(38px,12vw,50px)}.ct-hero .btn-row{display:grid;grid-template-columns:1fr}.ct-hero .fit-btn{width:100%}
+    .ct-jump .jump-nav{flex-direction:column;align-items:stretch;gap:12px}.ct-jump .jump-nav__label{text-align:center}.ct-jump .jump-nav ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.ct-jump .jump-nav li{min-width:0}.ct-jump .jump-nav a{width:100%;padding-inline:10px;white-space:normal;text-align:center}
+    .ct-about,.ct-involve,.ct-register,.ct-educators,.ct-students,.ct-impact,.ct-contact{padding-block:48px}
+    .ct-benefit-grid,.ct-paths__cards{grid-template-columns:1fr}.ct-benefit-grid li{min-height:0}.ct-steps li{grid-template-columns:1fr;gap:12px;padding:20px 22px}
+    .ct-who>div{grid-template-columns:1fr}.ct-who dd{margin-top:8px;padding:8px 0 0;border-top:1px solid rgba(0,41,87,.16);border-left:0}
+    .ct-badge-row{grid-template-columns:repeat(3,1fr)}
+    .ct-startcard{grid-template-columns:1fr}.ct-startcard img{width:80px;height:80px}
+    .ct-orgbenefits,.ct-register__cta{padding:26px 22px}.ct-paths__shell{padding:28px 22px}
+    .ct-contact .btn-row{display:grid;grid-template-columns:1fr}.ct-contact .fit-btn{width:100%}}
+    @media (prefers-reduced-motion:reduce){.ct-page *,.ct-page *::before,.ct-page *::after{transition-duration:.001ms !important}.ct-page .fit-btn:hover,.ct-benefit-grid li:hover,.ct-path-card:hover,.ct-covers a:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <div class="fit-ai">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============================ SITE HEADER ============================ -->
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="FIT — home">
+          <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+          <!-- Learners -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-learners">Learners <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-learners">
+              <a class="nav-menu__head" href="learners.html" data-match="learners.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Learners hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Apprenticeships</p>
+              <ul class="nav-menu__list">
+                <li><a href="tech-apprenticeships.html">Tech Apprenticeships</a></li>
+                <li><a href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeships</a></li>
+                <li><a href="i-fit.html">I-FIT</a></li>
+              </ul>
+              <p class="nav-menu__group">Courses &amp; skills</p>
+              <ul class="nav-menu__list">
+                <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+                <li><a href="courses.html">Courses &amp; Course Search</a></li>
+                <li><a href="learners.html#paths">Free Digital Skills Platforms</a></li>
+                <li><a href="green-skills-learners.html">Green Skills</a></li>
+              </ul>
+              <p class="nav-menu__group">Community &amp; support</p>
+              <ul class="nav-menu__list">
+                <li><a href="career-progression.html">Learner Support &amp; Alumni</a></li>
+                <li><a href="faq.html">Learner FAQs</a></li>
+                <li><a href="fit-northern-ireland.html">FIT Northern Ireland</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Employers -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-employers">Employers <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu" id="menu-employers">
+              <a class="nav-menu__head" href="employers.html" data-match="employers.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Employers hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <ul class="nav-menu__list">
+                <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
+                <li><a href="employers.html#develop">Upskill Your Team</a></li>
+                <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+                <li><a href="employers.html#hire">Benefits, Grants &amp; Supports</a></li>
+                <li><a href="green-skills-employers.html">Green Skills</a></li>
+                <li><a href="employers.html#story">Case Studies</a></li>
+                <li><a href="employers.html#resources">Employer Resources</a></li>
+                <li><a href="fit-northern-ireland.html">FIT Northern Ireland</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Funders &amp; Partners -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-funders">Funders &amp; Partners <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-funders">
+              <a class="nav-menu__head" href="funders.html" data-match="funders.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Funders &amp; Partners hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Funders</p>
+              <ul class="nav-menu__list">
+                <li><a href="funders.html#funders">Who funds FIT</a></li>
+                <li><a href="funders.html#impact">Impact &amp; Outcomes</a></li>
+                <li><a href="funders.html#projects">Funding Opportunities</a></li>
+                <li><a href="publications.html">Publications &amp; Reports</a></li>
+                <li><a href="board-of-directors.html">Governance &amp; Board</a></li>
+              </ul>
+              <p class="nav-menu__group">Partners</p>
+              <ul class="nav-menu__list">
+                <li><a href="funders.html#partners">Our Partners</a></li>
+                <li><a href="funders.html#projects">Irish Projects</a></li>
+                <li><a href="funders.html#projects">EU Projects</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Schools -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-schools">Schools &amp; Colleges <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-schools">
+              <a class="nav-menu__head" href="choosetech.html" data-match="choosetech.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Schools &amp; Colleges hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Schools</p>
+              <ul class="nav-menu__list">
+                <li><a href="choosetech.html">Choose Tech</a></li>
+                <li><a href="hero-in-tech.html">HERo in Tech</a></li>
+                <li><a href="choosetech.html#educators">Teacher &amp; Guidance Resources</a></li>
+                <li><a href="choosetech.html#register">School Enquiry</a></li>
+              </ul>
+              <p class="nav-menu__group">Colleges &amp; training centres</p>
+              <ul class="nav-menu__list">
+                <li><a href="courses.html">Courses &amp; Course Search</a></li>
+                <li><a href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeships</a></li>
+                <li><a href="skills-for-jobs.html">Skills for Jobs</a></li>
+                <li><a href="stepin2tech.html">Step In2 Tech</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- About & News -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-about">About &amp; News <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-about">
+              <a class="nav-menu__head" href="about.html" data-match="about.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">About &amp; News hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">About</p>
+              <ul class="nav-menu__list">
+                <li><a href="about.html">About FIT</a></li>
+                <li><a href="board-of-directors.html">Team &amp; Governance</a></li>
+                <li><a href="careers.html">Careers at FIT</a></li>
+                <li><a href="about.html#fit-eu">FIT EU</a></li>
+                <li><a href="publications.html">Publications &amp; Reports</a></li>
+                <li><a href="safeguarding.html">Policies Hub</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+              </ul>
+              <p class="nav-menu__group">News &amp; events</p>
+              <ul class="nav-menu__list">
+                <li><a href="news-and-events.html#stories">Latest News</a></li>
+                <li><a href="news-and-events.html#events">Events</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+
+        <a class="header-arena" data-arena-layout="horizontal" href="https://fitknowledgearena.com/" target="_blank" rel="noopener" aria-label="FIT Knowledge Arena"><img class="header-arena__logo" src="assets/img/ka/brain-horizontal-reversed.png" alt="FIT Knowledge Arena"></a>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="fit-ai ct-page">
+        <section class="ct-hero" id="top" aria-labelledby="ct-hero-title">
+          <div class="container ct-hero__inner">
+            <div class="ct-hero__copy">
+              <p class="eyebrow">Choose Tech &mdash; for schools, colleges &amp; training centres</p>
+              <h1 id="ct-hero-title">Widening access <span>&amp; inclusion</span> toward a tech career.</h1>
+              <div class="btn-row">
+                <a class="fit-btn fit-btn--yellow" href="https://idea.org.uk/4cb18209/signup" target="_blank" rel="noopener">Register your group <span aria-hidden="true">&nearr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="#register">How to register <span aria-hidden="true">&darr;</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="ct-supporter-band">
+          <div class="container">
+            <a href="https://www.jpmorganchase.com/" target="_blank" rel="noopener" aria-label="Supported by JPMorganChase"><img src="assets/img/supported-by-jpmc-white.png" alt="Supported by JPMorganChase"></a>
+          </div>
+        </div>
+
+        <section class="jump-band ct-jump" aria-label="Jump to page section">
+          <div class="container">
+            <nav class="jump-nav" aria-label="Jump to section">
+              <span class="jump-nav__label">Jump to:</span>
+              <ul>
+                <li><a href="#about">Overview</a></li>
+                <li><a href="#involve">What's involved</a></li>
+                <li><a class="jump-nav__register" href="#register">Register</a></li>
+                <li><a href="#educators">Educators</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#support">Support</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <section class="ct-about" id="about" aria-labelledby="about-title">
+          <div class="container ct-about__grid">
+            <div class="ct-about__copy">
+              <span class="section-kicker">About the programme</span>
+              <h2 id="about-title">Inspiring young people into tech, <em>earlier.</em></h2>
+              <p>The &lsquo;Choose Tech&rsquo; programme, supported by JPMorganChase, seeks to engage young people (15-20yr olds) into the exciting world of tech at an earlier stage. The programme aims to inspire young people to learn new skills and develop existing ones, and to provide support and information on pathways into a tech career, including <a class="ct-link" href="tech-apprenticeships.html">pre-tech and tech apprenticeships</a></p>
+              <p>This free programme addresses the structural under-representation of socio-economically disadvantaged young people and increases diversity in the pre-tech &amp; tech apprenticeships and the tech sector.</p>
+              <a class="ct-about__contact" href="mailto:choosetech@fit.ie?subject=Query%20about%20Choose%20Tech">&#9993;&nbsp; choosetech@fit.ie</a>
+            </div>
+            <div class="ct-brandcard">
+              <img src="https://fit.ie/wp-content/uploads/2020/07/CHOOSE-TECH-LOGO-01-600x388.png" alt="Choose Tech programme logo">
+              <dl class="ct-who" aria-label="Who is the programme for?">
+                <div><dt>DEIS schools</dt><dd>15&ndash;18 year olds</dd></div>
+                <div><dt>Youthreach</dt><dd>15&ndash;20 year olds</dd></div>
+                <div><dt>Nationwide</dt><dd>Free for schools, centres and groups across Ireland</dd></div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-involve" id="involve" aria-labelledby="involve-title">
+          <div class="container">
+            <div class="ct-involve__head">
+              <div>
+                <span class="section-kicker">What does the programme involve?</span>
+                <h2 id="involve-title">Four ways your class<br><em>gets hands-on with tech</em></h2>
+              </div>
+              <div class="ct-involve__intro">
+                <a class="fit-btn" href="https://idea.org.uk/4cb18209/signup" target="_blank" rel="noopener">Register your group <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+            <ul class="ct-benefit-grid">
+              <li>
+                <span class="ct-benefit-grid__icon" aria-hidden="true"><img src="https://fit.ie/wp-content/uploads/2020/09/icons-01.svg" alt=""></span>
+                <h3>FIT Career Pathways Workshops</h3>
+                <p>Video learning sessions: topics include tech roles, apprenticeships and how to get started.</p>
+              </li>
+              <li>
+                <span class="ct-benefit-grid__icon" aria-hidden="true"><img src="https://fit.ie/wp-content/uploads/2020/09/icons-03.svg" alt=""></span>
+                <h3>70+ bite-sized modules</h3>
+                <p>Students learn online at their own pace, earn digital badges and find the topics that interest them most. For more information check out our <a href="https://vimeo.com/392461023" target="_blank" rel="noopener">video here</a>.</p>
+              </li>
+              <li>
+                <span class="ct-benefit-grid__icon" aria-hidden="true"><img src="https://fit.ie/wp-content/uploads/2020/09/icons-02-1.svg" alt=""></span>
+                <h3>Information Packs</h3>
+                <p>For educators/leaders and students: Career Roadmap Posters, the Choose Tech Educators Guide, Career Guidance leaflets and <a class="ct-link" href="tech-apprenticeships.html">Tech Apprenticeship</a> brochures.</p>
+              </li>
+              <li>
+                <span class="ct-benefit-grid__icon" aria-hidden="true"><img src="https://fit.ie/wp-content/uploads/2020/09/icons-04.svg" alt=""></span>
+                <h3>Near Peer Tech Engagements</h3>
+                <p>Give your class/group an insight into the tech sector by meeting tech professionals &mdash; what different roles involve and the skills needed. Virtual and/or in classroom.</p>
+              </li>
+            </ul>
+
+            <div class="ct-orgbenefits">
+              <div>
+                <span class="section-kicker">Find out more about Choose Tech</span>
+                <h3>Challenges, badges and a real insight into tech life.</h3>
+                <p>Through a series of online challenges, students earn career-enhancing badges, build their understanding of the tech industry and its roles, and get an insight into the everyday life of tech professionals.</p>
+                <p>Registering on our partners portal gives you the Organiser Management System to track learner progress. We will then be in touch to arrange your information pack, FIT Career Pathways Workshops and Near Peer Engagements.</p>
+                <div class="btn-row">
+                  <a class="fit-btn fit-btn--ghost" href="https://vimeo.com/392461023" target="_blank" rel="noopener">Watch the programme video <span aria-hidden="true">&nearr;</span></a>
+                </div>
+              </div>
+              <div>
+                <span class="section-kicker">The benefits for your organisation</span>
+                <ul class="ct-check">
+                  <li>Improve your students' digital literacy, skills &amp; knowledge</li>
+                  <li>Help your class/group get more confident with technology and find out what subjects they are most interested in</li>
+                  <li>Learn more about the pathways to a career in tech, such as a <a class="ct-link ct-link--light" href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeship</a> and <a class="ct-link ct-link--light" href="tech-apprenticeships.html">Tech Apprenticeship</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-register" id="register" aria-labelledby="register-title">
+          <div class="container">
+            <div class="ct-register__heading">
+              <div>
+                <span class="section-kicker">Steps to register</span>
+                <h2 id="register-title">Registering your group takes <em>five simple steps</em></h2>
+              </div>
+              <p>For groups that meet the criteria: 15&ndash;18 year olds in a DEIS school, or 15&ndash;20 year olds in Youthreach.</p>
+            </div>
+            <ol class="ct-steps">
+              <li><span>01</span><div><h3>Educators register first</h3><p>Educators and Group Leaders register via the FIT unique link &mdash; name, date of birth, email and a password (8+ characters, 1 symbol, 1 number).</p></div></li>
+              <li><span>02</span><div><h3>Register your school or organisation</h3><p>Click &lsquo;Organisers&rsquo;, enter your organisation name and type, then &lsquo;New Group&rsquo; to set up your class with its own URL or class code.</p></div></li>
+              <li><span>03</span><div><h3>Students join via your URL</h3><p>Share your organisation's unique URL. Students enter a nickname, date of birth*, email address and their own password.</p></div></li>
+              <li><span>04</span><div><h3>Or join via class code</h3><p>Students can instead register at www.idea.org.uk/register, then add your &lsquo;Organiser Code&rsquo; under Edit Profile.</p></div></li>
+              <li><span>05</span><div><h3>Log in &amp; track progress</h3><p>Log in at www.idea.org.uk &mdash; admin users track group progress in the dashboard tab.</p></div></li>
+            </ol>
+            <p class="ct-register__note">*The digital age of consent in Ireland is 16 years. It is the responsibility of the school/organisation to seek permission from a parent/guardian for student participation.</p>
+
+            <div class="ct-register__cta">
+              <div>
+                <h3>Register your group and track their progress.</h3>
+                <p>Please ensure that you have read the steps above first. For further assistance check out our <a href="https://vimeo.com/600891167" target="_blank" rel="noopener">support video</a> or <a href="mailto:choosetech@fit.ie">contact support here</a>.</p>
+                <p class="ct-track__label" id="track-label">Your dashboard tracks:</p>
+                <ul class="ct-track" aria-labelledby="track-label">
+                  <li>Organisations</li><li>Learners</li><li>Digital Pathways badges</li><li>iDEA badges</li><li>Awards</li>
+                </ul>
+              </div>
+              <div class="ct-register__actions">
+                <a class="fit-btn fit-btn--yellow" href="https://idea.org.uk/4cb18209/signup" target="_blank" rel="noopener">Register here <span aria-hidden="true">&nearr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="https://vimeo.com/600891167" target="_blank" rel="noopener">Watch the how-to video <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-educators" id="educators" aria-labelledby="educators-title">
+          <div class="container ct-educators__grid">
+            <div class="ct-educators__copy">
+              <span class="section-kicker">For educators</span>
+              <h2 id="educators-title">Bring tech careers<br><em>into your classroom</em></h2>
+              <p>Find out how to get your students on a tech certification pathway with the <a class="ct-link" href="faq-choose-tech.html#resources">Choose Tech Educators Guide</a>.</p>
+              <p>Become a certified FIT Tech Apprenticeship Ambassador and earn Bronze, Silver or Gold recognition for your school or centre.</p>
+              <p>Programme guides, the Educators Guide, roadmaps, Ambassador materials and student leaflets are all gathered on one page, with answers to the questions we get asked most.</p>
+              <div class="btn-row">
+                <a class="fit-btn" href="faq-choose-tech.html#resources">Choose Tech FAQs &amp; downloads <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+            <div class="ct-educators__side">
+              <figure class="ct-ambassador">
+              <h3>FIT Tech Ambassador Awards</h3>
+              <p>Certify your skills as a FIT Tech Apprentice Ambassador and work towards Bronze, Silver and Gold recognition for your school or centre.</p>
+              <div class="ct-badge-row">
+                <img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/11/FIT-Credly-Ambassador-badge-2023-480x480-tinified.png" alt="FIT Credly Ambassador badge">
+                <img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/11/FIT-Credly-Tech-Ambassador-badge-2023-480x480-tinified.png" alt="FIT Credly Tech Ambassador badge">
+                <img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/11/FIT-Credly-Bronze-badge-2023-480x480-tinified.png" alt="Bronze Tech Ambassador badge">
+                <img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/11/FIT-Credly-Silver-badge-2023-480x480-tinified.png" alt="Silver Tech Ambassador badge">
+                <img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/11/FIT-Credly-Gold-badge-2023-480x480-tinified.png" alt="Gold Tech Ambassador badge">
+              </div>
+              <figcaption>Ambassador, Tech Ambassador, Bronze, Silver and Gold badges &mdash; issued via Credly.</figcaption>
+              </figure>
+              <div class="ct-covers">
+                <a href="faq-choose-tech.html#resources"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2020/09/EDUCATORS-COV.jpg" alt="Choose Tech Educators Guide cover — find it in the downloads"></a>
+                <a href="faq-choose-tech.html#resources"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2022/08/FIT-CREDLY-LEAFLET.jpg" alt="Certify your skills as a FIT Tech Apprentice Ambassador — find the leaflet in the downloads"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-students" id="students" aria-labelledby="students-title">
+          <div class="container ct-students__grid">
+            <div class="ct-students__copy">
+              <span class="section-kicker">For students</span>
+              <h2 id="students-title">Discover your path<br><em>into tech</em></h2>
+              <p>Grow confident with technology through Choose Tech by earning digital badges and awards that build your tech knowledge and digital literacy skills, and make your CV stand out.</p>
+              <p>Choose Tech helps you find the area of tech that interests you and the career opportunities in the sector. There are many pathways into tech, and the hardest part is knowing where to start &mdash; so we have mapped the skills you already use every day against the <a class="ct-link" href="courses.html">FIT programmes</a> that get you certified.</p>
+              <div class="btn-row">
+                <a class="fit-btn" href="faq-choose-tech.html#resources">Student guides &amp; downloads <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn fit-btn--dark-outline" href="faq-choose-tech.html">Choose Tech FAQs <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+            <div class="ct-startcards">
+              <div class="ct-startcard">
+                <img loading="lazy" src="https://fit.ie/wp-content/uploads/2021/10/Digital-Pathways-Badge-Icon-300x300.png" alt="FIT iDEA Digital Pathways badge">
+                <div>
+                  <h3>FIT Digital Pathways Badge</h3>
+                  <p>To get started, try the FIT Digital Pathways Badge (Worker section) to learn more about the tech sector, opportunities in tech and pathways to achieve a career in tech.</p>
+                  <a class="ct-minilink" href="https://idea.org.uk/badge/digital-pathways" target="_blank" rel="noopener">Try the badge &nearr;</a>
+                </div>
+              </div>
+              <div class="ct-startcard">
+                <img loading="lazy" src="https://fit.ie/wp-content/uploads/2021/08/gaisce-challenge-partner-logo-540x540-1-300x300.png" alt="Gaisce Challenge Partner logo">
+                <div>
+                  <h3>Gaisce President's Award</h3>
+                  <p>Learn about the world of tech and work towards your Gaisce President's Award with Choose Tech.</p>
+                  <a class="ct-minilink" href="mailto:choosetech@fit.ie?subject=Query%20about%20An%20Gaisce%20and%20Choose%20Tech">Email us to get started &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-paths" aria-labelledby="paths-title">
+          <div class="container">
+            <div class="ct-paths__shell">
+              <div class="ct-paths__copy">
+                <span class="section-kicker">Paths to a career in tech</span>
+                <h2 id="paths-title">Know the routes to the tech workforce.</h2>
+                <p>If you are interested in learning more about working in technology, download our roadmap with the routes you can take towards the tech workforce &mdash; or explore the pathways below.</p>
+                <div class="btn-row">
+                  <a class="fit-btn fit-btn--yellow" href="faq-choose-tech.html#resources">Roadmap &amp; brochures <span aria-hidden="true">&rarr;</span></a>
+                  <a class="fit-btn fit-btn--ghost" href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeships <span aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+              <div class="ct-paths__cards">
+                <a class="ct-path-card" href="tech-apprenticeships.html">
+                  <span>Pathway</span>
+                  <h3>Pre-Tech Apprenticeship</h3>
+                  <p>The first step to your future in tech.</p>
+                  <b>Learn more &rarr;</b>
+                </a>
+                <a class="ct-path-card" href="tech-apprenticeships.html#become">
+                  <span>Pathway</span>
+                  <h3>Become an ICT Apprentice</h3>
+                  <p>Your pathway to a rewarding career in Ireland's booming tech sector.</p>
+                  <b>Learn more &rarr;</b>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-impact" id="stories" aria-labelledby="impact-title">
+          <div class="container">
+            <div class="ct-impact__head">
+              <span class="section-kicker">Educator testimonials</span>
+              <h2 id="impact-title">What educators say about <em>Choose Tech</em></h2>
+            </div>
+            <div class="ct-testimonial-grid">
+              <blockquote>
+                <span class="ct-testimonial-grid__type">Educator</span>
+                <p>&ldquo;Since becoming involved in the Choose Tech programme, there has been a noticeable improvement in our students &mdash; not only in their IT skills but also their attitude to independent learning&hellip; Some students who would normally struggle in everyday school life are now flourishing, as they have access to an IT curriculum that they understand and one where they can work at their own pace.&rdquo;</p>
+                <footer><strong>Sarah Kavanagh</strong><span>Beneavin College</span></footer>
+              </blockquote>
+              <blockquote>
+                <span class="ct-testimonial-grid__type">Educator</span>
+                <p>&ldquo;As we are an all-girls school in a DEIS area we often struggle to get students interested in the world of tech&hellip; Choose Tech allowed us to give something to the students that may have an interest in going into the world of tech, while also introducing the area to others in a fun and interactive way that doesn't go over their head.&rdquo;</p>
+                <footer><strong>Keith O'Brien</strong><span>St Dominic's, Ballyfermot</span></footer>
+              </blockquote>
+              <blockquote>
+                <span class="ct-testimonial-grid__type">Educator</span>
+                <p>&ldquo;The videos are an excellent way of communicating to students the range of careers that are possible in IT&hellip; The fact that the students in the videos are young makes it so relatable for our students too &mdash; they are a brilliant way of motivating the students to keep working on their badges.&rdquo;</p>
+                <footer><strong>Adrienne Murphy</strong><span>Vice Principal, St John's DLS</span></footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-gallery" id="highlights" aria-labelledby="gallery-title">
+          <div class="container">
+            <span class="section-kicker">Highlights &amp; award winners</span>
+            <h2 id="gallery-title">Celebrating our schools and students.</h2>
+            <p class="ct-gallery__lead">Ambassador Awards, roadshows, career fairs and challenge days &mdash; a snapshot of the Choose Tech community in action.</p>
+            <div class="ct-gallery__strip" tabindex="0" role="region" aria-label="Photo gallery — scroll horizontally">
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/05/DSC_0523-300x201.jpg" alt="St Laurence College students and educators"><figcaption>St Laurence College, Loughlinstown &mdash; FIT School Tech Ambassadors 2023.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/05/Image-2-225x300.jpeg" alt="TY Graduation at Loreto College Crumlin"><figcaption>TY Graduation 2023, Loreto College Crumlin &mdash; Digital Awards for students and the FIT Tech Ambassador Award for the school.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/04/IMG-20230328-WA0006-300x225.jpg" alt="Royal and Prior Comprehensive School award"><figcaption>Our first FIT Tech Ambassador Award, presented to Royal &amp; Prior Comprehensive School at the Donegal Roadshow, March 2023.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2024/03/Tech-Ascent-Social-Engineering-Challenge-300x225.jpg" alt="Tech Ascent Social Engineering Challenge winners"><figcaption>Amy and Gabby of Presentation Community College Terenure with FIT CEO Peter Davitt &mdash; fastest to crack the Social Engineering Challenge at Tech Ascent, Croke Park 2024.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2024/05/Rush-May-2024-300x150.jpg" alt="St Joseph's Secondary School Rush Bronze Award recipients"><figcaption>St Joseph's Secondary School, Rush &mdash; 4,296 micro-credential badges with 292 students and 33 Bronze awards since 2022.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2025/04/IMR-pic-1--284x300.jpg" alt="Students exploring VR headsets"><figcaption>Students exploring VR through the IMR Intro to Engineering workshop, Spring 2025.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2025/04/FIT-Females-in-Tech-Event-November-2024-300x173.jpg" alt="FIT Females in Tech Event"><figcaption>A busy day at FIT&rsquo;s Females in Tech Event, November 2024.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2025/04/World-Skills-2024-1-300x223.jpg" alt="World Skills 2024 at the RDS"><figcaption>World Skills 2024 at the RDS.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2025/04/IMG_0489-225x300.jpg" alt="Aimee and Ashlee Keogh, keynote speakers"><figcaption>Keynote speakers Aimee and Ashlee Keogh of Tallaght Community School, on their app Mind the Gap and winning BT Young Scientist 2024 and 2025.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2025/04/IMG_0522-300x225.jpg" alt="Choose Tech AI Project participants"><figcaption>Participants of the Choose Tech Artificial Intelligence Project from St Mary's Holy Faith, Killester.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2025/04/IMG_0671-225x300.jpg" alt="Youthreach Crumlin Silver Award winners"><figcaption>Silver Award winners from Youthreach Crumlin &mdash; Ambassador Awards Ceremony, March 2025.</figcaption></figure>
+              <figure><img loading="lazy" src="https://fit.ie/wp-content/uploads/2025/04/IMG_0725-1-300x225.jpg" alt="Award winners group photo"><figcaption>Award winners of the FIT Choose Tech Ambassador Awards Ceremony, Dublin, March 2025.</figcaption></figure>
+            </div>
+            <p class="ct-gallery__hint" aria-hidden="true">Scroll sideways for more &rarr;</p>
+          </div>
+        </section>
+
+        <section id="ai-centre" aria-labelledby="ct-ai-title" style="background:var(--navy);color:#fff;padding-block:56px;">
+          <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,60px);align-items:center;">
+            <div>
+              <span class="section-kicker" style="color:var(--yellow);">Spotlight</span>
+              <h2 id="ct-ai-title" style="color:#fff;margin:10px 0 14px;font-size:clamp(26px,3vw,36px);line-height:1.18;">AI Centre of Excellence</h2>
+              <p style="max-width:52ch;margin:0 0 24px;color:rgba(255,255,255,.88);">FIT's AI Training Centre of Excellence brings AI training from the world's leading technology companies into a single pathway &mdash; useful for students exploring tech and for teachers building AI into their own practice.</p>
+              <a class="fit-btn" style="background:var(--yellow);border-color:var(--yellow);color:var(--navy);" href="ai-training.html">Visit the AI Centre of Excellence <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div style="aspect-ratio:4/3;border-radius:14px;overflow:hidden;">
+              <img loading="lazy" decoding="async" src="assets/img/woman-office-tablet.jpg" alt="A woman using a tablet in a modern office" style="display:block;width:100%;height:100%;object-fit:cover;">
+            </div>
+          </div>
+        </section>
+
+        <section class="ct-contact" id="support" aria-labelledby="support-title">
+          <div class="container">
+            <span class="section-kicker">Outreach support</span>
+            <h2 id="support-title">There is a lot to take in. We get that.</h2>
+            <p>We are here to help at every step. Each organisation is assigned a member of the <a class="ct-link ct-link--light" href="contact.html">FIT Choose Tech Team</a>, who will get you registered and arrange dates for the FIT workshops &amp; Near Peer Engagements. Email us with your name, contact number and email address and we will be in touch.</p>
+            <p class="ct-contact__social"><strong>Follow us on social media</strong> and tag us in your Choose Tech projects and achievements &mdash; <strong>@fastrackintoit</strong> (X, LinkedIn, Instagram, TikTok, Facebook)</p>
+            <div class="btn-row">
+              <a class="fit-btn" href="mailto:choosetech@fit.ie?subject=Query%20about%20Choose%20Tech">Email us for support <span aria-hidden="true">&rarr;</span></a>
+              <a class="fit-btn fit-btn--dark-outline" href="faq-choose-tech.html">Choose Tech FAQs <span aria-hidden="true">&rarr;</span></a>
+              <a class="fit-btn fit-btn--dark-outline" href="https://idea.org.uk/4cb18209/signup" target="_blank" rel="noopener">Register your group <span aria-hidden="true">&nearr;</span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ============================ SITE FOOTER =========================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand--footer" href="index.html" aria-label="FIT — home">
+              <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
+            </a>
+            <p>Creating inclusive pathways into Ireland's digital economy since 1999.</p>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/fit-fastrack-to-information-technology/" target="_blank" rel="noopener" aria-label="FIT on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
+              <a href="https://x.com/FastrackintoIT" target="_blank" rel="noopener" aria-label="FIT on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.01 4.13H5.05z"/></svg></a>
+              <a href="https://www.facebook.com/fastracktoit/" target="_blank" rel="noopener" aria-label="FIT on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.1 1.48-4.1 4.2v2.34H7.7V13h2.74v8z"/></svg></a>
+              <a href="https://www.youtube.com/@FastrackintoIT" target="_blank" rel="noopener" aria-label="FIT on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7c-.23-.85-.9-1.5-1.75-1.73C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.85.37c-.85.23-1.52.88-1.75 1.73C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.85.9 1.5 1.75 1.73C4.7 18.8 12 18.8 12 18.8s7.3 0 8.85-.37c.85-.23 1.52-.88 1.75-1.73C23 15.2 23 12 23 12zM9.75 15.02V8.98L15 12z"/></svg></a>
+              <a href="https://www.instagram.com/fastrackintoit/" target="_blank" rel="noopener" aria-label="FIT on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.06 1.97.24 2.43.42a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.18.46.36 1.26.42 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.97-.42 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.18-1.26.36-2.43.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.97-.24-2.43-.42a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.18-.46-.36-1.26-.42-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.06-1.17.24-1.97.42-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.61 1.8c.46-.18 1.26-.36 2.43-.42C9.31 1.32 9.69 1.31 12 1.31zm0 3.5a6.3 6.3 0 1 0 0 12.6 6.3 6.3 0 0 0 0-12.6zm0 2a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6zm6.4-3.9a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg></a>
+              <a href="https://www.tiktok.com/@fastrackintoit1" target="_blank" rel="noopener" aria-label="FIT on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.9a3.1 3.1 0 1 1-2.2-3v-3.2a6.3 6.3 0 1 0 5.4 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.4z"/></svg></a>
+            </div>
+          </div>
+
+          <nav class="footer-col" aria-label="Learners footer links">
+            <h2>Learners</h2>
+            <ul>
+              <li><a href="learners.html">Learners hub</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="tech-apprenticeships.html">Tech Apprenticeships</a></li>
+              <li><a href="cuimsiu-programme.html">Cuimsi&uacute; Programme</a></li>
+              <li><a href="hero-in-tech.html">HERo in Tech</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Employers footer links">
+            <h2>Employers</h2>
+            <ul>
+              <li><a href="employers.html">Employers hub</a></li>
+              <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
+              <li><a href="cuimsiu-programme.html">Employer Network</a></li>
+              <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+              <li><a href="https://fit.ie/tech-apprenticeship-policies-and-procedures/" target="_blank" rel="noopener">Policies &amp; Procedures</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Funders footer links">
+            <h2>Funders &amp; Partners</h2>
+            <ul>
+              <li><a href="funders.html">Funders &amp; Partners</a></li>
+              <li><a href="funders.html#partners">Partners</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="funders.html#projects">Projects &amp; Resources</a></li>
+              <li><a href="funders.html#impact">Impact</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Company footer links">
+            <h2>FIT</h2>
+            <ul>
+              <li><a href="about.html">About FIT</a></li>
+              <li><a href="about.html#team">Our Team</a></li>
+              <li><a href="news-and-events.html">News &amp; Events</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col footer-col--connect" aria-label="Get in touch">
+            <h2>Connect</h2>
+            <ul>
+              <li><a href="mailto:info@fit.ie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2.2V17h16V7.2l-8 5.6z"/></svg>info@fit.ie</a></li>
+              <li><a href="tel:+35318825570"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.4 1 1 0 0 1-.25 1z"/></svg>+353 1 882 5570</a></li>
+              <li><a href="contact.html#locations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Our Locations</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 FIT Ltd. FIT is a non-profit organisation and registered charity (RCN 20044572).</p>
+          <div class="footer-legal">
+            <a href="https://fit.ie/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://fit.ie/cookie-policy/" target="_blank" rel="noopener">Cookie Policy</a>
+            <a href="safeguarding.html">Safeguarding</a>
+            <a href="request-a-change.html">Website change requests</a>
+            <a href="https://fit.ie/data-protection-forms/" target="_blank" rel="noopener">Data Protection Forms</a>
+            <a href="https://fit.ie/accessibility-statement/" target="_blank" rel="noopener">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
