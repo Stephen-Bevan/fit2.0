@@ -306,6 +306,26 @@ select:focus-visible,
   backdrop-filter: blur(14px);
 }
 
+/* Branch watermark — identifies which deployment/branch is being viewed */
+.branch-watermark {
+  position: fixed;
+  top: 8px;
+  right: 14px;
+  z-index: 200;
+  padding: 5px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  background: rgba(0, 20, 45, 0.55);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .header-inner {
   min-height: var(--fit-header-h);
   display: flex;
