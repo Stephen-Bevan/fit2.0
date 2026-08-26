@@ -6,7 +6,7 @@
 
 This folder is the live site: a **redo of the original [fit.ie](https://fit.ie)** website for FIT (Fastrack into Information Technology), an Irish non-profit building inclusive pathways into the tech sector for learners, employers, funders and partners.
 
-It's published as-is via GitHub Pages — no build step, framework or bundler. Every page is a self-contained HTML file sharing one global stylesheet (`styles.css`) and one global script (`script.js`).
+It's published via GitHub Pages — no build step, framework or bundler of its own. Every page is a self-contained HTML file sharing one global stylesheet (`styles.css`) and one global script (`script.js`).
 
 ## Driving the site
 

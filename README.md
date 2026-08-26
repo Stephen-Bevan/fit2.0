@@ -12,7 +12,7 @@ It's a static, hand-built site: no build step, framework or bundler. Every page 
 
 Served straight from this repo's `docs/` folder via **GitHub Pages**: https://stephen-bevan.github.io/fit2.0/
 
-Enable it under **Settings → Pages → Deploy from a branch → `main` / `docs`** if it isn't already.
+Deployed via **Settings → Pages → Source: GitHub Actions**, which runs a Jekyll build over `docs/` before publishing. A `docs/.nojekyll` marker is present, but this build path still runs the files through Jekyll rather than serving them completely raw — that's a known source of occasional build hiccups on a plain static site like this one. If deployments start failing intermittently, switching **Source** to **Deploy from a branch** (`main` / `docs`) skips Jekyll entirely and serves the files as-is, which is simpler for a site with no Jekyll content in it.
 
 ## Driving the site (running it locally)
 
