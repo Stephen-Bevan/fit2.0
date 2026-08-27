@@ -20,6 +20,23 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <style>
+    .faq-cols { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 30px 72px; align-items: start; }
+    .faq-aside { position: static; }
+    .faq-aside .section-head p { font-size: 15.5px; line-height: 1.6; }
+    .faq-count {
+      margin: 0 0 14px;
+      font-family: "Work Sans", Arial, sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fit-muted);
+    }
+    .jump-nav { position: sticky; top: var(--fit-header-h); z-index: 6; }
+    @media (max-width: 900px) {
+      .faq-cols { grid-template-columns: 1fr; gap: 24px; }
+      .jump-nav { position: static; }
+    }
     .faq-list { counter-reset: faq; max-width: 760px; }
     .faq-qa {
       counter-increment: faq;

@@ -175,7 +175,7 @@
 <!-- FIT AI Training Centre of Excellence — Elementor HTML-widget fragment. Brand-aligned (Rubik + Work Sans, #006CA3 / #002957 / #FFCE34 / #EDEEEF). All CSS scoped under .fit-ai. Spans the full page width (scrollbar-aware, no horizontal scroll) + mobile responsive. Paste into one Elementor "HTML" widget. -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@500;600;700&display=swap');
-.fit-ai-widget{
+.fit-ai{
   --blue:#006ca3;--navy:#002957;--yellow:#ffce34;--teal:#1fb0bc;--grey:#edeeef;
   --shadow:0 18px 42px rgba(0,41,87,.16);
   color:var(--navy);font:400 18px/1.6 'Rubik',Arial,Helvetica,sans-serif;
@@ -183,119 +183,119 @@
   width:calc(100vw - var(--fitai-sbw, 0px));max-width:calc(100vw - var(--fitai-sbw, 0px));
   margin-left:calc(50% - 50vw + (var(--fitai-sbw, 0px) / 2));overflow-x:hidden;overflow-x:clip
 }
-.fit-ai-widget *{box-sizing:border-box}
-.fit-ai-widget ul,.fit-ai-widget li{list-style:none!important}
-.fit-ai-widget li::marker{content:""!important}
-.fit-ai-widget li::before{content:none!important;display:none!important}
-.fit-ai-widget :is(h1,h2,h3){font-family:'Rubik',Arial,Helvetica,sans-serif;font-weight:600}
-.fit-ai-widget :is(h1,h2,h3,p,li){overflow-wrap:break-word;word-break:normal}
-.fit-ai-widget a{color:var(--blue);text-decoration:none!important}
-.fit-ai-widget a:hover,.fit-ai-widget a:focus,.fit-ai-widget a:active{text-decoration:none!important}
-.fit-ai-widget [id]{scroll-margin-top:100px}
-.fit-ai-widget a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;box-shadow:0 0 0 3px var(--navy);border-radius:2px}
-.fit-ai-widget .skip-link{position:fixed;top:12px;left:12px;z-index:9999;padding:12px 18px;background:#fff;color:var(--navy);font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;border:3px solid var(--yellow);border-radius:4px;transform:translateY(-160%)}
-.fit-ai-widget .skip-link:focus{transform:translateY(0)}
+.fit-ai *{box-sizing:border-box}
+.fit-ai ul,.fit-ai li{list-style:none!important}
+.fit-ai li::marker{content:""!important}
+.fit-ai li::before{content:none!important;display:none!important}
+.fit-ai :is(h1,h2,h3){font-family:'Rubik',Arial,Helvetica,sans-serif;font-weight:600}
+.fit-ai :is(h1,h2,h3,p,li){overflow-wrap:break-word;word-break:normal}
+.fit-ai a{color:var(--blue);text-decoration:none!important}
+.fit-ai a:hover,.fit-ai a:focus,.fit-ai a:active{text-decoration:none!important}
+.fit-ai [id]{scroll-margin-top:100px}
+.fit-ai a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;box-shadow:0 0 0 3px var(--navy);border-radius:2px}
+.fit-ai .skip-link{position:fixed;top:12px;left:12px;z-index:9999;padding:12px 18px;background:#fff;color:var(--navy);font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;border:3px solid var(--yellow);border-radius:4px;transform:translateY(-160%)}
+.fit-ai .skip-link:focus{transform:translateY(0)}
 
-.fit-ai-widget .container{width:min(1180px,calc(100% - 32px));margin:0 auto}
-.fit-ai-widget .band{padding:48px 0}
-.fit-ai-widget .band--tint{background:var(--grey)}
+.fit-ai .container{width:min(1180px,calc(100% - 32px));margin:0 auto}
+.fit-ai .band{padding:48px 0}
+.fit-ai .band--tint{background:var(--grey)}
 
-.fit-ai-widget .fit-btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;margin:6px 8px 6px 0;border:2px solid var(--blue);border-radius:4px;padding:12px 22px;background:var(--blue);color:#fff;font-family:'Work Sans',Arial,Helvetica,sans-serif;font-weight:600;box-shadow:0 8px 18px rgba(0,41,87,.18);transition:background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
-.fit-ai-widget .fit-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,41,87,.25)}
-.fit-ai-widget .fit-btn--ghost{background:#fff;color:var(--navy);border-color:#fff}
-.fit-ai-widget .fit-btn--ghost:hover{background:transparent;color:#fff;border-color:#fff}
-.fit-ai-widget .hero-ai .fit-btn--ghost{background:transparent;color:#fff;border-color:#fff}
-.fit-ai-widget .hero-ai .fit-btn--ghost:hover{background:#fff;color:var(--navy);border-color:#fff}
-.fit-ai-widget .fit-btn--sm{min-height:44px;padding:10px 18px;font-size:15px}
-.fit-ai-widget .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 4px}
-.fit-ai-widget .btn-row .fit-btn{margin:0}
+.fit-ai .fit-btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;margin:6px 8px 6px 0;border:2px solid var(--blue);border-radius:4px;padding:12px 22px;background:var(--blue);color:#fff;font-family:'Work Sans',Arial,Helvetica,sans-serif;font-weight:600;box-shadow:0 8px 18px rgba(0,41,87,.18);transition:background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.fit-ai .fit-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,41,87,.25)}
+.fit-ai .fit-btn--ghost{background:#fff;color:var(--navy);border-color:#fff}
+.fit-ai .fit-btn--ghost:hover{background:transparent;color:#fff;border-color:#fff}
+.fit-ai .hero-ai .fit-btn--ghost{background:transparent;color:#fff;border-color:#fff}
+.fit-ai .hero-ai .fit-btn--ghost:hover{background:#fff;color:var(--navy);border-color:#fff}
+.fit-ai .fit-btn--sm{min-height:44px;padding:10px 18px;font-size:15px}
+.fit-ai .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 4px}
+.fit-ai .btn-row .fit-btn{margin:0}
 
-.fit-ai-widget .hero-ai{position:relative;isolation:isolate;overflow:hidden;color:#fff;border-bottom:5px solid var(--blue);background-color:#00152f;background-image:linear-gradient(90deg,rgba(0,7,18,.98) 0%,rgba(0,21,47,.92) 42%,rgba(0,41,87,.52) 72%,rgba(0,41,87,.18) 100%),url('https://fit.ie/wp-content/uploads/2026/06/A-smiling-woman-standing-in-a-modern-office-uses-a-tablet-behind-a-glass-wall-with-a-laptop-and-desk-lamp-on-a-nearby-desk.png');background-position:center;background-size:cover;background-repeat:no-repeat}
-.fit-ai-widget .hero-ai::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.18));pointer-events:none}
-.fit-ai-widget .hero-ai{min-height:600px;padding:0;display:flex;align-items:center}
-.fit-ai-widget .hero-ai__inner{position:relative;min-height:600px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:108px 0 72px;text-align:left}
-.fit-ai-widget .hero-ai .eyebrow{margin:0 0 14px;color:var(--yellow);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.fit-ai-widget .hero-ai h1{margin:0;max-width:17ch;color:#fff;font-size:clamp(36px,5vw,58px);font-weight:700;line-height:1.05;letter-spacing:-.01em}
-.fit-ai-widget .hero-ai h1 .hl{color:var(--yellow);display:inline;font-size:inherit;line-height:inherit;margin-top:0}
-.fit-ai-widget .hero-ai .hero-sub{margin:16px 0 0;max-width:48ch;color:#fff;font-size:clamp(18px,2.1vw,23px);font-weight:600;line-height:1.4}
-.fit-ai-widget .hero-ai__desc{margin:14px 0 0;max-width:62ch;color:rgba(255,255,255,.86);font-size:clamp(15px,1.55vw,17px);line-height:1.55}
-.fit-ai-widget .hero-ai .btn-row{justify-content:flex-start;margin-top:28px;max-width:520px}
+.fit-ai .hero-ai{position:relative;isolation:isolate;overflow:hidden;color:#fff;border-bottom:5px solid var(--blue);background-color:#00152f;background-image:linear-gradient(90deg,rgba(0,7,18,.98) 0%,rgba(0,21,47,.92) 42%,rgba(0,41,87,.52) 72%,rgba(0,41,87,.18) 100%),url('https://fit.ie/wp-content/uploads/2026/06/A-smiling-woman-standing-in-a-modern-office-uses-a-tablet-behind-a-glass-wall-with-a-laptop-and-desk-lamp-on-a-nearby-desk.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.fit-ai .hero-ai::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.18));pointer-events:none}
+.fit-ai .hero-ai{min-height:600px;padding:0;display:flex;align-items:center}
+.fit-ai .hero-ai__inner{position:relative;min-height:600px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:108px 0 72px;text-align:left}
+.fit-ai .hero-ai .eyebrow{margin:0 0 14px;color:var(--yellow);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.fit-ai .hero-ai h1{margin:0;max-width:17ch;color:#fff;font-size:clamp(36px,5vw,58px);font-weight:700;line-height:1.05;letter-spacing:-.01em}
+.fit-ai .hero-ai h1 .hl{color:var(--yellow);display:inline;font-size:inherit;line-height:inherit;margin-top:0}
+.fit-ai .hero-ai .hero-sub{margin:16px 0 0;max-width:48ch;color:#fff;font-size:clamp(18px,2.1vw,23px);font-weight:600;line-height:1.4}
+.fit-ai .hero-ai__desc{margin:14px 0 0;max-width:62ch;color:rgba(255,255,255,.86);font-size:clamp(15px,1.55vw,17px);line-height:1.55}
+.fit-ai .hero-ai .btn-row{justify-content:flex-start;margin-top:28px;max-width:520px}
 
-.fit-ai-widget .section-head{max-width:74ch;margin:0 0 24px}
-.fit-ai-widget .section-head h2{margin:0 0 8px;color:var(--navy);font-size:clamp(26px,3vw,36px);line-height:1.18}
-.fit-ai-widget .section-head p{margin:0;color:var(--navy)}
+.fit-ai .section-head{max-width:74ch;margin:0 0 24px}
+.fit-ai .section-head h2{margin:0 0 8px;color:var(--navy);font-size:clamp(26px,3vw,36px);line-height:1.18}
+.fit-ai .section-head p{margin:0;color:var(--navy)}
 /* section headings carry no accent bar — the kicker's yellow lead-rule is the accent (matches site-wide sub-header style) */
 
-.fit-ai-widget .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:0;padding:0}
-.fit-ai-widget .feature-card{height:100%;padding:24px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--accent,var(--blue));border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
-.fit-ai-widget .feature-card h3{margin:0 0 8px;color:var(--navy);font-size:19px;line-height:1.22}
-.fit-ai-widget .feature-card p{margin:0;color:var(--navy);font-size:16px;line-height:1.5}
+.fit-ai .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:0;padding:0}
+.fit-ai .feature-card{height:100%;padding:24px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--accent,var(--blue));border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
+.fit-ai .feature-card h3{margin:0 0 8px;color:var(--navy);font-size:19px;line-height:1.22}
+.fit-ai .feature-card p{margin:0;color:var(--navy);font-size:16px;line-height:1.5}
 
-.fit-ai-widget .cta-banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;padding:36px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}
-.fit-ai-widget .cta-banner>div{max-width:60ch}
-.fit-ai-widget .cta-banner h2{margin:0 0 8px;color:#fff;font-size:clamp(24px,2.6vw,32px);line-height:1.18}
-.fit-ai-widget .cta-banner p{margin:0;color:#fff;line-height:1.5}
-.fit-ai-widget .cta-banner .fit-btn{margin:0;flex:none;border-color:var(--blue)}
-.fit-ai-widget .cta-banner .fit-btn:hover{background:#fff;color:var(--navy);border-color:#fff}
-.fit-ai-widget .nl-form{flex:1 1 380px;margin:0}
-.fit-ai-widget .nl-field{display:flex;flex-wrap:wrap;gap:12px}
-.fit-ai-widget .nl-input{flex:1 1 220px;min-width:0;min-height:52px;padding:12px 16px;border:2px solid #fff;border-radius:6px;background:#fff;color:var(--navy);font:600 16px/1.4 'Rubik',Arial,Helvetica,sans-serif}
-.fit-ai-widget .nl-input::placeholder{color:rgba(0,41,87,.55)}
-.fit-ai-widget .nl-input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-.fit-ai-widget .nl-form .fit-btn{flex:none;min-height:52px}
-.fit-ai-widget .nl-msg{margin:12px 0 0;color:var(--yellow);font-size:15px;font-weight:600}
+.fit-ai .cta-banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;padding:36px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.fit-ai .cta-banner>div{max-width:60ch}
+.fit-ai .cta-banner h2{margin:0 0 8px;color:#fff;font-size:clamp(24px,2.6vw,32px);line-height:1.18}
+.fit-ai .cta-banner p{margin:0;color:#fff;line-height:1.5}
+.fit-ai .cta-banner .fit-btn{margin:0;flex:none;border-color:var(--blue)}
+.fit-ai .cta-banner .fit-btn:hover{background:#fff;color:var(--navy);border-color:#fff}
+.fit-ai .nl-form{flex:1 1 380px;margin:0}
+.fit-ai .nl-field{display:flex;flex-wrap:wrap;gap:12px}
+.fit-ai .nl-input{flex:1 1 220px;min-width:0;min-height:52px;padding:12px 16px;border:2px solid #fff;border-radius:6px;background:#fff;color:var(--navy);font:600 16px/1.4 'Rubik',Arial,Helvetica,sans-serif}
+.fit-ai .nl-input::placeholder{color:rgba(0,41,87,.55)}
+.fit-ai .nl-input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.fit-ai .nl-form .fit-btn{flex:none;min-height:52px}
+.fit-ai .nl-msg{margin:12px 0 0;color:var(--yellow);font-size:15px;font-weight:600}
 
-.fit-ai-widget .ico{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:var(--accent,var(--blue));color:#fff;margin-bottom:14px}
-.fit-ai-widget .ico svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fit-ai .ico{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:var(--accent,var(--blue));color:#fff;margin-bottom:14px}
+.fit-ai .ico svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-.fit-ai-widget .pill-list{display:flex;flex-wrap:wrap;gap:12px;margin:0;padding:0}
-.fit-ai-widget .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:#fff;border:2px solid var(--blue);color:var(--navy);font-weight:600;font-size:16px}
+.fit-ai .pill-list{display:flex;flex-wrap:wrap;gap:12px;margin:0;padding:0}
+.fit-ai .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:#fff;border:2px solid var(--blue);color:var(--navy);font-weight:600;font-size:16px}
 
-.fit-ai-widget .level-tag{position:static!important;float:none!important;visibility:visible!important;opacity:1!important;display:inline-flex!important;align-items:center;margin:0;padding:5px 14px;border-radius:999px;background:var(--navy);color:#fff!important;font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;line-height:1.2;text-transform:uppercase}
-.fit-ai-widget .level-tag.is-intro{background:var(--teal)!important;color:var(--navy)!important}
-.fit-ai-widget .level-tag.is-inter{background:var(--yellow)!important;color:var(--navy)!important}
-.fit-ai-widget .level-tag.is-adv{background:var(--navy)!important;color:#fff!important}
-.fit-ai-widget .ai-tile__soon{display:inline-flex;align-items:center;min-height:30px;margin:0;padding:5px 12px;border-radius:999px;background:var(--yellow);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.fit-ai .level-tag{position:static!important;float:none!important;visibility:visible!important;opacity:1!important;display:inline-flex!important;align-items:center;margin:0;padding:5px 14px;border-radius:999px;background:var(--navy);color:#fff!important;font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;line-height:1.2;text-transform:uppercase}
+.fit-ai .level-tag.is-intro{background:var(--teal)!important;color:var(--navy)!important}
+.fit-ai .level-tag.is-inter{background:var(--yellow)!important;color:var(--navy)!important}
+.fit-ai .level-tag.is-adv{background:var(--navy)!important;color:#fff!important}
+.fit-ai .ai-tile__soon{display:inline-flex;align-items:center;min-height:30px;margin:0;padding:5px 12px;border-radius:999px;background:var(--yellow);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 
-.fit-ai-widget .jump-band{padding:16px 0;background:rgba(255,255,255,.97);box-shadow:0 8px 22px rgba(0,41,87,.12)}
-.fit-ai-widget .jump-nav{display:flex;align-items:center;gap:16px;padding:15px 18px;background:rgba(0,108,163,.07);border:1px solid rgba(0,41,87,.12);border-radius:12px}
-.fit-ai-widget .jump-nav__label{flex:none;color:var(--navy);font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.fit-ai-widget .jump-nav ul{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0}
-.fit-ai-widget .jump-nav a{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:9px 16px;background:var(--blue);border:2px solid var(--blue);border-radius:999px;color:#fff;font-size:15px;font-weight:600;line-height:1.2;white-space:nowrap;text-decoration:none}
-.fit-ai-widget .jump-nav a:hover,.fit-ai-widget .jump-nav a:focus-visible{background:var(--navy);color:#fff;border-color:var(--navy)}
-.fit-ai-widget .ni-jump .jump-nav{gap:22px;background:transparent;border:0}
-.fit-ai-widget .ni-jump .jump-nav ul{flex:1;justify-content:space-between}
-.fit-ai-widget .ni-jump .jump-nav a{background:#fff;border:1px solid rgba(0,41,87,.18);color:var(--blue)}
-.fit-ai-widget .ni-jump .jump-nav a:hover,.fit-ai-widget .ni-jump .jump-nav a:focus-visible{border-color:var(--navy);background:var(--navy);color:#edeeef}
-.fit-ai-widget .section-badge{display:inline-block;margin:0 0 14px;color:var(--blue);font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;line-height:1.2;text-transform:uppercase}
-.fit-ai-widget .section-badge::before{content:"";display:inline-block;width:22px;height:2px;margin-right:10px;vertical-align:middle;background:var(--yellow)}
-.fit-ai-widget .ai-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:0;padding:0}
-.fit-ai-widget .ai-tile{display:flex;flex-direction:column;height:100%;padding:24px;background:#fff;border:1px solid rgba(0,41,87,.14);border-top:5px solid var(--accent,var(--blue));border-radius:12px;box-shadow:0 10px 26px rgba(0,41,87,.1)}
-.fit-ai-widget .ai-tile__meta{position:static!important;float:none!important;overflow:visible;display:flex!important;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:10px;min-height:30px;margin:0 0 12px}
-.fit-ai-widget .ai-tile__logo{display:flex;align-items:center;justify-content:center;align-self:stretch;width:100%;height:104px;padding:0 18px;margin-bottom:18px;overflow:hidden;background:#fff;border:1px solid rgba(0,41,87,.12);border-radius:14px;box-shadow:0 7px 18px rgba(0,41,87,.07)}
-.fit-ai-widget .ai-tile__logo img{display:block;flex:none;width:220px;max-width:none;height:220px;max-height:none;object-fit:contain;object-position:center}
-.fit-ai-widget .ai-tile__label{margin:14px 0 8px;color:var(--blue);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.fit-ai-widget .ai-tile__skills{gap:8px;min-height:76px;align-content:flex-start;margin:0 0 14px}
-.fit-ai-widget .ai-tile__skills .pill{padding:6px 11px;font-size:13px;font-weight:600;border:0;background:rgba(0,108,163,.09);color:var(--navy)}
-.fit-ai-widget .ai-tile h3{margin:0 0 9px;color:var(--navy);font-size:21px;line-height:1.22}
-.fit-ai-widget .ai-tile p{margin:0 0 11px;color:var(--navy);font-size:16px;line-height:1.52}
-.fit-ai-widget .ai-tile__suit{min-height:54px;font-size:15px}
-.fit-ai-widget .ai-tile>h3{min-height:52px}
-.fit-ai-widget .ai-tile>h3+p{min-height:74px}
-.fit-ai-widget .ai-tile__suit strong{color:var(--navy)}
-.fit-ai-widget .ai-tile__actions{margin-top:auto;padding-top:6px}
-.fit-ai-widget .ai-tile__actions .fit-btn{width:100%;margin-right:0}
+.fit-ai .jump-band{padding:16px 0;background:rgba(255,255,255,.97);box-shadow:0 8px 22px rgba(0,41,87,.12)}
+.fit-ai .jump-nav{display:flex;align-items:center;gap:16px;padding:15px 18px;background:rgba(0,108,163,.07);border:1px solid rgba(0,41,87,.12);border-radius:12px}
+.fit-ai .jump-nav__label{flex:none;color:var(--navy);font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.fit-ai .jump-nav ul{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0}
+.fit-ai .jump-nav a{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:9px 16px;background:var(--blue);border:2px solid var(--blue);border-radius:999px;color:#fff;font-size:15px;font-weight:600;line-height:1.2;white-space:nowrap;text-decoration:none}
+.fit-ai .jump-nav a:hover,.fit-ai .jump-nav a:focus-visible{background:var(--navy);color:#fff;border-color:var(--navy)}
+.fit-ai .ni-jump .jump-nav{gap:22px;background:transparent;border:0}
+.fit-ai .ni-jump .jump-nav ul{flex:1;justify-content:space-between}
+.fit-ai .ni-jump .jump-nav a{background:#fff;border:1px solid rgba(0,41,87,.18);color:var(--blue)}
+.fit-ai .ni-jump .jump-nav a:hover,.fit-ai .ni-jump .jump-nav a:focus-visible{border-color:var(--navy);background:var(--navy);color:#edeeef}
+.fit-ai .section-badge{display:inline-block;margin:0 0 14px;color:var(--blue);font-family:'Work Sans',Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;line-height:1.2;text-transform:uppercase}
+.fit-ai .section-badge::before{content:"";display:inline-block;width:22px;height:2px;margin-right:10px;vertical-align:middle;background:var(--yellow)}
+.fit-ai .ai-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:0;padding:0}
+.fit-ai .ai-tile{display:flex;flex-direction:column;height:100%;padding:24px;background:#fff;border:1px solid rgba(0,41,87,.14);border-top:5px solid var(--accent,var(--blue));border-radius:12px;box-shadow:0 10px 26px rgba(0,41,87,.1)}
+.fit-ai .ai-tile__meta{position:static!important;float:none!important;overflow:visible;display:flex!important;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:10px;min-height:30px;margin:0 0 12px}
+.fit-ai .ai-tile__logo{display:flex;align-items:center;justify-content:center;align-self:stretch;width:100%;height:104px;padding:0 18px;margin-bottom:18px;overflow:hidden;background:#fff;border:1px solid rgba(0,41,87,.12);border-radius:14px;box-shadow:0 7px 18px rgba(0,41,87,.07)}
+.fit-ai .ai-tile__logo img{display:block;flex:none;width:220px;max-width:none;height:220px;max-height:none;object-fit:contain;object-position:center}
+.fit-ai .ai-tile__label{margin:14px 0 8px;color:var(--blue);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.fit-ai .ai-tile__skills{gap:8px;min-height:76px;align-content:flex-start;margin:0 0 14px}
+.fit-ai .ai-tile__skills .pill{padding:6px 11px;font-size:13px;font-weight:600;border:0;background:rgba(0,108,163,.09);color:var(--navy)}
+.fit-ai .ai-tile h3{margin:0 0 9px;color:var(--navy);font-size:21px;line-height:1.22}
+.fit-ai .ai-tile p{margin:0 0 11px;color:var(--navy);font-size:16px;line-height:1.52}
+.fit-ai .ai-tile__suit{min-height:54px;font-size:15px}
+.fit-ai .ai-tile>h3{min-height:52px}
+.fit-ai .ai-tile>h3+p{min-height:74px}
+.fit-ai .ai-tile__suit strong{color:var(--navy)}
+.fit-ai .ai-tile__actions{margin-top:auto;padding-top:6px}
+.fit-ai .ai-tile__actions .fit-btn{width:100%;margin-right:0}
 
-@media (max-width:980px){.fit-ai-widget .ai-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:768px){.fit-ai-widget .hero-ai{background-position:62% center;background-image:linear-gradient(90deg,rgba(0,7,18,.97) 0%,rgba(0,21,47,.94) 55%,rgba(0,41,87,.74) 100%),url('https://fit.ie/wp-content/uploads/2026/06/A-smiling-woman-standing-in-a-modern-office-uses-a-tablet-behind-a-glass-wall-with-a-laptop-and-desk-lamp-on-a-nearby-desk.png')}.fit-ai-widget .hero-ai__inner{min-height:480px;padding:56px 0 60px}.fit-ai-widget .band{padding:36px 0}.fit-ai-widget .jump-band{padding:12px 0}.fit-ai-widget .cta-banner{padding:26px;gap:16px}}
-@media (max-width:640px){.fit-ai-widget .hero-ai__inner{align-items:center;text-align:center}.fit-ai-widget .hero-ai .hero-sub,.fit-ai-widget .hero-ai__desc{margin-left:auto;margin-right:auto}.fit-ai-widget .hero-ai .btn-row{flex-direction:column;justify-content:center;width:min(100%,360px)}.fit-ai-widget .hero-ai .btn-row .fit-btn{width:100%}.fit-ai-widget .ai-grid,.fit-ai-widget .feature-grid{grid-template-columns:1fr}.fit-ai-widget .ai-tile>h3,.fit-ai-widget .ai-tile>h3+p,.fit-ai-widget .ai-tile__skills,.fit-ai-widget .ai-tile__suit{min-height:0}}
-@media (max-width:680px){.fit-ai-widget .hero-ai,.fit-ai-widget .hero-ai__inner{min-height:620px}}
-@media (max-width:560px){.fit-ai-widget .jump-nav{flex-direction:column;align-items:stretch;gap:12px;overflow:visible}.fit-ai-widget .jump-nav__label{text-align:center}.fit-ai-widget .jump-nav ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}.fit-ai-widget .jump-nav li{min-width:0}.fit-ai-widget .jump-nav a{width:100%;padding-inline:10px;white-space:normal;text-align:center}}
-@media (max-width:420px){.fit-ai-widget .cta-banner .fit-btn{width:100%}}
-@media (prefers-reduced-motion:reduce){.fit-ai-widget *,.fit-ai-widget *::before,.fit-ai-widget *::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.fit-ai-widget .fit-btn:hover{transform:none}}
+@media (max-width:980px){.fit-ai .ai-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:768px){.fit-ai .hero-ai{background-position:62% center;background-image:linear-gradient(90deg,rgba(0,7,18,.97) 0%,rgba(0,21,47,.94) 55%,rgba(0,41,87,.74) 100%),url('https://fit.ie/wp-content/uploads/2026/06/A-smiling-woman-standing-in-a-modern-office-uses-a-tablet-behind-a-glass-wall-with-a-laptop-and-desk-lamp-on-a-nearby-desk.png')}.fit-ai .hero-ai__inner{min-height:480px;padding:56px 0 60px}.fit-ai .band{padding:36px 0}.fit-ai .jump-band{padding:12px 0}.fit-ai .cta-banner{padding:26px;gap:16px}}
+@media (max-width:640px){.fit-ai .hero-ai__inner{align-items:center;text-align:center}.fit-ai .hero-ai .hero-sub,.fit-ai .hero-ai__desc{margin-left:auto;margin-right:auto}.fit-ai .hero-ai .btn-row{flex-direction:column;justify-content:center;width:min(100%,360px)}.fit-ai .hero-ai .btn-row .fit-btn{width:100%}.fit-ai .ai-grid,.fit-ai .feature-grid{grid-template-columns:1fr}.fit-ai .ai-tile>h3,.fit-ai .ai-tile>h3+p,.fit-ai .ai-tile__skills,.fit-ai .ai-tile__suit{min-height:0}}
+@media (max-width:680px){.fit-ai .hero-ai,.fit-ai .hero-ai__inner{min-height:620px}}
+@media (max-width:560px){.fit-ai .jump-nav{flex-direction:column;align-items:stretch;gap:12px;overflow:visible}.fit-ai .jump-nav__label{text-align:center}.fit-ai .jump-nav ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}.fit-ai .jump-nav li{min-width:0}.fit-ai .jump-nav a{width:100%;padding-inline:10px;white-space:normal;text-align:center}}
+@media (max-width:420px){.fit-ai .cta-banner .fit-btn{width:100%}}
+@media (prefers-reduced-motion:reduce){.fit-ai *,.fit-ai *::before,.fit-ai *::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.fit-ai .fit-btn:hover{transform:none}}
 </style>
 
-<div class="fit-ai-widget">
+<div class="fit-ai">
   <a class="skip-link" href="#fit-main">Skip to main content</a>
   <section class="hero-ai" id="fit-overview" aria-labelledby="fit-page-title">
     <div class="container hero-ai__inner">
