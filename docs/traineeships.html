@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FIT Traineeships — short, full-time programmes that combine classroom training with a work placement, leading to an accredited qualification and a job-ready CV.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FIT — Fastrack into Information Technology">
+  <meta property="og:title" content="Traineeships &mdash; FIT">
+  <meta property="og:description" content="Short, fully funded traineeships combining training with real work experience — delivered with Education and Training Boards nationwide.">
+  <meta property="og:image" content="https://fit.ie/wp-content/uploads/2023/06/cropped-FIT-RGB-scaled-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Traineeships &mdash; FIT">
+  <meta name="twitter:description" content="Short, fully funded traineeships combining training with real work experience — delivered with Education and Training Boards nationwide.">
+  <meta name="twitter:image" content="https://fit.ie/wp-content/uploads/2023/06/cropped-FIT-RGB-scaled-1.png">
+  <title>Traineeships &mdash; FIT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Tech Apprenticeships — page styles scoped under .ta-page (same widget pattern as Choose Tech) */
+    .ta-page{--blue:#006ca3;--blue-bright:#023080;--navy:#002957;--navy-deep:#171139;--yellow:#ffce34;--grey:#edeeef;--grey-light:#f7f8fa;--white:#fff;--muted:#46617D;--shadow:0 18px 42px rgba(0,41,87,.16);width:100%;overflow:hidden;font-size:18px;line-height:1.6;color:var(--navy)}
+    .ta-page *,.ta-page *::before,.ta-page *::after{box-sizing:border-box}
+    .ta-page img{display:block;max-width:100%}
+    .ta-page a{color:inherit;text-decoration:none}
+    .ta-page h1,.ta-page h2,.ta-page h3,.ta-page p,.ta-page ul,.ta-page ol,.ta-page dl,.ta-page blockquote,.ta-page figure{margin-top:0}
+    .ta-page h1,.ta-page h2,.ta-page h3{font-family:"Rubik",Arial,Helvetica,sans-serif;font-weight:600;letter-spacing:0;text-wrap:balance;color:inherit}
+    .ta-page p{text-wrap:pretty}
+    .ta-page ul,.ta-page ol{list-style:none;margin:0;padding:0}
+    .ta-page .container{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+    .ta-page a:focus-visible,.ta-page button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;box-shadow:0 0 0 3px var(--navy);border-radius:3px}
+    .ta-page .fit-btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:12px;padding:12px 22px;border:2px solid var(--blue);border-radius:4px;background:var(--blue);color:#fff;font-family:"Work Sans",sans-serif;font-size:15px;font-weight:600;line-height:1.2;box-shadow:0 8px 18px rgba(0,41,87,.18);transition:transform .18s ease,background-color .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease}
+    .ta-page .fit-btn:hover{transform:translateY(-2px);background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 12px 24px rgba(0,41,87,.25)}
+    .ta-page .fit-btn span{display:inline-flex;min-width:1em;align-items:center;justify-content:center;font-size:1.15em;line-height:1;transform:translateY(1px)}
+    .ta-page .fit-btn--yellow{border-color:var(--yellow);background:var(--yellow);color:var(--navy)}
+    .ta-page .fit-btn--yellow:hover{border-color:#FFF4BF;background:#FFF4BF;color:var(--navy)}
+    .ta-page .fit-btn--ghost{border-color:#fff;background:transparent;color:#fff;box-shadow:none}
+    .ta-page .fit-btn--ghost:hover{border-color:#fff;background:#fff;color:var(--navy)}
+    .ta-page .fit-btn--dark-outline{border-color:var(--navy);background:transparent;color:var(--navy);box-shadow:none}
+    .ta-page .fit-btn--dark-outline:hover{border-color:var(--navy);background:var(--navy);color:#fff}
+    .ta-page .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .ta-page .eyebrow{display:block;margin:0 0 14px;color:var(--yellow);font-family:"Work Sans",sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;line-height:1.3;text-transform:uppercase}
+    .ta-page .section-kicker{display:inline-block;margin-bottom:14px;color:var(--blue);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;line-height:1.2;text-transform:uppercase}
+    .ta-page .section-kicker::before{content:"";display:inline-block;width:22px;height:2px;margin-right:10px;vertical-align:middle;background:var(--yellow)}
+    .ta-page em{color:var(--blue);font-style:italic;font-weight:400}
+    .ta-page section[id]{scroll-margin-top:96px}
+    .ta-page h2{margin-bottom:14px;font-size:clamp(28px,3vw,38px);line-height:1.18}
+
+    .ta-hero{position:relative;min-height:600px;display:flex;align-items:center;isolation:isolate;overflow:hidden;border-bottom:5px solid var(--blue);background-color:var(--navy-deep);background-repeat:no-repeat;background-image:linear-gradient(90deg,rgba(0,7,18,.98) 0%,rgba(0,21,47,.92) 42%,rgba(0,41,87,.52) 72%,rgba(0,41,87,.18) 100%),url("https://fit.ie/wp-content/uploads/2019/11/women-apprentices-working-at-computer-flipped_1920x900.jpg");background-position:center,center;background-size:cover,cover;color:#fff}
+    .ta-hero__inner{position:relative;min-height:600px;display:flex;align-items:center;padding-block:108px 72px}
+    .ta-hero__copy{width:min(680px,60%)}
+    .ta-hero h1{max-width:22ch;margin-bottom:26px;color:#fff;font-size:clamp(40px,5vw,60px);font-weight:700;line-height:1.05;letter-spacing:-.01em}
+    .ta-hero h1 span{color:var(--yellow)}
+    .ta-hero__lead{max-width:52ch;margin-bottom:12px;color:rgba(255,255,255,.9);font-size:clamp(18px,2.1vw,21px);font-weight:600;line-height:1.4}
+    .ta-hero__promise{margin:0 0 18px;color:rgba(255,255,255,.86);font-family:"Work Sans",sans-serif;font-size:15px;font-weight:400;line-height:1.55}
+    .ta-hero__badge{display:inline-flex;align-items:center;margin-top:26px;padding:12px 18px;border-radius:6px;background:rgba(255,255,255,.94)}
+    .ta-hero__badge img{height:44px;width:auto}
+
+    .jump-band.ta-jump{position:relative;z-index:5;padding:16px 0;background:#fff;box-shadow:0 8px 24px rgba(0,41,87,.12)}
+    .ta-jump .jump-nav{display:flex;align-items:center;gap:22px;padding:15px 18px;border-radius:12px;background:transparent;border:0}
+    .ta-jump .jump-nav__label{flex:none;color:var(--navy);font-family:"Work Sans",sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .ta-jump .jump-nav ul{display:flex;flex:1;flex-wrap:wrap;justify-content:center;gap:10px}
+    .ta-jump .jump-nav a{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:9px 16px;border:1px solid rgba(0,41,87,.18);border-radius:999px;background:#fff;color:var(--blue);font-size:15px;font-weight:600;transition:border-color .18s ease,background-color .18s ease,color .18s ease}
+    .ta-jump .jump-nav a:hover,.ta-jump .jump-nav a:focus-visible{border-color:var(--navy);background:var(--navy);color:#edeeef}
+    .ta-jump .jump-nav a.jump-nav__apply{border-color:var(--blue);background:var(--blue);color:#fff}
+    .ta-jump .jump-nav a.jump-nav__apply:hover,.ta-jump .jump-nav a.jump-nav__apply:focus-visible{border-color:var(--navy);background:var(--navy);color:#fff}
+
+    .ta-about,.ta-paths,.ta-apply,.ta-upcoming-section,.ta-eligibility,.ta-impact,.ta-faq,.ta-partners,.ta-contact{padding-block:56px}
+    .ta-about{background:var(--grey);padding-bottom:clamp(64px,7vw,88px)}
+    .ta-about__grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,5vw,72px);align-items:stretch}
+    .ta-about__copy p{max-width:640px;margin-bottom:16px;font-size:17px}
+    .ta-about__copy p.ta-lead{font-size:19px;color:var(--muted)}
+    .ta-about__copy h3{margin:24px 0 10px;font-size:21px;color:var(--blue)}
+    .ta-about__media{position:relative}
+    .ta-about__media img{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:8px;background:var(--grey-light);box-shadow:var(--shadow)}
+    .ta-about__stamp{position:absolute;left:-22px;bottom:26px;display:flex;flex-direction:column;gap:2px;padding:18px 22px;border-radius:6px;background:var(--blue);color:var(--grey);box-shadow:var(--shadow)}
+    .ta-about__stamp span{font-family:"Work Sans",Arial,sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;line-height:1.2;white-space:nowrap}
+    .ta-about__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;margin-bottom:8px}
+    .ta-page ul.ta-about__stats{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(28px,4vw,56px);width:100%;margin:clamp(80px,8vw,120px) auto 0;padding:clamp(40px,4vw,56px) clamp(36px,5vw,72px);border-radius:12px;background:var(--blue);color:#fff;box-shadow:var(--shadow);text-align:center}
+    .ta-about__stats li{display:flex;flex-direction:column;align-items:center;gap:16px}
+    .ta-about__stats-icon{flex:none;width:48px;height:48px}
+    .ta-about__stats-icon svg{width:100%;height:100%;display:block}
+    .ta-about__stats strong{display:block;font-family:"Rubik",Arial,sans-serif;font-size:22px;font-weight:600;line-height:1.25;color:#fff}
+    .ta-about__stats div span{display:block;margin-top:8px;font-size:16px;line-height:1.45;color:rgba(255,255,255,.85)}
+    @media (max-width:1040px){.ta-about__stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:560px){.ta-about__stats{grid-template-columns:1fr}}
+    .ta-page .ta-about__actions .fit-btn--ghost{border-color:var(--blue);color:var(--blue);background:transparent}
+    .ta-page .ta-about__actions .fit-btn--ghost:hover,.ta-page .ta-about__actions .fit-btn--ghost:focus-visible{border-color:var(--blue);background:var(--blue);color:#fff}
+    @media (max-width:1000px){.ta-about__stamp{left:0;bottom:0}}
+    @media (max-width:900px){.ta-about__media{margin-bottom:20px}.ta-about__media img{min-height:0;aspect-ratio:4/3}}
+    .ta-factcard{padding:28px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
+    .ta-facts{display:grid;gap:12px;margin:0}
+    .ta-facts>div{display:grid;grid-template-columns:150px 1fr;align-items:center;padding:16px 18px;border:1px solid rgba(0,41,87,.12);border-radius:8px;background:var(--grey-light)}
+    .ta-facts dt{color:var(--blue);font-family:"Rubik",Arial,sans-serif;font-size:17px;font-weight:700;line-height:1.2}
+    .ta-facts dd{margin:0;padding-left:18px;border-left:1px solid rgba(0,41,87,.16);color:var(--navy);font-size:14px;line-height:1.45}
+    .ta-facts>div:nth-child(2) dt{color:var(--blue-bright)}
+    .ta-facts>div:nth-child(3) dt{color:var(--navy)}
+    .ta-factcard .fit-btn{width:100%;margin-top:18px}
+
+    .ta-paths{background:#fff}
+    .ta-paths__head{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end;width:min(100%,1080px);margin:0 auto 28px;padding-inline:clamp(0px,2vw,32px)}
+    .ta-paths__head h2{margin-bottom:0}
+    .ta-paths__head p{margin-bottom:0;color:var(--muted);font-size:16px}
+    .ta-path-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+    .ta-path-grid li{display:flex;flex-direction:column;padding:26px 22px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.06);transition:transform .25s ease,box-shadow .25s ease}
+    .ta-path-grid li:nth-child(even){border-top-color:var(--navy)}
+    .ta-path-grid li:last-child{border-top-color:var(--yellow)}
+    .ta-path-grid li:hover{transform:translateY(-7px);box-shadow:0 12px 24px rgba(0,41,87,.14)}
+    .ta-path-grid li>span{color:var(--blue);font-family:"Work Sans",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .ta-path-grid h3{margin:8px 0 10px;color:var(--navy);font-size:19px;line-height:1.2}
+    .ta-path-grid p{margin:0 0 20px;color:var(--muted);font-size:14px;line-height:1.55;text-wrap:pretty}
+    .ta-path-grid a{margin-top:auto;color:var(--blue);font-family:"Work Sans",Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+    .ta-path-grid a:hover,.ta-path-grid a:focus-visible{color:var(--navy);text-decoration:underline}
+    @media (max-width:1200px){.ta-path-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media (max-width:780px){.ta-path-grid{grid-template-columns:1fr}}
+    .ta-paths__quote{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(24px,3vw,40px);align-items:center;margin-top:clamp(44px,5vw,64px);padding:clamp(28px,3.2vw,40px) clamp(30px,4vw,52px);border-radius:12px;background:var(--blue);box-shadow:var(--shadow)}
+    .ta-paths__quote img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.35)}
+    .ta-paths__quote blockquote{margin:0}
+    .ta-paths__quote blockquote p{margin:0 0 12px;color:#fff;font-size:clamp(19px,2vw,24px);line-height:1.4}
+    .ta-paths__quote footer{display:flex;flex-direction:column;gap:2px}
+    .ta-paths__quote footer strong{color:var(--yellow);font-family:"Work Sans",Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .ta-paths__quote footer span{color:rgba(255,255,255,.72);font-size:14px}
+    @media (max-width:900px){.ta-paths__quote{grid-template-columns:auto minmax(0,1fr);text-align:left}.ta-paths__quote .fit-btn{grid-column:1/-1;justify-self:start}}
+    @media (max-width:560px){.ta-paths__quote{grid-template-columns:1fr}}
+    .ta-brochure-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .ta-brochure-grid li{display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08);transition:transform .18s ease,box-shadow .18s ease}
+    .ta-brochure-grid li:nth-child(even){border-top-color:var(--navy)}
+    .ta-brochure-grid li:last-child{border-top-color:var(--blue-bright)}
+    .ta-brochure-grid li:hover{transform:translateY(-7px);box-shadow:0 12px 24px rgba(0,41,87,.14)}
+    .ta-brochure-grid figure{margin:0;aspect-ratio:3/4;background:var(--grey-light);border-bottom:1px solid rgba(0,41,87,.1)}
+    .ta-brochure-grid figure img{width:100%;height:100%;object-fit:cover;object-position:top center}
+    .ta-brochure-grid__body{display:flex;flex-direction:column;flex:1;gap:8px;padding:22px 22px 24px}
+    .ta-brochure-grid span{color:var(--blue-bright);font-family:"Work Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .ta-brochure-grid h3{margin-bottom:0;font-size:19px}
+    .ta-brochure-grid a{margin-top:auto;color:var(--blue);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .ta-brochure-grid a:hover{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+    .ta-benefits{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:36px;padding:32px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+    .ta-page .ta-benefits .section-kicker{color:var(--yellow)}
+    .ta-benefits h3{margin-bottom:12px;color:#fff;font-size:clamp(22px,2.4vw,28px);line-height:1.2}
+    .ta-benefits p{color:rgba(255,255,255,.78);font-size:15px;margin-bottom:0}
+    .ta-check{display:grid;gap:12px;margin:0}
+    .ta-check li{position:relative;padding-left:30px;color:#fff;font-weight:600;font-size:16px}
+    .ta-check li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px rgba(255,206,52,.2)}
+
+    .ta-apply{background:var(--navy);color:#fff}
+    .ta-upcoming-section{padding-block:56px;background:#fff}
+    @media (max-width:900px){.ta-upcoming{grid-template-columns:1fr;gap:20px}}
+    .ta-page .ta-apply .section-kicker{color:var(--yellow)}
+    .ta-apply__heading{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,4vw,56px);align-items:end;width:min(100%,1080px);margin:0 auto 34px;padding-inline:clamp(0px,2vw,32px)}
+    .ta-apply__aside p{margin-bottom:18px;color:rgba(255,255,255,.82);font-size:16px;line-height:1.55;text-wrap:pretty}
+    .ta-apply__heading h2{max-width:760px;margin-bottom:0;color:#fff}
+    .ta-apply__heading h2 em{color:var(--yellow)}
+    .ta-apply__heading>p{margin-bottom:0;color:#fff;font-size:17px}
+    .ta-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(18px,2.2vw,30px)}
+    .ta-steps li{padding:22px 16px;border:1px solid rgba(0,41,87,.14);border-top:5px solid var(--yellow);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.06)}
+    .ta-steps li>span{width:48px;height:48px;display:grid;place-items:center;margin-bottom:14px;border-radius:50%;background:#006CA3;color:#fff;font-family:"Work Sans",sans-serif;font-size:13px;font-weight:700}
+    .ta-steps h3{margin-bottom:10px;color:var(--navy);font-size:16px}
+    .ta-steps p{margin-bottom:0;color:var(--muted);font-size:13px;line-height:1.5}
+    .ta-upcoming{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,48px);align-items:center;width:min(100%,1000px);margin-inline:auto;padding:clamp(26px,2.6vw,34px) clamp(28px,3vw,40px);border-radius:10px;background:var(--blue);box-shadow:var(--shadow)}
+    .ta-upcoming h3{margin-bottom:0;color:#fff;font-size:clamp(26px,3vw,36px);line-height:1.15}
+    .ta-upcoming p{margin-bottom:18px;color:rgba(255,255,255,.82);font-size:15px;line-height:1.55}
+    .ta-upcoming strong{color:#fff}
+
+    .ta-eligibility{background:var(--grey)}
+    .ta-eligibility__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,104px);align-items:center}
+    .ta-eligibility__media img{display:block;width:100%;max-width:none;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--grey-light);box-shadow:var(--shadow)}
+    .ta-eligibility__copy h2{margin-bottom:22px}
+    .ta-eligibility-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+    .ta-eligibility-list li{display:flex;gap:14px;align-items:flex-start}
+    .ta-eligibility-list li>span{flex:none;color:var(--blue);font-weight:700;line-height:1.5}
+    .ta-eligibility-list p{margin:0;color:var(--navy);font-size:17px;line-height:1.5;text-wrap:pretty}
+    .ta-explore{display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:clamp(28px,4vw,48px);align-items:center;margin-top:clamp(72px,8vw,104px);padding:clamp(28px,3vw,40px) clamp(30px,4vw,48px);border-radius:12px;background:var(--blue);box-shadow:var(--shadow)}
+    .ta-explore h3{margin:0 0 10px;color:var(--yellow);font-size:clamp(24px,2.6vw,32px);line-height:1.15}
+    .ta-explore p{margin:0;color:rgba(255,255,255,.88);font-size:17px;line-height:1.55;text-wrap:pretty}
+    .ta-explore__actions{display:flex;flex-wrap:wrap;gap:14px}
+    @media (max-width:900px){.ta-eligibility__grid{grid-template-columns:1fr;gap:28px}.ta-eligibility__media img{max-width:100%;aspect-ratio:4/3}.ta-explore{grid-template-columns:1fr}}
+    .ta-support-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+    .ta-support-grid li{grid-column:span 2;display:flex;flex-direction:column;padding:26px 24px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08);transition:transform .18s ease,box-shadow .18s ease}
+    .ta-support-grid li:nth-child(even){border-top-color:var(--navy)}
+    .ta-support-grid li:hover{transform:translateY(-7px);box-shadow:0 12px 24px rgba(0,41,87,.14)}
+    .ta-support-grid li:nth-child(4),.ta-support-grid li:nth-child(5){grid-column:span 3}
+    .ta-support-grid__icon{width:64px;height:64px;display:grid;place-items:center;margin-bottom:16px;border-radius:50%;background:var(--grey-light);border:1px solid rgba(0,41,87,.1)}
+    .ta-support-grid__icon img{width:40px;height:40px;object-fit:contain}
+    .ta-support-grid h3{margin-bottom:12px;font-size:19px}
+    .ta-support-grid p{margin-bottom:0;color:var(--muted);font-size:15px;line-height:1.5}
+
+    .ta-impact{background:#fff}
+    .ta-impact__head{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end;margin-bottom:28px}
+    .ta-impact__head h2{margin-bottom:0}
+    .ta-impact__subhead{margin:40px 0 20px;color:var(--navy);font-size:clamp(22px,2.4vw,28px)}
+    .ta-crosslink{margin:26px 0 0;color:var(--muted);font-size:15px}
+    .ta-crosslink a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .ta-crosslink a:hover{color:var(--navy)}
+    .ta-carousel{position:relative}
+    .ta-carousel__viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+    .ta-carousel__viewport::-webkit-scrollbar{display:none}
+    .ta-testimonial-grid{display:flex;gap:20px;align-items:stretch}
+    .ta-testimonial-grid blockquote{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;display:flex;flex-direction:column;margin:0;padding:24px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
+    .ta-testimonial-grid blockquote:nth-child(3n+2){border-top-color:var(--navy)}
+    .ta-testimonial-grid blockquote:nth-child(3n){border-top-color:var(--blue-bright)}
+    .ta-testimonial-grid blockquote>p{margin-bottom:20px;font-family:"Rubik",Arial,sans-serif;font-size:19px;font-weight:500;line-height:1.4;color:var(--navy)}
+    .ta-testimonial-grid footer{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(0,41,87,.16)}
+    .ta-testimonial-grid footer img,.ta-testimonial-grid footer .ta-mono{flex:none;width:52px;height:52px;border-radius:50%;object-fit:cover}
+    .ta-testimonial-grid footer .ta-mono{display:grid;place-items:center;background:var(--navy);color:#fff;font-family:"Work Sans",sans-serif;font-size:15px;font-weight:700}
+    .ta-testimonial-grid footer strong{display:block;color:var(--blue-bright);font-family:"Work Sans",sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+    .ta-testimonial-grid footer span{display:block;margin-top:3px;color:var(--muted);font-size:12px;line-height:1.4}
+    .ta-carousel__controls{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:20px}
+    .ta-carousel__dots{display:flex;flex:1;align-items:center;gap:8px}
+    .ta-carousel__dots button{width:26px;height:6px;padding:0;border:0;border-radius:99px;background:rgba(0,41,87,.2);cursor:pointer;transition:background-color .18s ease,width .18s ease}
+    .ta-carousel__dots button[aria-current="true"]{width:44px;background:var(--blue)}
+    .ta-carousel__btn{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(0,41,87,.2);border-radius:50%;background:#fff;color:var(--navy);font-size:19px;line-height:1;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,opacity .18s ease}
+    .ta-carousel__btn:hover:not(:disabled){background:var(--navy);border-color:var(--navy);color:#fff}
+    .ta-carousel__btn:disabled{opacity:.34;cursor:default}
+
+    .ta-voice{padding-block:52px;background:var(--navy);color:#fff}
+    .ta-voice__inner{display:grid;grid-template-columns:120px 1fr;gap:36px;align-items:center}
+    .ta-voice img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--yellow)}
+    .ta-voice blockquote{margin:0;font-family:"Rubik",Arial,sans-serif;font-size:clamp(21px,2.4vw,30px);font-weight:500;line-height:1.3;color:#fff}
+    .ta-voice cite{display:block;margin-top:18px;font-style:normal;font-family:"Work Sans",sans-serif;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
+    .ta-voice cite span{display:block;margin-top:5px;font-size:13px;font-weight:500;letter-spacing:.02em;text-transform:none;color:rgba(255,255,255,.78)}
+
+    .ta-faq{background:var(--grey)}
+    .ta-faq__head{max-width:720px;margin-bottom:28px}
+    .ta-faq__head h2{margin-bottom:0}
+    .ta-page .fit-faq{max-width:none;gap:10px}
+    .ta-page .fit-faq__item{border:1px solid rgba(0,41,87,.14);border-left:5px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 4px 12px rgba(0,41,87,.06)}
+    .ta-page .fit-faq__item.is-open{border-left-color:var(--yellow)}
+    .ta-page .fit-faq__q{font-family:"Rubik",Arial,sans-serif;font-size:17px;font-weight:600;color:var(--navy)}
+    .ta-page .fit-faq__a p,.ta-page .fit-faq__a li{color:var(--muted);font-size:15px;line-height:1.55}
+    .ta-page .fit-faq__a strong{color:var(--navy);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+    .ta-page .fit-faq__a ul{list-style:disc;padding-left:22px}
+    .ta-page .fit-faq__a a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+    .ta-partners{background:#fff;text-align:center;padding-block:44px}
+    .ta-partners h2{margin-bottom:26px;font-size:clamp(22px,2.4vw,28px)}
+    .ta-partners .logo-marquee{margin-top:6px}
+    .ta-partners .logo-marquee .logo-chip img{width:auto;max-width:130px;max-height:46px;object-fit:contain}
+
+    .ta-hire{padding-block:52px;background:var(--grey-light)}
+    .ta-hire__shell{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding:34px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:0 24px 50px rgba(0,41,87,.25)}
+    .ta-page .ta-hire .section-kicker{color:var(--yellow)}
+    .ta-hire h2{margin-bottom:16px;color:#fff;font-size:clamp(26px,3vw,36px);line-height:1.1}
+    .ta-hire p{margin-bottom:0;color:rgba(255,255,255,.86);font-size:16px;line-height:1.55}
+    .ta-hire__shell>.ta-check{justify-self:end;width:min(100%,420px);padding-left:clamp(12px,3vw,48px)}
+
+    .ta-contact{padding-block:clamp(56px,7vw,88px);background:var(--grey)}
+    .ta-contact__grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,5vw,72px);align-items:stretch}
+    .ta-contact__media img{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:8px;background:var(--grey-light);box-shadow:var(--shadow)}
+    .ta-contact h2{margin:10px 0 16px;color:var(--navy);font-size:clamp(28px,3.4vw,42px);line-height:1.08}
+    .ta-contact h2 em{color:var(--blue);font-style:italic}
+    .ta-contact p{max-width:52ch;margin:0;color:var(--muted);font-size:17px;line-height:1.6;text-wrap:pretty}
+    .ta-contact__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .ta-page .ta-contact__actions .fit-btn--ghost{border-color:var(--blue);color:var(--blue);background:transparent}
+    .ta-page .ta-contact__actions .fit-btn--ghost:hover,.ta-page .ta-contact__actions .fit-btn--ghost:focus-visible{border-color:var(--blue);background:var(--blue);color:#fff}
+    @media (max-width:900px){.ta-contact__grid{grid-template-columns:1fr;gap:28px}.ta-contact__media img{min-height:0;aspect-ratio:4/3}}
+
+    /* Hero sizes to the copy, not the photo (id selector beats the site-wide hero tweak) */
+    .fit-ai .ta-page section#top.ta-hero{min-height:0;align-items:center;padding:calc(var(--fit-header-h) + 44px) 0 52px;background-position:center 28%,center 28%}
+    .fit-ai .ta-page section#top.ta-hero>.ta-hero__inner{min-height:0;align-items:center;padding-block:0;margin-inline:clamp(20px,2.4vw,44px) auto}
+
+    @media (max-width:1040px){.ta-brochure-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ta-support-grid li,.ta-support-grid li:nth-child(4),.ta-support-grid li:nth-child(5){grid-column:span 3}.ta-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.ta-testimonial-grid blockquote{flex-basis:calc((100% - 20px)/2)}}
+    @media (max-width:900px){.ta-about__grid,.ta-paths__head,.ta-benefits,.ta-apply__heading,.ta-hire__shell,.ta-voice__inner{grid-template-columns:1fr;gap:32px}.ta-testimonial-grid blockquote{flex-basis:100%}.ta-voice img{width:96px;height:96px}}
+    @media (max-width:680px){.ta-hero,.ta-hero__inner{min-height:620px}.ta-hero{background-image:linear-gradient(180deg,rgba(0,7,18,.92) 0%,rgba(0,21,47,.94) 56%,rgba(0,41,87,.82) 100%),url("https://fit.ie/wp-content/uploads/2019/11/women-apprentices-working-at-computer-flipped_1920x900.jpg")}.ta-hero__inner{align-items:flex-start;justify-content:center;padding-block:98px 54px}.ta-hero__copy{width:100%}.ta-hero h1{font-size:clamp(38px,12vw,50px)}.ta-hero .btn-row{display:grid;grid-template-columns:1fr}.ta-hero .fit-btn{width:100%}
+    .ta-jump .jump-nav{flex-direction:column;align-items:stretch;gap:12px}.ta-jump .jump-nav__label{text-align:center}.ta-jump .jump-nav ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.ta-jump .jump-nav a{width:100%;padding-inline:10px;white-space:normal;text-align:center}
+    .ta-about,.ta-paths,.ta-apply,.ta-upcoming-section,.ta-eligibility,.ta-impact,.ta-faq,.ta-contact{padding-block:48px}
+    .ta-brochure-grid,.ta-steps{grid-template-columns:1fr}
+    .ta-support-grid li,.ta-support-grid li:nth-child(4),.ta-support-grid li:nth-child(5){grid-column:span 1}
+    .ta-facts>div{grid-template-columns:1fr}.ta-facts dd{margin-top:8px;padding:8px 0 0;border-top:1px solid rgba(0,41,87,.16);border-left:0}
+    .ta-benefits,.ta-upcoming{padding:24px 22px}.ta-hire__shell{padding:28px 22px}
+.ta-contact .fit-btn{width:100%}}
+    @media (prefers-reduced-motion:reduce){.ta-page *,.ta-page *::before,.ta-page *::after{transition-duration:.001ms !important}.ta-page .fit-btn:hover,.ta-brochure-grid li:hover,.ta-support-grid li:hover{transform:none}}
+    .ta-mark{width:74px;height:auto;margin-bottom:16px}
+    .ta-ifit-badge{width:112px;height:auto;margin:0 auto 20px}
+  </style>
+  <style>
+    .ta-page .ta-paths__head{margin-bottom:clamp(36px,4vw,56px)}
+    .ta-page .ta-path-grid h3{margin-top:0;font-size:clamp(21px,2.2vw,26px)}
+    .ta-page ul.ta-about__stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:1040px){.ta-page ul.ta-about__stats{grid-template-columns:repeat(2,minmax(0,1fr))}}    @media (max-width:560px){.ta-page ul.ta-about__stats{grid-template-columns:1fr}}
+    @media (max-width:1040px){.ta-page .ta-path-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+    @media (max-width:680px){.ta-page .ta-path-grid{grid-template-columns:1fr!important}}
+    .ta-page .ta-contact .section-kicker{color:var(--yellow)}
+    .ta-page .ta-contact h2{color:#fff}
+    .ta-page .ta-contact p{color:rgba(255,255,255,.88)}
+    .ta-page .ta-contact__actions .fit-btn{border-color:var(--yellow);background:var(--yellow);color:var(--navy)}
+    .ta-page .ta-contact__actions .fit-btn:hover{border-color:#FFF4BF;background:#FFF4BF;color:var(--navy)}
+  </style>
+</head>
+<body>
+  <div class="fit-ai">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============================ SITE HEADER ============================ -->
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="FIT — home">
+          <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+          <!-- Learners -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-learners">Learners <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-learners">
+              <a class="nav-menu__head" href="learners.html" data-match="learners.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Learners hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Apprenticeships</p>
+              <ul class="nav-menu__list">
+                <li><a href="tech-apprenticeships.html">Tech Apprenticeships</a></li>
+                <li><a href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeships</a></li>
+                <li><a href="i-fit.html">I-FIT</a></li>
+              </ul>
+              <p class="nav-menu__group">Courses &amp; skills</p>
+              <ul class="nav-menu__list">
+                <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+                <li><a href="courses.html">Courses &amp; Course Search</a></li>
+                <li><a href="digital-skills-training.html">Digital Skills Training</a></li>
+                <li><a href="traineeships.html">Traineeships</a></li>
+                <li><a href="green-skills-learners.html">Green Skills</a></li>
+              </ul>
+              <p class="nav-menu__group">Community &amp; support</p>
+              <ul class="nav-menu__list">
+                <li><a href="career-progression.html">Learner Support &amp; Alumni</a></li>
+                <li><a href="faq.html">Learner FAQs</a></li>
+                <li><a href="fit-northern-ireland.html">FIT Northern Ireland</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Employers -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-employers">Employers <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu" id="menu-employers">
+              <a class="nav-menu__head" href="employers.html" data-match="employers.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Employers hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <ul class="nav-menu__list">
+                <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
+                <li><a href="upskill-your-team.html">Upskill Your Team</a></li>
+                <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+                <li><a href="employers.html#hire">Benefits, Grants &amp; Supports</a></li>
+                <li><a href="green-skills-employers.html">Green Skills</a></li>
+                <li><a href="employers.html#story">Case Studies</a></li>
+                <li><a href="employers.html#resources">Employer Resources</a></li>
+                <li><a href="fit-northern-ireland.html">FIT Northern Ireland</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Funders &amp; Partners -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-funders">Funders &amp; Partners <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-funders">
+              <a class="nav-menu__head" href="funders.html" data-match="funders.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Funders &amp; Partners hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Funders</p>
+              <ul class="nav-menu__list">
+                <li><a href="funders.html#funders">Who funds FIT</a></li>
+                <li><a href="funders.html#impact">Impact &amp; Outcomes</a></li>
+                <li><a href="funders.html#projects">Funding Opportunities</a></li>
+                <li><a href="publications.html">Publications &amp; Reports</a></li>
+                <li><a href="board-of-directors.html">Governance &amp; Board</a></li>
+              </ul>
+              <p class="nav-menu__group">Partners</p>
+              <ul class="nav-menu__list">
+                <li><a href="funders.html#partners">Our Partners</a></li>
+                <li><a href="funders.html#projects">Irish Projects</a></li>
+                <li><a href="funders.html#projects">EU Projects</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Schools -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-schools">Schools &amp; Colleges <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-schools">
+              <a class="nav-menu__head" href="schools-and-colleges.html" data-match="schools-and-colleges.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">Schools &amp; Colleges hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">Schools</p>
+              <ul class="nav-menu__list">
+                <li><a href="choosetech.html">Choose Tech</a></li>
+                <li><a href="hero-in-tech.html">HERo in Tech</a></li>
+                <li><a href="choosetech.html#educators">Teacher &amp; Guidance Resources</a></li>
+                <li><a href="core-supports.html">Core Supports</a></li>
+              </ul>
+              <p class="nav-menu__group">Colleges &amp; training centres</p>
+              <ul class="nav-menu__list">
+                <li><a href="courses.html">Courses &amp; Course Search</a></li>
+                <li><a href="tech-apprenticeships.html#routes-title">Pre-Tech Apprenticeships</a></li>
+                <li><a href="skills-for-jobs.html">Skills for Jobs</a></li>
+                <li><a href="stepin2tech.html">Step In2 Tech</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- About & News -->
+          <div class="nav-group">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-about">About &amp; News <span class="nav-trigger__caret" aria-hidden="true"></span></button>
+            <div class="nav-menu nav-menu--wide" id="menu-about">
+              <a class="nav-menu__head" href="about.html" data-match="about.html">
+                <span class="nav-menu__head-label">Pathway</span>
+                <span class="nav-menu__head-link">About &amp; News hub <span aria-hidden="true">&rarr;</span></span>
+              </a>
+              <p class="nav-menu__group">About</p>
+              <ul class="nav-menu__list">
+                <li><a href="about.html">About FIT</a></li>
+                <li><a href="board-of-directors.html">Team &amp; Governance</a></li>
+                <li><a href="careers.html">Careers at FIT</a></li>
+                <li><a href="about.html#fit-eu">FIT EU</a></li>
+                <li><a href="publications.html">Publications &amp; Reports</a></li>
+                <li><a href="safeguarding.html">Policies Hub</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+              </ul>
+              <p class="nav-menu__group">News &amp; events</p>
+              <ul class="nav-menu__list">
+                <li><a href="news-and-events.html#stories">Latest News</a></li>
+                <li><a href="news-and-events.html#events">Events</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+
+        <a class="header-arena" data-arena-layout="horizontal" href="https://fitknowledgearena.com/" target="_blank" rel="noopener" aria-label="FIT Knowledge Arena"><img class="header-arena__logo" src="assets/img/ka/brain-horizontal-reversed.png" alt="FIT Knowledge Arena"></a>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="fit-ai ta-page">
+        <section class="ta-hero" id="top" aria-labelledby="tr-hero-title" style="background-image:linear-gradient(90deg,rgba(0,7,18,.98) 0%,rgba(0,21,47,.92) 42%,rgba(0,41,87,.52) 72%,rgba(0,41,87,.18) 100%),url('assets/img/ict-course-002-min-1024x686.jpg');">
+          <div class="container ta-hero__inner">
+            <div class="ta-hero__copy">
+              <p class="eyebrow">Traineeships &mdash; train, work, qualify</p>
+              <h1 id="tr-hero-title">Get job ready with a <span>traineeship.</span></h1>
+              <p class="ta-hero__lead">Short, fully funded programmes that combine classroom training with real work experience.</p>
+              <p class="ta-hero__promise">Traineeships are a faster route into employment &mdash; you learn the skills, spend time with an employer and finish with an accredited qualification.</p>
+              <div class="btn-row">
+                <a class="fit-btn fit-btn--yellow" href="#areas">Explore programme areas <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="courses.html">Search current traineeships <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="jump-band ta-jump" aria-label="Jump to page section">
+          <div class="container">
+            <nav class="jump-nav" aria-label="Jump to section">
+              <span class="jump-nav__label">On this page</span>
+              <ul>
+                <li><a href="#about">What is a traineeship?</a></li>
+                <li><a href="#areas">Programme areas</a></li>
+                <li><a href="#how">How it works</a></li>
+                <li><a href="#eligibility">Who it's for</a></li>
+                <li><a class="jump-nav__apply" href="courses.html">Find a traineeship</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <section class="ta-about" id="about" aria-labelledby="tr-about-title">
+          <div class="container ta-about__grid">
+            <div class="ta-about__media">
+              <img loading="lazy" decoding="async" src="assets/img/ict-course-tech-min.jpg" alt="Trainees working together on a technical exercise in a training centre">
+              <div class="ta-about__stamp"><span>Fully Funded</span></div>
+            </div>
+
+            <div class="ta-about__copy">
+              <span class="section-kicker">What is a traineeship?</span>
+              <h2 id="tr-about-title">Learn the skills, then <em>use them at work</em></h2>
+              <p class="ta-lead">A traineeship is a short, full-time programme that mixes training in a centre with a placement in a real workplace.</p>
+              <p>Most run for six to nine months and are delivered by FIT with Education and Training Boards around the country. You finish with an accredited award, hands-on experience an employer recognises and a CV that shows both &mdash; often with a job offer from the placement itself.</p>
+              <div class="ta-about__actions">
+                <a class="fit-btn" href="courses.html">Find a traineeship <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="tech-apprenticeships.html">Compare with apprenticeships</a>
+              </div>
+            </div>
+
+            <div class="container" style="grid-column:1/-1;">
+            <ul class="ta-about__stats">
+              <li>
+                <span class="ta-about__stats-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 7h6a2.5 2.5 0 0 1 0 5H9a2.5 2.5 0 0 0 0 5h7"/></svg></span>
+                <div><strong>No fees</strong><span>Fully funded training</span></div>
+              </li>
+              <li>
+                <span class="ta-about__stats-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></span>
+                <div><strong>6&ndash;9 months</strong><span>Short, full-time programmes</span></div>
+              </li>
+              <li>
+                <span class="ta-about__stats-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4zM9 7V4h6v3M9 13h6"/></svg></span>
+                <div><strong>Work placement</strong><span>Real experience with an employer</span></div>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="ta-paths" id="areas" aria-labelledby="tr-areas-title">
+          <div class="container">
+            <div class="ta-paths__head">
+              <div>
+                <span class="section-kicker">Choose your pathway</span>
+                <h2 id="tr-areas-title">Programme areas<br><em>across Ireland</em></h2>
+              </div>
+              <p>Traineeships run in the sectors where employers are hiring right now. Availability changes through the year &mdash; the course search always shows what is open.</p>
+            </div>
+
+            <ul class="ta-path-grid" style="grid-template-columns:repeat(4,minmax(0,1fr));">
+              <li>
+                <h3>Advanced manufacturing</h3>
+                <p>Technician skills for modern production and maintenance environments, from automation to quality.</p>
+                <a href="courses.html">Find a programme <span aria-hidden="true">&rarr;</span></a>
+              </li>
+              <li>
+                <h3>ICT &amp; digital support</h3>
+                <p>Practical technical support, networking and digital skills for entry-level roles in technology teams.</p>
+                <a href="courses.html">Find a programme <span aria-hidden="true">&rarr;</span></a>
+              </li>
+              <li>
+                <h3>Green skills</h3>
+                <p>Skills for retrofit, sustainability and the circular economy &mdash; a growing area of demand nationwide.</p>
+                <a href="green-skills-learners.html">Find a programme <span aria-hidden="true">&rarr;</span></a>
+              </li>
+              <li>
+                <h3>Business &amp; administration</h3>
+                <p>Office, customer service and business support skills, with the software employers expect you to know.</p>
+                <a href="courses.html">Find a programme <span aria-hidden="true">&rarr;</span></a>
+              </li>
+            </ul>
+
+            <div class="ta-benefits">
+              <div>
+                <img loading="lazy" decoding="async" src="assets/img/what-we-do-engineer-main-min-1024x686.jpg" alt="A trainee working on equipment during a work placement" style="width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:8px;">
+              </div>
+              <div>
+                <ul class="ta-check">
+                  <li>No fees &mdash; training is fully funded</li>
+                  <li>An accredited award at the end of the programme</li>
+                  <li>A work placement with a local employer</li>
+                  <li>Support from a FIT trainer throughout</li>
+                </ul>
+                <div class="btn-row">
+                  <a class="fit-btn fit-btn--yellow" href="courses.html">Search current traineeships <span aria-hidden="true">&rarr;</span></a>
+                  <a class="fit-btn fit-btn--ghost" href="contact.html">Talk to the FIT team</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ta-apply" id="how" aria-labelledby="tr-how-title">
+          <div class="container">
+            <div class="ta-apply__heading">
+              <div>
+                <span class="section-kicker">How it works</span>
+                <h2 id="tr-how-title">From application to <em>employment</em></h2>
+              </div>
+              <p>Four steps, with the FIT team alongside you at each one.</p>
+            </div>
+            <ul class="ta-steps" style="grid-template-columns:repeat(4,minmax(0,1fr));">
+              <li>
+                <span>01</span>
+                <h3>Find your programme</h3>
+                <p>Search by area and location to see which traineeships are currently recruiting near you.</p>
+              </li>
+              <li>
+                <span>02</span>
+                <h3>Apply and meet us</h3>
+                <p>Send your application and come to an information session so you know exactly what is involved.</p>
+              </li>
+              <li>
+                <span>03</span>
+                <h3>Train and place</h3>
+                <p>Build your skills in the training centre, then put them to work on a placement with an employer.</p>
+              </li>
+              <li>
+                <span>04</span>
+                <h3>Qualify and progress</h3>
+                <p>Finish with an accredited award and move into employment, a tech apprenticeship or further study.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="ta-eligibility" id="eligibility" aria-labelledby="tr-elig-title">
+          <div class="container ta-eligibility__grid">
+            <div class="ta-eligibility__media">
+              <img loading="lazy" decoding="async" src="assets/img/eligibility-trainer-support.png" alt="A FIT trainer supporting a trainee one to one">
+            </div>
+            <div class="ta-eligibility__copy">
+              <span class="section-kicker">Who it's for</span>
+              <h2 id="tr-elig-title">No experience needed</h2>
+              <p style="margin:0 0 22px;color:var(--muted);font-size:17px;">Traineeships are built for people who want to get working quickly &mdash; whatever route brought you here.</p>
+              <ul class="ta-eligibility-list">
+                <li><span aria-hidden="true">&#10003;</span><p><strong>Jobseekers</strong> &mdash; a short, funded route back into work with experience employers value.</p></li>
+                <li><span aria-hidden="true">&#10003;</span><p><strong>Career changers</strong> &mdash; move into a new sector without going back to full-time study.</p></li>
+                <li><span aria-hidden="true">&#10003;</span><p><strong>School leavers</strong> &mdash; a practical alternative to college, with a qualification at the end.</p></li>
+                <li><span aria-hidden="true">&#10003;</span><p><strong>Learners needing support</strong> &mdash; additional supports are available through the Cuimsi&uacute; Programme.</p></li>
+              </ul>
+              <div class="btn-row">
+                <a class="fit-btn" href="courses.html">Find a traineeship <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn fit-btn--dark-outline" href="cuimsiu-programme.html">Learner supports</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ta-contact" aria-labelledby="tr-cta-title" style="background:var(--blue);">
+          <div class="container ta-contact__grid">
+            <div class="ta-contact__media">
+              <img loading="lazy" decoding="async" src="assets/img/home-learners-graduation.png" alt="FIT learners celebrating at a graduation ceremony">
+            </div>
+            <div class="ta-contact__copy">
+              <span class="section-kicker">Your next step</span>
+              <h2 id="tr-cta-title">Ready to start a traineeship?</h2>
+              <p>New programmes open throughout the year across the country. Search what is recruiting now, or talk to the FIT team about the right pathway for you.</p>
+              <div class="ta-contact__actions">
+                <a class="fit-btn" href="courses.html">Search current traineeships <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding-block:clamp(48px,6vw,72px);background:#fff;">
+          <div class="container">
+            <div class="ta-explore" style="margin-top:0;grid-template-columns:minmax(0,1fr) minmax(240px,auto);">
+              <div>
+                <span class="section-kicker" style="color:var(--yellow);">Another way in</span>
+                <h3 style="color:#fff;">Tech Apprenticeships</h3>
+                <p>If you would rather earn a salary while you train over two years, a tech apprenticeship in software development, networking or cybersecurity may suit you better.</p>
+              </div>
+              <div class="ta-explore__actions" style="flex-direction:column;align-items:stretch;">
+                <a class="fit-btn fit-btn--yellow" href="tech-apprenticeships.html">Explore Tech Apprenticeships <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="digital-skills-training.html">Digital Skills Training</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+
+    <!-- ============================ SITE FOOTER =========================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand--footer" href="index.html" aria-label="FIT — home">
+              <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
+            </a>
+            <p>Creating inclusive pathways into Ireland's digital economy since 1999.</p>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/fit-fastrack-to-information-technology/" target="_blank" rel="noopener" aria-label="FIT on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
+              <a href="https://x.com/FastrackintoIT" target="_blank" rel="noopener" aria-label="FIT on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.01 4.13H5.05z"/></svg></a>
+              <a href="https://www.facebook.com/fastracktoit/" target="_blank" rel="noopener" aria-label="FIT on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.1 1.48-4.1 4.2v2.34H7.7V13h2.74v8z"/></svg></a>
+              <a href="https://www.youtube.com/@FastrackintoIT" target="_blank" rel="noopener" aria-label="FIT on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7c-.23-.85-.9-1.5-1.75-1.73C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.85.37c-.85.23-1.52.88-1.75 1.73C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.85.9 1.5 1.75 1.73C4.7 18.8 12 18.8 12 18.8s7.3 0 8.85-.37c.85-.23 1.52-.88 1.75-1.73C23 15.2 23 12 23 12zM9.75 15.02V8.98L15 12z"/></svg></a>
+              <a href="https://www.instagram.com/fastrackintoit/" target="_blank" rel="noopener" aria-label="FIT on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.06 1.97.24 2.43.42a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.18.46.36 1.26.42 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.97-.42 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.18-1.26.36-2.43.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.97-.24-2.43-.42a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.18-.46-.36-1.26-.42-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.06-1.17.24-1.97.42-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.61 1.8c.46-.18 1.26-.36 2.43-.42C9.31 1.32 9.69 1.31 12 1.31zm0 3.5a6.3 6.3 0 1 0 0 12.6 6.3 6.3 0 0 0 0-12.6zm0 2a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6zm6.4-3.9a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg></a>
+              <a href="https://www.tiktok.com/@fastrackintoit1" target="_blank" rel="noopener" aria-label="FIT on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.9a3.1 3.1 0 1 1-2.2-3v-3.2a6.3 6.3 0 1 0 5.4 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.4z"/></svg></a>
+            </div>
+          </div>
+
+          <nav class="footer-col" aria-label="Learners footer links">
+            <h2>Learners</h2>
+            <ul>
+              <li><a href="learners.html">Learners hub</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="tech-apprenticeships.html">Tech Apprenticeships</a></li>
+              <li><a href="cuimsiu-programme.html">Cuimsi&uacute; Programme</a></li>
+              <li><a href="hero-in-tech.html">HERo in Tech</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Employers footer links">
+            <h2>Employers</h2>
+            <ul>
+              <li><a href="employers.html">Employers hub</a></li>
+              <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
+              <li><a href="cuimsiu-programme.html">Employer Network</a></li>
+              <li><a href="ai-training.html">AI Centre of Excellence</a></li>
+              <li><a href="https://fit.ie/tech-apprenticeship-policies-and-procedures/" target="_blank" rel="noopener">Policies &amp; Procedures</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Funders footer links">
+            <h2>Funders &amp; Partners</h2>
+            <ul>
+              <li><a href="funders.html">Funders &amp; Partners</a></li>
+              <li><a href="funders.html#partners">Partners</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="funders.html#projects">Projects &amp; Resources</a></li>
+              <li><a href="funders.html#impact">Impact</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Company footer links">
+            <h2>FIT</h2>
+            <ul>
+              <li><a href="about.html">About FIT</a></li>
+              <li><a href="about.html#team">Our Team</a></li>
+              <li><a href="news-and-events.html">News &amp; Events</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col footer-col--connect" aria-label="Get in touch">
+            <h2>Connect</h2>
+            <ul>
+              <li><a href="mailto:info@fit.ie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2.2V17h16V7.2l-8 5.6z"/></svg>info@fit.ie</a></li>
+              <li><a href="tel:+35318825570"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.4 1 1 0 0 1-.25 1z"/></svg>+353 1 882 5570</a></li>
+              <li><a href="contact.html#locations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Our Locations</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 FIT Ltd. FIT is a non-profit organisation and registered charity (RCN 20044572).</p>
+          <div class="footer-legal">
+            <a href="https://fit.ie/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://fit.ie/cookie-policy/" target="_blank" rel="noopener">Cookie Policy</a>
+            <a href="safeguarding.html">Safeguarding</a>
+            <a href="request-a-change.html">Website change requests</a>
+            <a href="https://fit.ie/data-protection-forms/" target="_blank" rel="noopener">Data Protection Forms</a>
+            <a href="https://fit.ie/accessibility-statement/" target="_blank" rel="noopener">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -67,11 +67,27 @@
     .ta-jump .jump-nav a.jump-nav__apply{border-color:var(--yellow);background:var(--yellow);color:var(--navy)}
     .ta-jump .jump-nav a.jump-nav__apply:hover,.ta-jump .jump-nav a.jump-nav__apply:focus-visible{border-color:var(--navy);background:var(--navy);color:#fff}
 
-    .ta-about,.ta-paths,.ta-apply,.ta-supports,.ta-impact,.ta-faq,.ta-partners,.ta-contact{padding-block:56px}
+    .ta-about,.ta-paths,.ta-apply,.ta-upcoming-section,.ta-supports,.ta-impact,.ta-faq,.ta-partners,.ta-contact{padding-block:56px}
     .ta-about{background:var(--grey)}
-    .ta-about__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:40px;align-items:center}
+    .ta-about__grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,5vw,72px);align-items:center}
     .ta-about__copy p{max-width:640px;margin-bottom:16px;font-size:17px}
-    .ta-about__copy h3{margin:24px 0 10px;font-size:21px;color:var(--blue)}
+    .ta-about__copy p.ta-lead{font-size:19px;color:var(--muted)}
+    .ta-about__media{position:relative}
+    .ta-about__media img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--grey-light);box-shadow:var(--shadow)}
+    .ta-about__stamp{position:absolute;left:-22px;bottom:26px;padding:18px 22px;border-radius:6px;background:var(--blue);color:#fff;box-shadow:var(--shadow)}
+    .ta-about__stamp span{font-family:"Work Sans",Arial,sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;line-height:1.2;white-space:nowrap}
+    .ta-about__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .ta-page .ta-about__actions .fit-btn--ghost{border-color:var(--blue);color:var(--blue);background:transparent}
+    .ta-page .ta-about__actions .fit-btn--ghost:hover,.ta-page .ta-about__actions .fit-btn--ghost:focus-visible{border-color:var(--blue);background:var(--blue);color:#fff}
+    .ta-page ul.ta-about__stats{list-style:none;display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:clamp(28px,3.4vw,56px);width:100%;max-width:1340px;margin:clamp(44px,4.6vw,64px) auto 0;padding:clamp(32px,3.4vw,44px) clamp(28px,3vw,40px);border-radius:12px;background:var(--blue);color:#fff;box-shadow:var(--shadow);text-align:center}
+    .ta-about__stats li{display:flex;flex-direction:column;align-items:center;gap:14px}
+    .ta-about__stats-icon{flex:none;width:44px;height:44px}
+    .ta-about__stats-icon svg{width:100%;height:100%;display:block}
+    .ta-about__stats strong{display:block;font-family:"Rubik",Arial,sans-serif;font-size:clamp(15px,1.2vw,17px);font-weight:600;line-height:1.25;color:#fff;white-space:nowrap}
+    .ta-about__stats div span{display:block;margin-top:6px;font-size:15px;line-height:1.45;color:rgba(255,255,255,.85)}
+    @media (max-width:1000px){.ta-about__stamp{left:0;bottom:0}}
+    @media (max-width:1040px){.ta-page ul.ta-about__stats{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:stretch}.ta-about__stats strong{white-space:normal}}
+    @media (max-width:560px){.ta-page ul.ta-about__stats{grid-template-columns:1fr}}
     .ta-factcard{padding:28px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08)}
     .ta-facts{display:grid;gap:12px;margin:0}
     .ta-facts>div{display:grid;grid-template-columns:150px 1fr;align-items:center;padding:16px 18px;border:1px solid rgba(0,41,87,.12);border-radius:8px;background:var(--grey-light)}
@@ -85,22 +101,31 @@
     .ta-paths__head{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end;margin-bottom:28px}
     .ta-paths__head h2{margin-bottom:0}
     .ta-paths__head p{margin-bottom:0;color:var(--muted);font-size:16px}
-    .ta-brochure-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-    .ta-brochure-grid li{display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08);transition:transform .18s ease,box-shadow .18s ease}
-    .ta-brochure-grid li:nth-child(even){border-top-color:var(--navy)}
-    .ta-brochure-grid li:last-child{border-top-color:var(--blue)}
-    .ta-brochure-grid li:hover{transform:translateY(-7px);box-shadow:0 12px 24px rgba(0,41,87,.14)}
-    .ta-brochure-grid figure{margin:0;aspect-ratio:3/4;background:var(--grey-light);border-bottom:1px solid rgba(0,41,87,.1)}
-    .ta-brochure-grid figure img{width:100%;height:100%;object-fit:cover;object-position:top center}
-    .ta-brochure-grid__body{display:flex;flex-direction:column;flex:1;gap:8px;padding:22px 22px 24px}
-    .ta-brochure-grid span{color:var(--blue-bright);font-family:"Work Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-    .ta-brochure-grid h3{margin-bottom:0;font-size:19px}
-    .ta-brochure-grid a{margin-top:auto;color:var(--blue);font-family:"Work Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .ta-brochure-grid a:hover{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
-    .ta-benefits{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:36px;padding:32px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}
-    .ta-page .ta-benefits .section-kicker{color:var(--yellow)}
-    .ta-benefits h3{margin-bottom:12px;color:#fff;font-size:clamp(22px,2.4vw,28px);line-height:1.2}
-    .ta-benefits p{color:rgba(255,255,255,.78);font-size:15px;margin-bottom:0}
+    .ta-paths__actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
+    .ta-paths__quote{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(24px,3vw,40px);align-items:center;width:min(1180px,calc(100% - 32px));margin-inline:auto;padding:clamp(28px,3.2vw,40px) clamp(30px,4vw,52px);border-radius:12px;background:var(--navy);box-shadow:var(--shadow)}
+    @media (max-width:900px){.ta-paths__quote{grid-template-columns:auto minmax(0,1fr)}.ta-paths__quote .fit-btn{grid-column:1/-1;justify-self:start}}
+    @media (max-width:560px){.ta-paths__quote{grid-template-columns:1fr}}
+    section.ta-paths+.ta-paths__quote{margin-block:clamp(44px,5vw,64px)}
+    .ta-paths__quote img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.35)}
+    .ta-paths__quote blockquote{margin:0}
+    .ta-paths__quote blockquote p{margin:0 0 12px;color:#fff;font-size:clamp(19px,2vw,24px);line-height:1.4}
+    .ta-paths__quote footer{display:flex;flex-direction:column;gap:2px}
+    .ta-paths__quote footer strong{color:var(--yellow);font-family:"Work Sans",Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .ta-paths__quote footer span{color:rgba(255,255,255,.72);font-size:14px}
+
+    @media (max-width:900px){.ta-paths__actions{justify-content:flex-start}}
+    .ta-path-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+    .ta-path-grid li{display:flex;flex-direction:column;padding:26px 22px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.06);transition:transform .25s ease,box-shadow .25s ease}
+    .ta-path-grid li:nth-child(even){border-top-color:var(--navy)}
+    .ta-path-grid li:last-child{border-top-color:var(--yellow)}
+    .ta-path-grid li:hover{transform:translateY(-7px);box-shadow:0 12px 24px rgba(0,41,87,.14)}
+    .ta-path-grid li>span{color:var(--blue);font-family:"Work Sans",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .ta-path-grid h3{margin:10px 0 12px;color:var(--navy);font-size:clamp(20px,1.9vw,26px);line-height:1.15}
+    .ta-path-grid p{margin:0 0 22px;color:var(--muted);font-size:15px;line-height:1.5;text-wrap:pretty}
+    .ta-path-grid a{margin-top:auto;color:var(--blue);font-family:"Work Sans",Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+    .ta-path-grid a:hover,.ta-path-grid a:focus-visible{color:var(--navy);text-decoration:underline}
+    @media (max-width:1200px){.ta-path-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media (max-width:780px){.ta-path-grid{grid-template-columns:1fr}}
     .ta-check{display:grid;gap:12px;margin:0}
     .ta-check li{position:relative;padding-left:30px;color:#fff;font-weight:600;font-size:16px}
     .ta-check li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px rgba(255,206,52,.2)}
@@ -119,35 +144,36 @@
     .ta-steps p{margin-bottom:0;color:var(--muted);font-size:13px;line-height:1.5}
     .ta-steps a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:2px}
     .ta-steps a:hover{color:var(--navy)}
-    .ta-upcoming{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:center;margin-top:30px;padding:30px;border-radius:10px;background:var(--navy);box-shadow:var(--shadow)}
-    .ta-upcoming img{width:100%;border-radius:8px}
-    .ta-upcoming h3{margin-bottom:10px;color:#fff;font-size:clamp(22px,2.4vw,28px)}
-    .ta-upcoming p{margin-bottom:0;color:rgba(255,255,255,.78);font-size:15px}
+    .ta-upcoming-section{padding-block:56px;background:#fff}
+    .ta-upcoming{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,48px);align-items:center;width:min(100%,1000px);margin-inline:auto;padding:clamp(26px,2.6vw,34px) clamp(28px,3vw,40px);border-radius:10px;background:var(--blue);box-shadow:var(--shadow)}
+    .ta-upcoming h3{margin-bottom:0;color:#fff;font-size:clamp(26px,3vw,36px);line-height:1.15}
+    .ta-upcoming p{margin-bottom:18px;color:rgba(255,255,255,.82);font-size:15px;line-height:1.55}
     .ta-upcoming strong{color:#fff}
-    .ta-upcoming .btn-row{margin-top:20px}
+    .ta-upcoming .fit-btn--ghost{border-color:rgba(255,255,255,.78);color:#fff;background:transparent}
+    .ta-upcoming .fit-btn--ghost:hover,.ta-upcoming .fit-btn--ghost:focus-visible{border-color:#fff;background:#fff;color:var(--blue)}
+    @media (max-width:900px){.ta-upcoming{grid-template-columns:1fr;gap:20px}}
 
     .ta-supports{background:var(--grey)}
-    .ta-supports__head{max-width:720px;margin-bottom:28px}
-    .ta-supports__head h2{margin-bottom:0}
-    .ta-support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-    .ta-support-grid li{display:flex;flex-direction:column;padding:26px 24px;border:1px solid rgba(0,41,87,.14);border-top:6px solid var(--blue);border-radius:8px;background:#fff;box-shadow:0 8px 20px rgba(0,41,87,.08);transition:transform .18s ease,box-shadow .18s ease}
-    .ta-support-grid li:nth-child(even){border-top-color:var(--navy)}
-.ta-support-grid li:hover{transform:translateY(-7px);box-shadow:0 12px 24px rgba(0,41,87,.14)}
-    .ta-support-grid li:nth-child(3n+2){border-top-color:var(--navy)}
-    .ta-support-grid li:nth-child(3n){border-top-color:var(--blue)}
-    .ta-support-grid__icon{width:64px;height:64px;display:grid;place-items:center;margin-bottom:16px;border-radius:50%;background:var(--grey-light);border:1px solid rgba(0,41,87,.1)}
-    .ta-support-grid__icon img{width:40px;height:40px;object-fit:contain}
-    .ta-support-grid h3{margin-bottom:10px;font-size:19px}
-    .ta-support-grid p{margin-bottom:0;color:var(--muted);font-size:15px;line-height:1.5}
-
-    .ta-impact{background:#fff}
-    .ta-impact__head{max-width:760px;margin-bottom:28px}
-    .ta-impact__head h2{margin-bottom:0}
-    .ta-impact__subhead{margin:40px 0 20px;color:var(--navy);font-size:clamp(22px,2.4vw,28px)}
-    .ta-crosslink{margin:26px 0 0;color:var(--muted);font-size:15px}
-    .ta-crosslink a{color:var(--blue-bright);font-weight:600;text-decoration:underline;text-underline-offset:3px}
-    .ta-crosslink a:hover{color:var(--navy)}
-
+    .ta-supports__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,104px);align-items:center}
+    .ta-supports__media{position:relative}
+    .ta-supports__stamp{position:absolute;left:-22px;top:26px;padding:18px 22px;border-radius:6px;background:var(--blue);color:#fff;box-shadow:var(--shadow)}
+    .ta-supports__stamp span{font-family:"Work Sans",Arial,sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;line-height:1.2;white-space:nowrap}
+    @media (max-width:1000px){.ta-supports__stamp{left:0;top:0}}
+    .ta-supports__media img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--grey-light);box-shadow:var(--shadow)}
+    .ta-supports__copy h2{margin-bottom:22px;color:var(--navy);font-size:clamp(22px,2.3vw,32px);white-space:nowrap}
+    @media (max-width:900px){.ta-supports__copy h2{white-space:normal}}
+    .ta-supports__copy h2 em{color:var(--blue);font-style:italic}
+    .ta-supports-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+    .ta-supports-list li{display:flex;gap:14px;align-items:flex-start}
+    .ta-supports-list li>span{flex:none;color:var(--blue);font-weight:700;line-height:1.5}
+    .ta-supports-list p{margin:0;color:var(--navy);font-size:17px;line-height:1.5;text-wrap:pretty}
+    .ta-explore{display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:clamp(28px,4vw,48px);align-items:center;margin-top:clamp(48px,5vw,72px);padding:clamp(28px,3vw,40px) clamp(30px,4vw,48px);border-radius:12px;background:var(--blue);box-shadow:var(--shadow)}
+    .ta-explore h3{margin:0 0 10px;color:var(--yellow);font-size:clamp(24px,2.6vw,32px);line-height:1.15}
+    .ta-explore p{margin:0;color:rgba(255,255,255,.88);font-size:17px;line-height:1.55;text-wrap:pretty}
+    .ta-explore__actions{display:flex;flex-wrap:wrap;gap:14px}
+    .ta-explore__actions .fit-btn--ghost{border-color:rgba(255,255,255,.78);color:#fff;background:transparent}
+    .ta-explore__actions .fit-btn--ghost:hover,.ta-explore__actions .fit-btn--ghost:focus-visible{border-color:#fff;background:#fff;color:var(--blue)}
+    @media (max-width:900px){.ta-supports__grid{grid-template-columns:1fr;gap:28px}.ta-explore{grid-template-columns:1fr}}
     .ta-carousel{position:relative}
     .ta-carousel__viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
     .ta-carousel__viewport::-webkit-scrollbar{display:none}
@@ -190,11 +216,6 @@
 
     .ta-partners{background:#fff;text-align:center;padding-block:44px}
     .ta-partners h2{margin-bottom:26px;font-size:clamp(22px,2.4vw,28px)}
-    .ta-partner-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px}
-    .ta-partner-row li{display:grid;place-items:center;min-width:170px;height:92px;padding:0 26px;border:1px solid rgba(0,41,87,.14);border-radius:8px;background:#fff;box-shadow:0 4px 12px rgba(0,41,87,.06)}
-    .ta-partner-row img{max-width:120px;max-height:48px;width:auto;height:auto}
-    .ta-partner-row li.ta-partner-row__wide{min-width:250px;background:var(--navy);border-color:var(--navy)}
-    .ta-partner-row li.ta-partner-row__wide img{max-width:210px;max-height:60px}
 
     .ta-hire{padding-block:52px;background:var(--grey-light)}
     .ta-hire__shell{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding:34px;border-radius:10px;background:var(--navy);color:#fff;box-shadow:0 24px 50px rgba(0,41,87,.25)}
@@ -216,46 +237,37 @@
     .fit-ai .ta-page section#top.ta-hero{min-height:0;align-items:center;padding:calc(var(--fit-header-h) + 44px) 0 52px;background-position:center 28%,center 28%}
     .fit-ai .ta-page section#top.ta-hero>.ta-hero__inner{min-height:0;align-items:center;padding-block:0;margin-inline:clamp(20px,2.4vw,44px) auto}
 
-    @media (max-width:1040px){.ta-brochure-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ta-support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ta-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.ta-testimonial-grid blockquote{flex-basis:calc((100% - 20px)/2)}}
-    @media (max-width:900px){.ta-about__grid,.ta-paths__head,.ta-benefits,.ta-apply__heading,.ta-upcoming,.ta-hire__shell,.ta-voice__inner{grid-template-columns:1fr;gap:32px}.ta-testimonial-grid blockquote{flex-basis:100%}.ta-voice img{width:96px;height:96px}}
+    @media (max-width:1040px){.ta-support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ta-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.ta-testimonial-grid blockquote{flex-basis:calc((100% - 20px)/2)}}
+    @media (max-width:900px){.ta-about__grid,.ta-paths__head,.ta-apply__heading,.ta-hire__shell,.ta-voice__inner{grid-template-columns:1fr;gap:32px}.ta-testimonial-grid blockquote{flex-basis:100%}.ta-voice img{width:96px;height:96px}}
     @media (max-width:680px){.ta-hero,.ta-hero__inner{min-height:620px}.ta-hero{background-image:linear-gradient(180deg,rgba(0,7,18,.92) 0%,rgba(0,21,47,.94) 56%,rgba(0,41,87,.82) 100%),url("https://fit.ie/wp-content/uploads/2019/03/ict-apprenticeship-fit-min.jpg")}.ta-hero__inner{align-items:flex-start;justify-content:center;padding-block:98px 54px}.ta-hero__copy{width:100%}.ta-hero h1{font-size:clamp(38px,12vw,50px)}.ta-hero .btn-row{display:grid;grid-template-columns:1fr}.ta-hero .fit-btn{width:100%}
     .ta-jump .jump-nav{flex-direction:column;align-items:stretch;gap:12px}.ta-jump .jump-nav__label{text-align:center}.ta-jump .jump-nav ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.ta-jump .jump-nav a{width:100%;padding-inline:10px;white-space:normal;text-align:center}
-    .ta-about,.ta-paths,.ta-apply,.ta-supports,.ta-impact,.ta-faq,.ta-contact{padding-block:48px}
-    .ta-brochure-grid,.ta-support-grid,.ta-steps{grid-template-columns:1fr}
+    .ta-about,.ta-paths,.ta-apply,.ta-upcoming-section,.ta-supports,.ta-impact,.ta-faq,.ta-contact{padding-block:48px}
     .ta-facts>div{grid-template-columns:1fr}.ta-facts dd{margin-top:8px;padding:8px 0 0;border-top:1px solid rgba(0,41,87,.16);border-left:0}
-    .ta-benefits,.ta-upcoming{padding:26px 22px}.ta-hire__shell{padding:28px 22px}
+    .ta-upcoming{padding:26px 22px}.ta-hire__shell{padding:28px 22px}
     .ta-contact .btn-row{display:grid;grid-template-columns:1fr}.ta-contact .fit-btn{width:100%}}
-    @media (prefers-reduced-motion:reduce){.ta-page *,.ta-page *::before,.ta-page *::after{transition-duration:.001ms !important}.ta-page .fit-btn:hover,.ta-brochure-grid li:hover,.ta-support-grid li:hover{transform:none}}
+    @media (prefers-reduced-motion:reduce){.ta-page *,.ta-page *::before,.ta-page *::after{transition-duration:.001ms !important}.ta-page .fit-btn:hover,.ta-support-grid li:hover{transform:none}}
 
     /* Employer-side identity: teal-led accents, navy bands, inverted section rhythm */
     .fit-ai .ta-page .section-kicker{color:var(--blue-bright)}
-    .fit-ai .ta-page :is(.ta-apply,.ta-benefits,.ta-hire,.ta-contact) .section-kicker{color:var(--yellow)}
+    .fit-ai .ta-page :is(.ta-apply,.ta-hire,.ta-contact) .section-kicker{color:var(--yellow)}
     .ta-page .section-kicker::before{background:var(--blue)}
     .ta-page em{color:var(--blue-bright)}
-    .ta-about{background:var(--grey-light);border-top:5px solid var(--navy)}
+    .ta-about{background:var(--grey-light)}
     .ta-factcard{border-top-color:var(--blue)}
     .ta-facts>div:nth-child(1) dt{color:var(--blue-bright)}
     .ta-facts>div:nth-child(2) dt{color:var(--navy)}
     .ta-facts>div:nth-child(3) dt,.ta-facts>div:nth-child(4) dt{color:var(--blue-bright)}
     .ta-factcard .fit-btn{border-color:var(--navy);background:var(--navy)}
-    .ta-brochure-grid li{border-top-color:var(--blue)}
-    .ta-brochure-grid li:nth-child(even){border-top-color:var(--navy)}
-    .ta-brochure-grid li:last-child{border-top-color:var(--blue)}
-    .ta-brochure-grid span{color:var(--blue-bright)}
-    .ta-brochure-grid a{color:var(--blue-bright)}
     .ta-apply{background:var(--navy)}
     .ta-steps li{border-top-color:var(--blue)}
     .ta-steps li>span{background:var(--blue-bright)}
     .ta-steps a{color:var(--blue-bright)}
-    .ta-upcoming{background:var(--navy-deep)}
     .ta-impact{background:var(--grey)}
     .ta-testimonial-grid blockquote{background:#fff;border-top-color:var(--blue)}
     .ta-testimonial-grid blockquote:nth-child(3n+2){border-top-color:var(--navy)}
     .ta-testimonial-grid blockquote:nth-child(3n){border-top-color:var(--blue-bright)}
     .ta-testimonial-grid footer strong{color:var(--blue-bright)}
-    .ta-supports{background:#fff}
-    .ta-support-grid li{background:var(--grey-light);border-top-color:var(--blue)}
-    .ta-support-grid li:nth-child(3n+2){border-top-color:var(--navy)}
+
     .ta-support-grid li:nth-child(3n){border-top-color:var(--blue-bright)}
     .ta-support-grid__icon{background:#fff}
     .ta-voice{background:var(--navy-deep)}
@@ -307,7 +319,31 @@
       .ta-support-grid li{padding:22px 0}
     }
     .ta-timeline__shot{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;margin:0 0 16px;border-radius:6px;background:rgba(255,255,255,.08)}
-    .ta-benefits__shot{display:block;width:100%;max-width:420px;margin-top:20px;border-radius:6px;aspect-ratio:3/2;object-fit:cover}
+    .ta-page .ta-impact__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:clamp(24px,4vw,56px);align-items:end;margin-bottom:clamp(28px,3vw,40px)}
+    .ta-page .ta-impact__head h2{white-space:nowrap}
+    .ta-page .ta-impact__aside{width:min(420px,100%);margin-left:auto;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+    .ta-page .ta-impact__aside p{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.55;text-wrap:pretty}
+    .ta-page .ta-impact__aside .fit-btn{border-color:var(--blue);background:var(--blue);color:#fff}
+    .ta-page .ta-impact__aside .fit-btn:hover,.ta-page .ta-impact__aside .fit-btn:focus-visible{border-color:var(--navy);background:#fff;color:var(--navy)}
+    @media (max-width:1150px){.ta-page .ta-impact__head{grid-template-columns:1fr}.ta-page .ta-impact__head h2{white-space:normal}.ta-page .ta-impact__aside{margin-left:0;width:100%}}
+    .ta-contact{padding-block:clamp(56px,7vw,88px);background:var(--blue)}
+    .fit-ai .ta-page .ta-contact .section-kicker{color:var(--yellow)}
+    .fit-ai .ta-page .ta-contact .section-kicker::before{background:var(--yellow)}
+    .ta-contact__grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,5vw,72px);align-items:stretch}
+    .ta-contact__media{order:1}
+    .ta-contact__copy{order:2;display:flex;flex-direction:column;align-items:flex-start;text-align:left;justify-content:center}
+    .ta-contact__actions{justify-content:flex-start}
+    .ta-contact__media img{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:8px;background:var(--grey-light);box-shadow:var(--shadow)}
+    .ta-page .ta-contact h2{margin:10px 0 16px;color:#fff;font-size:clamp(28px,3.4vw,42px);line-height:1.08}
+    .ta-page .ta-contact h2 em{color:var(--yellow);font-style:italic}
+    .ta-page .ta-contact p{max-width:52ch;margin:0;color:rgba(255,255,255,.88);font-size:17px;line-height:1.6;text-wrap:pretty}
+    .ta-contact__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .ta-page .ta-contact__actions .fit-btn{border-color:var(--yellow);background:var(--yellow);color:var(--navy)}
+    .ta-page .ta-contact__actions .fit-btn--ghost{border-color:rgba(255,255,255,.78);color:#fff;background:transparent}
+    .ta-page .ta-contact__actions .fit-btn:hover,.ta-page .ta-contact__actions .fit-btn:focus-visible,.ta-page .ta-contact__actions .fit-btn--ghost:hover,.ta-page .ta-contact__actions .fit-btn--ghost:focus-visible{border-color:#fff;background:#fff;color:var(--blue)}
+    @media (max-width:900px){.ta-contact__grid{grid-template-columns:1fr;gap:28px}.ta-contact__media img{min-height:0;aspect-ratio:4/3}}
+    .ta-partners .logo-marquee{margin-top:6px}
+    .ta-partners .logo-marquee .logo-chip img{width:auto;max-width:130px;max-height:46px;object-fit:contain}
   </style>
 </head>
 <body>
@@ -316,7 +352,6 @@
 
     <!-- ============================ SITE HEADER ============================ -->
     <header class="site-header" data-header>
-      <span class="branch-watermark" aria-hidden="true">Stephen (FIT)</span>
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="FIT — home">
           <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
@@ -346,7 +381,8 @@
               <ul class="nav-menu__list">
                 <li><a href="ai-training.html">AI Centre of Excellence</a></li>
                 <li><a href="courses.html">Courses &amp; Course Search</a></li>
-                <li><a href="learners.html#paths">Free Digital Skills Platforms</a></li>
+                <li><a href="digital-skills-training.html">Digital Skills Training</a></li>
+                <li><a href="traineeships.html">Traineeships</a></li>
                 <li><a href="green-skills-learners.html">Green Skills</a></li>
               </ul>
               <p class="nav-menu__group">Community &amp; support</p>
@@ -368,7 +404,7 @@
               </a>
               <ul class="nav-menu__list">
                 <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
-                <li><a href="employers.html#develop">Upskill Your Team</a></li>
+                <li><a href="upskill-your-team.html">Upskill Your Team</a></li>
                 <li><a href="ai-training.html">AI Centre of Excellence</a></li>
                 <li><a href="employers.html#hire">Benefits, Grants &amp; Supports</a></li>
                 <li><a href="green-skills-employers.html">Green Skills</a></li>
@@ -408,7 +444,7 @@
           <div class="nav-group">
             <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-schools">Schools &amp; Colleges <span class="nav-trigger__caret" aria-hidden="true"></span></button>
             <div class="nav-menu nav-menu--wide" id="menu-schools">
-              <a class="nav-menu__head" href="choosetech.html" data-match="choosetech.html">
+              <a class="nav-menu__head" href="schools-and-colleges.html" data-match="schools-and-colleges.html">
                 <span class="nav-menu__head-label">Pathway</span>
                 <span class="nav-menu__head-link">Schools &amp; Colleges hub <span aria-hidden="true">&rarr;</span></span>
               </a>
@@ -417,7 +453,7 @@
                 <li><a href="choosetech.html">Choose Tech</a></li>
                 <li><a href="hero-in-tech.html">HERo in Tech</a></li>
                 <li><a href="choosetech.html#educators">Teacher &amp; Guidance Resources</a></li>
-                <li><a href="choosetech.html#register">School Enquiry</a></li>
+                <li><a href="core-supports.html">Core Supports</a></li>
               </ul>
               <p class="nav-menu__group">Colleges &amp; training centres</p>
               <ul class="nav-menu__list">
@@ -470,7 +506,7 @@
               <h1 id="ta-hero-title">Hire a <span>tech apprentice.</span></h1>
               <div class="btn-row">
                 <a class="fit-btn fit-btn--yellow" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/ApprenticeshipEmployerApplicationForm/formperma/ih6WuPLGzJ--zTTlQIAELYrTL0vxRyOOZoLxdbRhd-w" target="_blank" rel="noopener">Get involved <span aria-hidden="true">&nearr;</span></a>
-                <a class="fit-btn fit-btn--ghost" href="tech-apprenticeships.html">Become an apprentice <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="#paths">Explore programmes <span aria-hidden="true">&rarr;</span></a>
               </div>
             </div>
           </div>
@@ -484,9 +520,9 @@
                 <li><a href="#about">Programme</a></li>
                 <li><a href="#paths">Career paths</a></li>
                 <li><a href="#onboarding">Onboarding</a></li>
-                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#benefits">Why hire</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#supports">Further info</a></li>
+                <li><a href="#supports">How we help</a></li>
                 <li><a href="faq-hiring-an-apprentice.html">FAQs</a></li>
                 <li><a class="jump-nav__apply" href="mailto:info@fit.ie?subject=We%20are%20interested%20in%20Hiring%20an%20Apprentice">Get involved</a></li>
               </ul>
@@ -496,24 +532,38 @@
 
         <section class="ta-about" id="about" aria-labelledby="about-title">
           <div class="container ta-about__grid">
+            <div class="ta-about__media">
+              <img loading="lazy" decoding="async" src="assets/img/tallaght-software-development-cohort.jpg" alt="A Software Development apprenticeship cohort at a FIT training centre">
+              <div class="ta-about__stamp"><span>80% Retention Rates</span></div>
+            </div>
+
             <div class="ta-about__copy">
               <span class="section-kicker">Why hire an apprentice</span>
-              <h2 id="about-title">Diversify your intake and <em>reach untapped tech talent</em></h2>
-              <p>In Ireland, over 12,000 jobs are currently available in the tech sector. 75% of these roles could be facilitated through apprenticeship programmes providing an additional talent pipeline of new entrants into the sector.</p>
-              <p>Tech Apprenticeships offer your company the opportunity to diversify your intake and reach untapped tech talent. As more and more companies see Tech Apprenticeships as the key to addressing the skills gap, why not join the long list of companies accessing talent via the apprenticeship route.</p>
-              <h3>What is the ICT Associate Apprenticeship programme?</h3>
-              <p>FIT was appointed Coordinating Provider by the Apprenticeship Council for the delivery of three Technology Apprenticeship programmes placed at Level 6 on the National Framework of Qualifications (NFQ). Today the portfolio of Tech Apprenticeships includes the Software Development Associate, Computer Networking Associate and Cybersecurity Apprenticeship programmes, with plans to enhance the provision in response to Industry demands. The portfolio is being further enhanced with anticipated programmes in Cloud Computing, DevOps and Data Analytics.</p>
-              <p>The Tech Apprenticeship programme adopts a learning-by-doing format of ICT skills development, giving new meaning to the concept of &lsquo;hire education&rsquo;. Over a two-year period the Tech Apprenticeship programme combines off-the-job skills training with on-the-job application, and the culmination behaviour of a QQI level 6 Advanced Certificate award.</p>
+              <h2 id="about-title">Build your future <em>tech workforce</em></h2>
+              <p class="ta-lead">Develop the talent you need through a FIT Tech Apprenticeship programme.</p>
+              <p>The two-year Tech Apprenticeship gives you a practical way to recruit and develop emerging talent, diversify your intake and stay competitive. Your apprentice works with you throughout the programme, combining structured training with real workplace experience.</p>
+              <div class="ta-about__actions">
+                <a class="fit-btn" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/ApprenticeshipEmployerApplicationForm/formperma/ih6WuPLGzJ--zTTlQIAELYrTL0vxRyOOZoLxdbRhd-w" target="_blank" rel="noopener">Hire an apprentice <span aria-hidden="true">&nearr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="#testimonials">Our impact</a>
+              </div>
             </div>
-            <div class="ta-factcard">
-              <dl class="ta-facts" aria-label="Employer facts">
-                <div><dt>Qualification</dt><dd>QQI Level 6 Advanced Certificate</dd></div>
-                <div><dt>Duration</dt><dd>Two years, apprentice employed by you throughout</dd></div>
-                <div><dt>Employer grant</dt><dd>&euro;2,000 per year per registered apprentice</dd></div>
-                <div><dt>Gender bursary</dt><dd>&euro;2,666 for Computer Networking and Cybersecurity</dd></div>
-              </dl>
-              <a class="fit-btn" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/ApprenticeshipEmployerApplicationForm/formperma/ih6WuPLGzJ--zTTlQIAELYrTL0vxRyOOZoLxdbRhd-w" target="_blank" rel="noopener">Get involved <span aria-hidden="true">&nearr;</span></a>
-            </div>
+          </div>
+
+          <div class="container">
+            <ul class="ta-about__stats">
+              <li>
+                <span class="ta-about__stats-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/><path d="M8 16.5l3-3 2.2 2.2L17 12"/><path d="M17 15V12h-3"/></svg></span>
+                <div><strong>70% Workplace Learning</strong><span>Builds skills while embedded in your business</span></div>
+              </li>
+              <li>
+                <span class="ta-about__stats-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7.5C10.6 6.2 8.6 5.5 6 5.5H3.5v12H6c2.6 0 4.6.7 6 2 1.4-1.3 3.4-2 6-2h2.5v-12H18c-2.6 0-4.6.7-6 2z"/><path d="M12 7.5v14"/><path d="M15.5 11.5h4"/></svg></span>
+                <div><strong>Fully Funded Training</strong><span>No training fees for your business</span></div>
+              </li>
+              <li>
+                <span class="ta-about__stats-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="5"/><path d="M14.5 6.6A3.2 3.2 0 1 0 14.5 10.4"/><path d="M9.6 8.5h3.2"/><path d="M3.5 17c1.6-1.4 3.3-1.1 4.8 0l1.4 1h3.1"/><path d="M20.5 15.5 15 19.5c-.9.7-2 1-3.1 1H4"/></svg></span>
+                <div><strong>Financial Support</strong><span>Employer grants and gender based bursaries available</span></div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -521,59 +571,87 @@
           <div class="container">
             <div class="ta-paths__head">
               <div>
-                <span class="section-kicker">Career paths</span>
-                <h2 id="routes-title">Three distinct career paths,<br><em>with more to follow</em></h2>
+                <span class="section-kicker">Choose your career path</span>
+                <h2 id="routes-title">Build the skills <em>your business needs</em></h2>
               </div>
-              <p>Upon successful completion of a programme the apprentice will attain a QQI Level 6 Advanced Certificate in Computer Networking, Computer Programming, or Cybersecurity as applicable.</p>
+              <div class="ta-paths__actions">
+                <a class="fit-btn" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/ApprenticeshipEmployerApplicationForm/formperma/ih6WuPLGzJ--zTTlQIAELYrTL0vxRyOOZoLxdbRhd-w" target="_blank" rel="noopener">Hire a tech apprentice <span aria-hidden="true">&nearr;</span></a>
+              </div>
             </div>
-            <ul class="ta-brochure-grid">
+            <ul class="ta-path-grid">
               <li>
-                <figure><img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2025/03/FIT-CompNetworking-Syllabus-cover.png" alt="Computer Networking Associate Apprenticeship brochure"></figure>
-                <div class="ta-brochure-grid__body">
-                  <span>NFQ Level 6</span>
-                  <h3>Computer Networking</h3>
-                  <a href="https://fit.ie/wp-content/uploads/2025/03/FIT-CompNetworking-Syllabus.pdf" target="_blank" rel="noopener">View course &rarr;</a>
-                </div>
+                <span>NFQ Level 6</span>
+                <h3>Computer Networking</h3>
+                <p>Networks, servers and cloud infrastructure.</p>
+                <a href="https://fit.ie/wp-content/uploads/2025/03/FIT-CompNetworking-Syllabus.pdf" target="_blank" rel="noopener">View syllabus &rarr;</a>
               </li>
               <li>
-                <figure><img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2025/03/FIT-SoftDev-Syllabus-cover.png" alt="Software Developer Associate Apprenticeship brochure"></figure>
-                <div class="ta-brochure-grid__body">
-                  <span>NFQ Level 6</span>
-                  <h3>Software Development</h3>
-                  <a href="https://fit.ie/wp-content/uploads/2025/03/FIT-SoftDev-Syllabus.pdf" target="_blank" rel="noopener">View course &rarr;</a>
-                </div>
+                <span>NFQ Level 6</span>
+                <h3>Software Development</h3>
+                <p>Coding inside your development team.</p>
+                <a href="https://fit.ie/wp-content/uploads/2025/03/FIT-SoftDev-Syllabus.pdf" target="_blank" rel="noopener">View syllabus &rarr;</a>
               </li>
               <li>
-                <figure><img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2025/03/FIT-Cybersecurity-Syllabus-cover.png" alt="Cybersecurity Apprenticeship brochure"></figure>
-                <div class="ta-brochure-grid__body">
-                  <span>NFQ Level 6</span>
-                  <h3>Cybersecurity</h3>
-                  <a href="https://fit.ie/wp-content/uploads/2025/03/FIT-Cybersecurity-Syllabus.pdf" target="_blank" rel="noopener">View course &rarr;</a>
-                </div>
+                <span>NFQ Level 6</span>
+                <h3>Cybersecurity</h3>
+                <p>Threat monitoring and incident response.</p>
+                <a href="https://fit.ie/wp-content/uploads/2025/03/FIT-Cybersecurity-Syllabus.pdf" target="_blank" rel="noopener">View syllabus &rarr;</a>
               </li>
               <li>
-                <figure><img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2025/12/Data-Analytics-Brochure-Coming-Soon.png" alt="FIT graphic announcing a coming soon Data Analytics Associate apprenticeship"></figure>
-                <div class="ta-brochure-grid__body">
-                  <span>NFQ Level 6 &middot; Coming soon</span>
-                  <h3>Data Analytics</h3>
-                  <a href="mailto:info@fit.ie?subject=Data%20Analytics%20Apprenticeship%20interest">I'm interested &rarr;</a>
-                </div>
+                <span>NFQ Level 6 &middot; Coming soon</span>
+                <h3>Data Analytics</h3>
+                <p>Reporting and dashboards for your teams.</p>
+                <a href="#become">Register interest &rarr;</a>
+              </li>
+              <li>
+                <span>All-female programme</span>
+                <h3>I-FIT</h3>
+                <p>An all-female cohort for a more diverse intake.</p>
+                <a href="i-fit.html">About I-FIT &rarr;</a>
               </li>
             </ul>
 
-            <div class="ta-benefits" id="benefits">
-              <div>
-                <span class="section-kicker">Benefits of the programme</span>
-                <h3>Employers</h3>
-                <img class="ta-benefits__shot" loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2019/03/Learn-on-the-job.jpg" alt="Apprentices learning on the job alongside colleagues">
-              </div>
-              <ul class="ta-check">
-                <li>Widen access to highly motivated tech enthusiasts with bespoke skills</li>
-                <li>Grow tech-savvy teams efficiently</li>
-                <li>Bring fresh thinking and energy to new technologies and product development</li>
-                <li>Free up experienced staff to do what they do best</li>
-                <li>State grants available of &euro;2000 per year per apprentice for the two-year program. A gender-based bursary is also applicable to the Computer Networking Associate and the Cybersecurity apprenticeship program. Eligibility to the gender bursary changes from year to year.</li>
+          </div>
+        </section>
+
+        <div class="ta-paths__quote" id="benefits">
+          <img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2019/03/Hilary-O-Meara-Accenture.jpg" alt="Hilary O'Meara, Managing Director of Accenture Ireland">
+          <blockquote>
+            <p>&ldquo;This programme brings increased diversity of experience and thinking and has enabled us to broaden our talent pool to shape the workforce we need.&rdquo;</p>
+            <footer><strong>Hilary O'Meara</strong><span>MD, Accenture Ireland</span></footer>
+          </blockquote>
+          <a class="fit-btn fit-btn--yellow" href="#testimonials">Hear from our employers <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <section class="ta-supports" id="supports" aria-labelledby="supports-title">
+          <div class="container ta-supports__grid">
+            <div class="ta-supports__media">
+              <img loading="lazy" decoding="async" src="assets/img/man-woman-at-computer-S2S-image-560x300-1.jpg" alt="An employer mentoring an apprentice at a laptop">
+              <div class="ta-supports__stamp"><span>300+ Employer Partners</span></div>
+            </div>
+
+            <div class="ta-supports__copy">
+              <h2 id="supports-title">How FIT supports <em>your business</em></h2>
+              <ul class="ta-supports-list">
+                <li><span aria-hidden="true">&#10003;</span><p>Access a motivated talent pool</p></li>
+                <li><span aria-hidden="true">&#10003;</span><p>Recruitment supports, matching you to suitable candidates</p></li>
+                <li><span aria-hidden="true">&#10003;</span><p>Onboarding guidance to help you get set up</p></li>
+                <li><span aria-hidden="true">&#10003;</span><p>Mentoring supports throughout the process</p></li>
+                <li><span aria-hidden="true">&#10003;</span><p>Grants and gender based bursaries</p></li>
               </ul>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="ta-explore">
+              <div>
+                <h3>Not ready to hire?</h3>
+                <p>Upskill the team you already have. FIT runs short, funded training in AI, data, cloud and cybersecurity &mdash; a lighter way to close a skills gap without adding headcount.</p>
+              </div>
+              <div class="ta-explore__actions">
+                <a class="fit-btn fit-btn--yellow" href="upskill-your-team.html">Upskilling options <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="ai-training.html">AI training</a>
+              </div>
             </div>
           </div>
         </section>
@@ -613,26 +691,21 @@
                 <p>Provide FIT with final sign-off for your chosen Tech Apprentice. You are now a Tech Apprentice employer!</p>
               </li>
             </ol>
-
-            <div class="ta-upcoming">
-              <img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2026/08/Employer-TA-2026-3-1-600x750.png" alt="FIT Tech Apprenticeship 2026 employer recruitment graphic">
-              <div>
-                <h3>Upcoming Tech Apprenticeships 2026</h3>
-                <p>See our exact programme <strong>locations</strong> and <strong>dates</strong> for 2026. All of the off-the-job learning takes place in Education and Training Boards nationwide, in person or through live webinar.</p>
-                <div class="btn-row">
-                  <a class="fit-btn fit-btn--yellow" href="courses.html">Locations &amp; dates <span aria-hidden="true">&rarr;</span></a>
-                  <a class="fit-btn fit-btn--ghost" href="https://fit.ie/wp-content/uploads/2024/12/Employer-Checklist_onepager.pdf" target="_blank" rel="noopener">Onboarding checklist <span aria-hidden="true">&darr;</span></a>
-                </div>
-              </div>
-            </div>
           </div>
+
         </section>
 
         <section class="ta-impact" id="testimonials" aria-labelledby="testimonials-title">
           <div class="container">
             <div class="ta-impact__head">
-              <span class="section-kicker">In their words</span>
-              <h2 id="testimonials-title">Employer <em>testimonials</em></h2>
+              <div>
+                <span class="section-kicker">Success stories</span>
+                <h2 id="testimonials-title">Employer <em>testimonials</em></h2>
+              </div>
+              <div class="ta-impact__aside">
+                <p>We work with 300+ SMEs, large corporations and public bodies across a wide range of industry.</p>
+                <a class="fit-btn" href="employers.html">Hear from our employers <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </div>
             <div class="ta-carousel" data-carousel>
               <div class="ta-carousel__viewport">
@@ -658,117 +731,74 @@
               </div>
             </div>
 
-            <p class="ta-crosslink">Curious what the apprentices say? <a href="tech-apprenticeships.html#testimonials">Read apprentice testimonials &rarr;</a></p>
           </div>
         </section>
 
-        <section class="ta-supports" id="supports" aria-labelledby="supports-title">
+        <section class="ta-upcoming-section" id="upcoming" aria-labelledby="upcoming-title">
           <div class="container">
-            <div class="ta-supports__head">
-              <span class="section-kicker">Further information</span>
-              <h2 id="supports-title">Costs, grants <em>and supports</em></h2>
-            </div>
-            <ul class="ta-support-grid">
-              <li>
-                <span class="ta-support-grid__icon" aria-hidden="true"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2019/03/FIT-Icons-Circles-Blue-01.svg" alt=""></span>
-                <h3>Training costs</h3>
-                <p>Off-the-job training costs are entirely government funded. FIT manages all aspects of the programme and co-ordinates employer input.</p>
-              </li>
-              <li>
-                <span class="ta-support-grid__icon" aria-hidden="true"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2019/03/FIT-Icons-Circles-Blue-04.svg" alt=""></span>
-                <h3>Career progression</h3>
-                <p>On successful completion of the programme, qualified apprentices have the potential to progress into full-time positions with their employers.</p>
-              </li>
-              <li>
-                <span class="ta-support-grid__icon" aria-hidden="true"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2019/03/FIT-Icons-Circles-Blue-03.svg" alt=""></span>
-                <h3>Grants available</h3>
-                <p>FIT is an equal opportunities employer &amp; welcomes people from diverse backgrounds. We are keen to support both employer and employee on their apprenticeship journey with information on grants available for successful applicants with a disability available.</p>
-              </li>
-              <li>
-                <span class="ta-support-grid__icon" aria-hidden="true"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2019/03/FIT-Icons-Circles-Blue-03.svg" alt=""></span>
-                <h3>Salary guideline</h3>
-                <p>For apprentices that have commenced a programme post 2023, FIT would recommend as a guideline that apprentices employed under a contract of employment would receive a payment no less than the value of &euro;312 weekly in the first year and &euro;408 weekly in year two.</p>
-              </li>
-              <li>
-                <span class="ta-support-grid__icon" aria-hidden="true"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2019/03/FIT-Icons-Circles-Blue-02.svg" alt=""></span>
-                <h3>On-the-job learning</h3>
-                <p>Participating companies employ the apprentice throughout their apprenticeship and facilitate the on-the-job application of learning.</p>
-              </li>
-              <li>
-                <span class="ta-support-grid__icon" aria-hidden="true"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2023/10/circlebluenew.png" alt=""></span>
-                <h3>Employer supports</h3>
-                <p>Employers will benefit from Mentor Training and discussions relating to apprentice's progress with a member of the FIT team. FIT will also provide support &amp; guidance when supporting apprentices who require reasonable accommodations.</p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="ta-voice" aria-label="Industry perspective">
-          <div class="container ta-voice__inner">
-            <img loading="lazy" src="https://fit.ie/wp-content/uploads/2019/03/Hilary-O-Meara-Accenture.jpg" alt="Hilary O'Meara">
-            <div>
-              <blockquote>&ldquo;This programme brings increased diversity of experience and thinking and has enabled us to broaden our talent pool to shape the workforce we need to help clients succeed.&rdquo;</blockquote>
-              <cite>Hilary O'Meara<span>MD, Accenture Ireland</span></cite>
+            <div class="ta-upcoming">
+              <h3 id="upcoming-title">Upcoming Tech<br>Apprenticeships</h3>
+              <div class="ta-upcoming__body">
+                <p>See our exact programme <strong>locations</strong> and <strong>dates</strong>. All of the off-the-job learning takes place in Education and Training Boards nationwide, in person or through hybrid training.</p>
+                <div class="btn-row">
+                  <a class="fit-btn fit-btn--yellow" href="courses.html">Locations &amp; dates <span aria-hidden="true">&rarr;</span></a>
+                  <a class="fit-btn fit-btn--ghost" href="contact.html">Book a call</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="ta-faq" id="faq" aria-labelledby="faq-link-title">
-          <div class="container">
-            <div class="ta-faq__head">
-              <span class="section-kicker">Good to know</span>
-              <h2 id="faq-link-title" style="margin-bottom:14px;">Employer <em>FAQs</em></h2>
+        <section class="ta-contact" aria-labelledby="cta-title">
+          <div class="container ta-contact__grid">
+            <div class="ta-contact__media">
+              <img loading="lazy" decoding="async" src="assets/img/tallaght-software-development-cohort.jpg" alt="A Software Development apprenticeship cohort at a FIT training centre">
             </div>
-            <p>Onboarding steps, on-site patterns, how FIT recruits, and the grants and bursaries available are answered in full on the employer FAQ page.</p>
-            <div class="btn-row" style="margin-top:22px;">
-              <a class="fit-btn fit-btn--navy" href="faq-hiring-an-apprentice.html">Read employer FAQs <span aria-hidden="true">&rarr;</span></a>
-              <a class="fit-btn fit-btn--outline" href="contact.html">Ask a question <span aria-hidden="true">&rarr;</span></a>
+
+            <div class="ta-contact__copy">
+              <span class="section-kicker">Recruiting all year round</span>
+              <h2 id="cta-title">Ready to hire <em>emerging tech talent?</em></h2>
+              <p>Tell us the roles you need and the FIT team will take it from there &mdash; shortlisting candidates who match your business, supporting your onboarding and staying with you throughout the two years.</p>
+              <div class="ta-contact__actions">
+                <a class="fit-btn" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/ApprenticeshipEmployerApplicationForm/formperma/ih6WuPLGzJ--zTTlQIAELYrTL0vxRyOOZoLxdbRhd-w" target="_blank" rel="noopener">Hire an apprentice <span aria-hidden="true">&nearr;</span></a>
+                <a class="fit-btn fit-btn--ghost" href="contact.html">Book a call</a>
+              </div>
             </div>
           </div>
         </section>
 
         <section class="ta-partners" aria-labelledby="partners-title">
           <div class="container">
-            <h2 id="partners-title">Apprenticeship partners</h2>
-            <ul class="ta-partner-row">
-              <li class="ta-partner-row__wide"><img loading="lazy" src="https://fit.ie/wp-content/uploads/2019/08/Generation-Apprenticeship-logo.svg" alt="Generation Apprenticeship — www.apprenticeship.ie"></li>
-              <li><img loading="lazy" src="assets/img/logos/etbi-FIT-Partners-003.svg" alt="Education and Training Boards Ireland"></li>
-              <li><img loading="lazy" src="assets/img/logos/QQI-Logo.svg" alt="Quality and Qualifications Ireland"></li>
-              <li><img loading="lazy" src="assets/img/logos/Solas-1.svg" alt="SOLAS"></li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="ta-hire" id="become" aria-labelledby="become-title">
-          <div class="container ta-hire__shell">
-            <div>
-              <span class="section-kicker">For learners</span>
-              <h2 id="become-title">Become a tech apprentice</h2>
-              <p>If you enjoy learning by doing, gaining skills and valuable experience while earning, the Tech Apprenticeship is the route in. FIT recruits all year round.</p>
-              <div class="btn-row">
-                <a class="fit-btn fit-btn--yellow" href="tech-apprenticeships.html">Become an apprentice <span aria-hidden="true">&rarr;</span></a>
+            <h2 id="partners-title">Apprenticeship Employers &amp; Partners</h2>
+            <div class="logo-marquee logo-marquee--onlight logo-marquee--sm" aria-label="Apprenticeship employers and partners">
+              <div class="logo-marquee__track">
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2019/08/Generation-Apprenticeship-logo.svg" alt="Generation Apprenticeship"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/etbi-FIT-Partners-003.svg" alt="Education and Training Boards Ireland"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/QQI-Logo.svg" alt="Quality and Qualifications Ireland"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/Solas-1.svg" alt="SOLAS"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/google.png" alt="Google"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/salesforce.webp" alt="Salesforce"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/mastercard.webp" alt="Mastercard"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/fidelity.webp" alt="Fidelity Investments"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/esb.png" alt="ESB"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/hse.png" alt="HSE"></span>
+                <span class="logo-chip"><img loading="lazy" decoding="async" src="assets/img/logos/zinkworks.png" alt="Zinkworks"></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="https://fit.ie/wp-content/uploads/2019/08/Generation-Apprenticeship-logo.svg" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/etbi-FIT-Partners-003.svg" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/QQI-Logo.svg" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/Solas-1.svg" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/google.png" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/salesforce.webp" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/mastercard.webp" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/fidelity.webp" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/esb.png" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/hse.png" alt=""></span>
+                <span class="logo-chip" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/logos/zinkworks.png" alt=""></span>
               </div>
             </div>
-            <ul class="ta-check">
-              <li>QQI Level 6 Advanced Certificate in two years</li>
-              <li>Employed and paid by your host company from day one</li>
-              <li>Off-the-job training in ETBs nationwide, fully funded</li>
-              <li>Support from FIT throughout the apprenticeship</li>
-            </ul>
           </div>
         </section>
 
-        <section class="ta-contact" aria-labelledby="cta-title">
-          <div class="container">
-            <span class="section-kicker">Ready to start?</span>
-            <h2 id="cta-title">Join the long list of companies hiring via the apprenticeship route</h2>
-            <p><strong>Express your interest today.</strong> A member of the FIT Tech Apprenticeship team will contact you to arrange the next steps.</p>
-            <div class="btn-row">
-              <a class="fit-btn" href="https://forms.zohopublic.eu/fasttrackintoinformationtech1/form/ApprenticeshipEmployerApplicationForm/formperma/ih6WuPLGzJ--zTTlQIAELYrTL0vxRyOOZoLxdbRhd-w" target="_blank" rel="noopener">Get involved <span aria-hidden="true">&nearr;</span></a>
-              <a class="fit-btn fit-btn--dark-outline" href="https://www.apprenticeshiponline.ie/#/employer/register" target="_blank" rel="noopener">SOLAS employer registration <span aria-hidden="true">&nearr;</span></a>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
 
@@ -864,6 +894,7 @@
   </div>
   <script>
   (function () {
+
     var carousels = document.querySelectorAll('[data-carousel]');
     Array.prototype.forEach.call(carousels, function (root) {
       var viewport = root.querySelector('.ta-carousel__viewport');

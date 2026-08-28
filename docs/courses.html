@@ -26,7 +26,6 @@
 
     <!-- ============================ SITE HEADER ============================ -->
     <header class="site-header" data-header>
-      <span class="branch-watermark" aria-hidden="true">Stephen (FIT)</span>
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="FIT — home">
           <img class="brand-logo" src="assets/fit-logo-white.png" alt="FIT — The Tech Talent Pipeline">
@@ -56,7 +55,8 @@
               <ul class="nav-menu__list">
                 <li><a href="ai-training.html">AI Centre of Excellence</a></li>
                 <li><a href="courses.html">Courses &amp; Course Search</a></li>
-                <li><a href="learners.html#paths">Free Digital Skills Platforms</a></li>
+                <li><a href="digital-skills-training.html">Digital Skills Training</a></li>
+                <li><a href="traineeships.html">Traineeships</a></li>
                 <li><a href="green-skills-learners.html">Green Skills</a></li>
               </ul>
               <p class="nav-menu__group">Community &amp; support</p>
@@ -78,7 +78,7 @@
               </a>
               <ul class="nav-menu__list">
                 <li><a href="hire-a-tech-apprentice.html">Hire a Tech Apprentice</a></li>
-                <li><a href="employers.html#develop">Upskill Your Team</a></li>
+                <li><a href="upskill-your-team.html">Upskill Your Team</a></li>
                 <li><a href="ai-training.html">AI Centre of Excellence</a></li>
                 <li><a href="employers.html#hire">Benefits, Grants &amp; Supports</a></li>
                 <li><a href="green-skills-employers.html">Green Skills</a></li>
@@ -118,7 +118,7 @@
           <div class="nav-group">
             <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-schools">Schools &amp; Colleges <span class="nav-trigger__caret" aria-hidden="true"></span></button>
             <div class="nav-menu nav-menu--wide" id="menu-schools">
-              <a class="nav-menu__head" href="choosetech.html" data-match="choosetech.html">
+              <a class="nav-menu__head" href="schools-and-colleges.html" data-match="schools-and-colleges.html">
                 <span class="nav-menu__head-label">Pathway</span>
                 <span class="nav-menu__head-link">Schools &amp; Colleges hub <span aria-hidden="true">&rarr;</span></span>
               </a>
@@ -127,7 +127,7 @@
                 <li><a href="choosetech.html">Choose Tech</a></li>
                 <li><a href="hero-in-tech.html">HERo in Tech</a></li>
                 <li><a href="choosetech.html#educators">Teacher &amp; Guidance Resources</a></li>
-                <li><a href="choosetech.html#register">School Enquiry</a></li>
+                <li><a href="core-supports.html">Core Supports</a></li>
               </ul>
               <p class="nav-menu__group">Colleges &amp; training centres</p>
               <ul class="nav-menu__list">
@@ -184,6 +184,7 @@
           </nav>
           <p class="eyebrow">For learners</p>
           <h1 id="page-title">Courses &amp; <span class="hl">apprenticeships</span></h1>
+          <p class="fit-hero__lead">Search the further-education and training directory FIT lists with its partners, or apply for one of the seven programmes FIT delivers itself.</p>
           <div class="fit-btn-row">
             <a class="fit-btn fit-btn--yellow" href="#find">Find a course <span aria-hidden="true">&rarr;</span></a>
             <a class="fit-btn fit-btn--ghost" href="apply-tech-apprenticeship.html">Apply now <span aria-hidden="true">&rarr;</span></a>
@@ -195,8 +196,10 @@
         <div class="fit-container jump-nav__inner">
           <span class="jump-nav__label">On this page</span>
           <ul>
-            <li><a href="#find">FET courses nationwide</a></li>
+            <li><a href="#find">Course search</a></li>
             <li><a href="#courses">FIT programmes</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#free">Free courses</a></li>
             <li><a href="#testimonials">Graduate stories</a></li>
           </ul>
         </div>
@@ -204,87 +207,105 @@
 
       <!-- FIND A COURSE -->
       <section class="fit-section" id="find" aria-labelledby="find-title">
-        <div class="fit-container">
-          <div class="section-head" style="margin-bottom:30px;">
+        <div class="fit-container course-find__grid">
+          <div class="section-head">
             <span class="section-kicker">Search with FIT</span>
             <h2 id="find-title">FET courses nationwide</h2>
             <p>With over 200 courses to choose from, there&rsquo;s one that&rsquo;s just right for you. Search the full further-education and training directory FIT lists with its partners by category, location and award level.</p>
           </div>
 
           <div class="course-search">
-            <form class="search-scope" id="scope-fet" action="https://fit.ie/courses/" method="get">
-              <div class="search-facets">
-                <div class="fit-field">
-                  <label for="fet-category">Course category</label>
-                  <select id="fet-category" name="category">
-                    <option value="">All categories (257)</option>
-                    <option>Business, Administration &amp; Customer Service (75)</option>
-                    <option>Childcare (3)</option>
-                    <option>Computing, Engineering &amp; Science (77)</option>
-                    <option>Design &amp; Construction (2)</option>
-                    <option>Digital Media, Multimedia &amp; Design (24)</option>
-                    <option>Manufacturing (3)</option>
-                    <option>Retail (1)</option>
-                    <option>Tech Apprenticeships (3)</option>
-                    <option>Tourism (8)</option>
-                    <option>Youthreach (52)</option>
-                    <option>Other (9)</option>
-                  </select>
-                </div>
-                <div class="fit-field">
-                  <label for="fet-county">Location</label>
-                  <select id="fet-county" name="county">
-                    <option value="">All locations</option>
-                    <option>Carlow (3)</option>
-                    <option>Cavan (3)</option>
-                    <option>Cork (29)</option>
-                    <option>Donegal (5)</option>
-                    <option>Dublin (67)</option>
-                    <option>Kerry (22)</option>
-                    <option>Kildare (2)</option>
-                    <option>Kilkenny (4)</option>
-                    <option>Laois (4)</option>
-                    <option>Leitrim (2)</option>
-                    <option>Limerick (5)</option>
-                    <option>Longford (1)</option>
-                    <option>Louth (7)</option>
-                    <option>Mayo (22)</option>
-                    <option>Meath (14)</option>
-                    <option>Monaghan (4)</option>
-                    <option>Offaly (6)</option>
-                    <option>Sligo (8)</option>
-                    <option>Tipperary (10)</option>
-                    <option>Waterford (6)</option>
-                    <option>Westmeath (7)</option>
-                    <option>Wexford (3)</option>
-                    <option>Wicklow (4)</option>
-                    <option>Nationwide (3)</option>
-                  </select>
-                </div>
-                <div class="fit-field">
-                  <label for="fet-level">Award level</label>
-                  <select id="fet-level" name="level">
-                    <option value="">All award levels</option>
-                    <option>NFQ Level 2 (1)</option>
-                    <option>NFQ Level 3 (2)</option>
-                    <option>NFQ Level 3&ndash;4 (30)</option>
-                    <option>NFQ Level 4 (37)</option>
-                    <option>NFQ Level 5 (147)</option>
-                    <option>NFQ Level 6 (30)</option>
-                    <option>Accredited, no NFQ level (1)</option>
-                  </select>
-                </div>
-              </div>
-              <div class="search-row">
+            <div class="course-search__head">
+              <h3 id="search-title">Course search</h3>
+              <p id="search-help">Start with a keyword, then narrow by category, location or award level. Leave a filter on &ldquo;All&rdquo; to include everything.</p>
+              <ul class="course-search__stats">
+                <li><b>257</b> courses</li>
+                <li><b>23</b> counties</li>
+                <li>NFQ Levels <b>2&ndash;6</b></li>
+              </ul>
+            </div>
+
+            <form class="search-scope" id="scope-fet" action="https://fit.ie/courses/" method="get" aria-labelledby="search-title" aria-describedby="search-help">
+              <div class="search-primary">
                 <div class="fit-field">
                   <label for="fet-keyword">Keyword</label>
                   <input id="fet-keyword" name="s" type="search" placeholder="e.g. cybersecurity, business administration">
                 </div>
-                <button class="fit-btn fit-btn--navy" type="submit">Search FET courses <span aria-hidden="true">&rarr;</span></button>
               </div>
+
+              <fieldset class="search-filters">
+                <legend class="search-filters__legend">Narrow your results</legend>
+                <div class="search-facets">
+                  <div class="fit-field">
+                    <label for="fet-category">Course category</label>
+                    <select id="fet-category" name="category">
+                      <option value="">All categories (257)</option>
+                      <option>Business, Administration &amp; Customer Service (75)</option>
+                      <option>Childcare (3)</option>
+                      <option>Computing, Engineering &amp; Science (77)</option>
+                      <option>Design &amp; Construction (2)</option>
+                      <option>Digital Media, Multimedia &amp; Design (24)</option>
+                      <option>Manufacturing (3)</option>
+                      <option>Retail (1)</option>
+                      <option>Tech Apprenticeships (3)</option>
+                      <option>Tourism (8)</option>
+                      <option>Youthreach (52)</option>
+                      <option>Other (9)</option>
+                    </select>
+                  </div>
+                  <div class="fit-field">
+                    <label for="fet-county">Location</label>
+                    <select id="fet-county" name="county">
+                      <option value="">All locations</option>
+                      <option>Carlow (3)</option>
+                      <option>Cavan (3)</option>
+                      <option>Cork (29)</option>
+                      <option>Donegal (5)</option>
+                      <option>Dublin (67)</option>
+                      <option>Kerry (22)</option>
+                      <option>Kildare (2)</option>
+                      <option>Kilkenny (4)</option>
+                      <option>Laois (4)</option>
+                      <option>Leitrim (2)</option>
+                      <option>Limerick (5)</option>
+                      <option>Longford (1)</option>
+                      <option>Louth (7)</option>
+                      <option>Mayo (22)</option>
+                      <option>Meath (14)</option>
+                      <option>Monaghan (4)</option>
+                      <option>Offaly (6)</option>
+                      <option>Sligo (8)</option>
+                      <option>Tipperary (10)</option>
+                      <option>Waterford (6)</option>
+                      <option>Westmeath (7)</option>
+                      <option>Wexford (3)</option>
+                      <option>Wicklow (4)</option>
+                      <option>Nationwide (3)</option>
+                    </select>
+                  </div>
+                  <div class="fit-field">
+                    <label for="fet-level">Award level</label>
+                    <select id="fet-level" name="level">
+                      <option value="">All award levels</option>
+                      <option>NFQ Level 2 (1)</option>
+                      <option>NFQ Level 3 (2)</option>
+                      <option>NFQ Level 3&ndash;4 (30)</option>
+                      <option>NFQ Level 4 (37)</option>
+                      <option>NFQ Level 5 (147)</option>
+                      <option>NFQ Level 6 (30)</option>
+                      <option>Accredited, no NFQ level (1)</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="search-actions">
+                <button class="fit-btn fit-btn--navy" type="submit">Search FET courses <span aria-hidden="true">&rarr;</span></button>
+                <button class="search-reset" type="reset">Clear all filters</button>
+              </div>
+
               <p class="search-note">FET courses are delivered by Education and Training Boards and FIT partners nationwide. Entry requirements, start dates and how to apply sit on each course listing. You can also browse the national <a href="https://www.fetchcourses.ie/course/finder" target="_blank" rel="noopener">Further Education &amp; Training Course Hub</a>.</p>
             </form>
-
           </div>
         </div>
       </section>
@@ -292,63 +313,140 @@
       <!-- FIT COURSES -->
       <section class="fit-section fit-section--light" id="courses" aria-labelledby="courses-title">
         <div class="fit-container">
-          <div class="section-head" style="margin-bottom:44px;">
+          <div class="section-head section-head--flow">
             <span class="section-kicker">Delivered by FIT</span>
             <h2 id="courses-title">FIT programmes</h2>
             <p>Earn while you learn. FIT tech apprenticeships combine off-the-job skills training with on-the-job experience, leading to a nationally recognised qualification. Seven programmes run under FIT itself: four Level 6 tech apprenticeships, a Level 5 pre-apprenticeship, and manufacturing maintenance in Navan and Ballina.</p>
           </div>
 
-          <div class="fit-card-grid fit-card-grid--3">
-            <article class="fit-card">
-              <span class="fit-card__eyebrow">NFQ Level 6 &middot; Apprenticeship</span>
-              <h3>Computer Networking Associate</h3>
-              <p>Design, build and support the networks that keep organisations connected — a two-year, work-based apprenticeship.</p>
-              <a class="fit-card__link" href="apply-tech-apprenticeship.html">Course details <span aria-hidden="true">&rarr;</span></a>
+          <div class="course-group course-group--wide">
+            <h3 class="course-group__label">Level 6 tech apprenticeships</h3>
+            <div class="fit-card-grid fit-card-grid--2">
+            <article class="fit-card course-card fit-card--blue">
+              <span class="fit-card__eyebrow">Tech Apprenticeship</span>
+              <h4 class="course-card__title">Computer Networking Associate</h4>
+              <p class="course-card__desc">Design, build and support the networks that keep organisations connected — a two-year, work-based apprenticeship.</p>
+              <dl class="course-card__meta">
+                <div><dt>Award</dt><dd>NFQ Level 6</dd></div>
+                <div><dt>Duration</dt><dd>2 years, paid</dd></div>
+                <div><dt>Delivery</dt><dd>Work-based, in person or hybrid</dd></div>
+                <div><dt>Location</dt><dd>ETB centres nationwide</dd></div>
+              </dl>
+              <div class="course-card__actions">
+                <a class="fit-btn fit-btn--navy fit-btn--sm" href="apply-tech-apprenticeship.html">Apply<span class="sr-only"> for Computer Networking Associate</span> <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-card__link" href="tech-apprenticeships.html">View course<span class="sr-only">: Computer Networking Associate</span> <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </article>
-            <article class="fit-card fit-card--blue">
-              <span class="fit-card__eyebrow">NFQ Level 6 &middot; Apprenticeship</span>
-              <h3>Software Development Associate</h3>
-              <p>Learn to build software and applications with modern tools and languages while working with a host employer.</p>
-              <a class="fit-card__link" href="apply-tech-apprenticeship.html">Course details <span aria-hidden="true">&rarr;</span></a>
+
+            <article class="fit-card course-card fit-card--blue">
+              <span class="fit-card__eyebrow">Tech Apprenticeship</span>
+              <h4 class="course-card__title">Software Development Associate</h4>
+              <p class="course-card__desc">Learn to build software and applications with modern tools and languages while working with a host employer.</p>
+              <dl class="course-card__meta">
+                <div><dt>Award</dt><dd>NFQ Level 6</dd></div>
+                <div><dt>Duration</dt><dd>2 years, paid</dd></div>
+                <div><dt>Delivery</dt><dd>Work-based, in person or hybrid</dd></div>
+                <div><dt>Location</dt><dd>ETB centres nationwide</dd></div>
+              </dl>
+              <div class="course-card__actions">
+                <a class="fit-btn fit-btn--navy fit-btn--sm" href="apply-tech-apprenticeship.html">Apply<span class="sr-only"> for Software Development Associate</span> <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-card__link" href="tech-apprenticeships.html">View course<span class="sr-only">: Software Development Associate</span> <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </article>
-            <article class="fit-card fit-card--purple">
-              <span class="fit-card__eyebrow">NFQ Level 6 &middot; Apprenticeship</span>
-              <h3>Cybersecurity Associate</h3>
-              <p>Protect systems, data and people. Develop the in-demand skills organisations need to stay secure.</p>
-              <a class="fit-card__link" href="apply-tech-apprenticeship.html">Course details <span aria-hidden="true">&rarr;</span></a>
+
+            <article class="fit-card course-card fit-card--blue">
+              <span class="fit-card__eyebrow">Tech Apprenticeship</span>
+              <h4 class="course-card__title">Cybersecurity Associate</h4>
+              <p class="course-card__desc">Protect systems, data and people. Develop the in-demand skills organisations need to stay secure.</p>
+              <dl class="course-card__meta">
+                <div><dt>Award</dt><dd>NFQ Level 6</dd></div>
+                <div><dt>Duration</dt><dd>2 years, paid</dd></div>
+                <div><dt>Delivery</dt><dd>Work-based, in person or hybrid</dd></div>
+                <div><dt>Location</dt><dd>ETB centres nationwide</dd></div>
+              </dl>
+              <div class="course-card__actions">
+                <a class="fit-btn fit-btn--navy fit-btn--sm" href="apply-tech-apprenticeship.html">Apply<span class="sr-only"> for Cybersecurity Associate</span> <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-card__link" href="tech-apprenticeships.html">View course<span class="sr-only">: Cybersecurity Associate</span> <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </article>
-            <article class="fit-card fit-card--yellow">
-              <span class="fit-card__eyebrow">NFQ Level 6 &middot; Apprenticeship</span>
-              <h3>Data Analytics Associate</h3>
-              <p>Turn data into decisions. Build the analysis, reporting and visualisation skills employers are hiring for, while working with a host employer.</p>
-              <a class="fit-card__link" href="apply-tech-apprenticeship.html">Course details <span aria-hidden="true">&rarr;</span></a>
+
+            <article class="fit-card course-card fit-card--blue">
+              <span class="fit-card__eyebrow">Tech Apprenticeship</span>
+              <h4 class="course-card__title">Data Analytics Associate</h4>
+              <p class="course-card__desc">Turn data into decisions. Build the analysis, reporting and visualisation skills employers are hiring for, while working with a host employer.</p>
+              <dl class="course-card__meta">
+                <div><dt>Award</dt><dd>NFQ Level 6</dd></div>
+                <div><dt>Duration</dt><dd>2 years, paid</dd></div>
+                <div><dt>Delivery</dt><dd>Work-based, in person or hybrid</dd></div>
+                <div><dt>Location</dt><dd>ETB centres nationwide</dd></div>
+              </dl>
+              <div class="course-card__actions">
+                <a class="fit-btn fit-btn--navy fit-btn--sm" href="apply-tech-apprenticeship.html">Apply<span class="sr-only"> for Data Analytics Associate</span> <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-card__link" href="tech-apprenticeships.html">View course<span class="sr-only">: Data Analytics Associate</span> <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </article>
-            <article class="fit-card fit-card--green">
-              <span class="fit-card__eyebrow">NFQ Level 5 &middot; Pre-apprenticeship</span>
-              <h3>IT Technician</h3>
-              <p>A pre-apprenticeship that builds the core skills and confidence to step into a Level 6 tech apprenticeship.</p>
-              <a class="fit-card__link" href="tech-apprenticeships.html#routes-title">Course details <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="course-group">
+            <h3 class="course-group__label">Pre-apprenticeship &amp; manufacturing</h3>
+            <div class="fit-card-grid fit-card-grid--3">
+            <article class="fit-card course-card fit-card--green">
+              <span class="fit-card__eyebrow">Pre-apprenticeship</span>
+              <h4 class="course-card__title">IT Technician</h4>
+              <p class="course-card__desc">A pre-apprenticeship that builds the core skills and confidence to step into a Level 6 tech apprenticeship.</p>
+              <dl class="course-card__meta">
+                <div><dt>Award</dt><dd>NFQ Level 5</dd></div>
+                <div><dt>Duration</dt><dd>Under 2 years</dd></div>
+                <div><dt>Delivery</dt><dd>In person or hybrid</dd></div>
+                <div><dt>Location</dt><dd>ETB centres nationwide</dd></div>
+              </dl>
+              <div class="course-card__actions">
+                <a class="fit-btn fit-btn--navy fit-btn--sm" href="apply-tech-apprenticeship.html">Apply<span class="sr-only"> for IT Technician</span> <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-card__link" href="tech-apprenticeships.html#routes-title">View course<span class="sr-only">: IT Technician</span> <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </article>
-            <article class="fit-card">
-              <span class="fit-card__eyebrow">NFQ Level 6 &middot; Navan, Co. Meath</span>
-              <h3>Manufacturing Technician — Maintenance Skills</h3>
-              <p>Hands-on maintenance skills for advanced manufacturing, delivered locally in Navan.</p>
-              <a class="fit-card__link" href="tech-apprenticeships.html">Course details <span aria-hidden="true">&rarr;</span></a>
+
+            <article class="fit-card course-card fit-card--purple">
+              <span class="fit-card__eyebrow">Manufacturing</span>
+              <h4 class="course-card__title">Manufacturing Technician — Maintenance Skills</h4>
+              <p class="course-card__desc">Hands-on maintenance skills for advanced manufacturing, delivered locally in Navan.</p>
+              <dl class="course-card__meta">
+                <div><dt>Award</dt><dd>NFQ Level 6</dd></div>
+                <div><dt>Duration</dt><dd>2 years, paid</dd></div>
+                <div><dt>Delivery</dt><dd>Work-based, in person</dd></div>
+                <div><dt>Location</dt><dd>Navan, Co. Meath</dd></div>
+              </dl>
+              <div class="course-card__actions">
+                <a class="fit-btn fit-btn--navy fit-btn--sm" href="contact.html">Register interest<span class="sr-only"> in Manufacturing Technician, Navan</span> <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-card__link" href="tech-apprenticeships.html">View course<span class="sr-only">: Manufacturing Technician, Navan</span> <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </article>
-            <article class="fit-card">
-              <span class="fit-card__eyebrow">NFQ Level 6 &middot; Ballina, Co. Mayo</span>
-              <h3>Manufacturing Technician — Maintenance Skills</h3>
-              <p>The same industry-recognised maintenance programme, delivered locally in Ballina.</p>
-              <a class="fit-card__link" href="tech-apprenticeships.html">Course details <span aria-hidden="true">&rarr;</span></a>
+
+            <article class="fit-card course-card fit-card--purple">
+              <span class="fit-card__eyebrow">Manufacturing</span>
+              <h4 class="course-card__title">Manufacturing Technician — Maintenance Skills</h4>
+              <p class="course-card__desc">The same industry-recognised maintenance programme, delivered locally in Ballina.</p>
+              <dl class="course-card__meta">
+                <div><dt>Award</dt><dd>NFQ Level 6</dd></div>
+                <div><dt>Duration</dt><dd>2 years, paid</dd></div>
+                <div><dt>Delivery</dt><dd>Work-based, in person</dd></div>
+                <div><dt>Location</dt><dd>Ballina, Co. Mayo</dd></div>
+              </dl>
+              <div class="course-card__actions">
+                <a class="fit-btn fit-btn--navy fit-btn--sm" href="contact.html">Register interest<span class="sr-only"> in Manufacturing Technician, Ballina</span> <span aria-hidden="true">&rarr;</span></a>
+                <a class="fit-card__link" href="tech-apprenticeships.html">View course<span class="sr-only">: Manufacturing Technician, Ballina</span> <span aria-hidden="true">&rarr;</span></a>
+              </div>
             </article>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- HOW APPRENTICESHIPS WORK -->
-      <section class="fit-section" aria-labelledby="how-title">
+      <section class="fit-section" id="how" aria-labelledby="how-title">
         <div class="fit-container">
-          <div class="section-head" style="margin-bottom:52px;">
+          <div class="section-head section-head--flow" style="margin-bottom:56px;">
             <span class="section-kicker">Earn while you learn</span>
             <h2 id="how-title">How a tech apprenticeship works</h2>
           </div>
@@ -362,7 +460,7 @@
       </section>
 
       <!-- FREE / AI SHORT COURSES -->
-      <section class="fit-section fit-section--navy" aria-labelledby="free-title">
+      <section class="fit-section fit-section--navy" id="free" aria-labelledby="free-title">
         <div class="fit-container">
           <div class="fit-split">
             <div class="fit-prose">
@@ -387,9 +485,9 @@
       </section>
 
       <!-- FAQ LINK -->
-      <section class="fit-section" aria-labelledby="faq-link-title">
+      <section class="fit-section fit-section--light" aria-labelledby="faq-link-title">
         <div class="fit-container">
-          <div class="section-head eyebrow-center" style="margin-bottom:26px;text-align:center;">
+          <div class="section-head eyebrow-center section-head--tight" style="text-align:center;">
             <span class="section-kicker">Course FAQs</span>
             <h2 id="faq-link-title">Questions about FIT programmes?</h2>
             <p>Attendance, entry requirements, course length, training allowances, childcare and the VTOS, BTEA and SUSI supports are all answered on the course FAQ page.</p>
@@ -404,7 +502,7 @@
       <!-- WHERE TO NEXT -->
       <section class="fit-section" aria-labelledby="next-title">
         <div class="fit-container">
-          <div class="section-head" style="margin-bottom:44px;">
+          <div class="section-head section-head--flow">
             <span class="section-kicker">Keep going</span>
             <h2 id="next-title">Where to next</h2>
             <p>Pages that go deeper on the routes and supports behind these courses.</p>
@@ -439,9 +537,9 @@
       </section>
 
       <!-- ALUMNI TESTIMONIALS -->
-      <section class="fit-section fit-section--light" id="testimonials" aria-labelledby="testimonials-title">
+      <section class="fit-section" id="testimonials" aria-labelledby="testimonials-title">
         <div class="fit-container">
-          <div class="section-head eyebrow-center" style="margin-bottom:44px;text-align:center;">
+          <div class="section-head eyebrow-center section-head--flow" style="text-align:center;">
             <span class="section-kicker">FIT alumni</span>
             <h2 id="testimonials-title">What our graduates say</h2>
           </div>
