@@ -45,6 +45,82 @@
     host.insertBefore(badge, host.firstChild);
   })();
 
+  /* ---- 0b. "Not final image" placeholder label on stock photography ----
+     Flags photographic <img>s and photo background-images inside <main> as
+     placeholders, without touching their DOM (no wrapping, no layout risk)
+     — each label is a position:fixed span kept aligned on scroll/resize.
+     Real branding (logos, favicon, partner/council marks) is excluded by
+     keyword + a minimum-size heuristic so small icons never get tagged. --- */
+  (function () {
+    var LABEL_TEXT = "Not final image";
+    var MIN_SIZE = 90;
+    var EXCLUDE_RE = /logo|favicon|brand|arena|council|sponsor|\/ka\//i;
+    var main = document.querySelector("main");
+    if (!main) return;
+
+    var items = [];
+
+    function isExcluded(target, extra) {
+      var src = target.currentSrc || target.src || "";
+      var cls = (target.className || "") + " " + (extra || "");
+      var alt = (target.getAttribute && target.getAttribute("alt")) || "";
+      return EXCLUDE_RE.test(src) || EXCLUDE_RE.test(cls) || EXCLUDE_RE.test(alt);
+    }
+
+    function addLabel(target) {
+      var el = document.createElement("span");
+      el.className = "not-final-label";
+      el.textContent = LABEL_TEXT;
+      el.setAttribute("aria-hidden", "true");
+      document.body.appendChild(el);
+      items.push({ el: el, target: target });
+    }
+
+    function collect() {
+      Array.prototype.slice.call(main.querySelectorAll("img")).forEach(function (img) {
+        var rect = img.getBoundingClientRect();
+        if (rect.width < MIN_SIZE || rect.height < MIN_SIZE) return;
+        if (isExcluded(img, "")) return;
+        addLabel(img);
+      });
+      Array.prototype.slice.call(main.querySelectorAll("*")).forEach(function (el) {
+        if (el.tagName === "IMG") return;
+        var bg = getComputedStyle(el).backgroundImage;
+        if (!bg || bg.indexOf("url(") === -1) return;
+        var rect = el.getBoundingClientRect();
+        if (rect.width < 160 || rect.height < MIN_SIZE) return;
+        if (isExcluded(el, bg)) return;
+        addLabel(el);
+      });
+    }
+
+    function reposition() {
+      var vh = window.innerHeight;
+      items.forEach(function (item) {
+        var rect = item.target.getBoundingClientRect();
+        var visible = rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < vh;
+        item.el.style.display = visible ? "" : "none";
+        if (!visible) return;
+        item.el.style.top = Math.max(0, Math.min(rect.bottom - 24, vh - 24)) + "px";
+        item.el.style.left = Math.max(0, rect.left + 8) + "px";
+      });
+    }
+
+    window.addEventListener("load", function () {
+      collect();
+      reposition();
+    });
+
+    var ticking = false;
+    function onViewportChange() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { reposition(); ticking = false; });
+    }
+    window.addEventListener("scroll", onViewportChange, { passive: true });
+    window.addEventListener("resize", onViewportChange);
+  })();
+
   /* ---- 1. Header: solid navy on scroll ---------------------------------- */
   var header = document.querySelector("[data-header]");
   if (header) {

@@ -37,7 +37,7 @@
   --fit-container: 1180px;
   --fit-header-h: 96px;
   --fit-logo-scale: 1;
-  --fit-logo-fit: 56px;
+  --fit-logo-fit: 84px;
   --fit-logo-ka: 66px;
   --fit-logo-ka-wm: 85px;
   --fit-ease: 180ms ease;
@@ -349,6 +349,23 @@ select:focus-visible,
 @media (max-width: 400px) {
   /* Not enough room for the full date next to the hamburger — keep branch + time only */
   .branch-watermark__day { display: none; }
+}
+
+/* "Not final image" placeholder label — script.js keeps these aligned to their photo on scroll/resize */
+.not-final-label {
+  position: fixed;
+  z-index: 40;
+  padding: 3px 8px;
+  background: rgba(0, 0, 0, 0.64);
+  color: #fff;
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .header-inner {
@@ -1643,7 +1660,7 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
 @media (min-width: 1081px) and (max-width: 1280px) {
   .primary-nav { gap: 10px; }
   .nav-link, .nav-trigger { font-size: 14px; }
-  :root { --fit-logo-fit: 46px; --fit-logo-ka: 54px; --fit-logo-ka-wm: 70px; }
+  :root { --fit-logo-fit: 70px; --fit-logo-ka: 54px; --fit-logo-ka-wm: 70px; }
 }
 
 /* Nav collapses to hamburger below 1080px */
@@ -1698,7 +1715,7 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
   .nav-menu__head { padding: 8px 8px 12px; border-color: rgba(255,255,255,0.12); }
   .nav-menu__list a { padding: 12px 10px; font-size: 15px; }
   .header-arena { margin-left: auto; }
-  :root { --fit-logo-fit: 40px; --fit-logo-ka: 47px; --fit-logo-ka-wm: 61px; }
+  :root { --fit-logo-fit: 60px; --fit-logo-ka: 47px; --fit-logo-ka-wm: 61px; }
 }
 
 @media (max-width: 860px) {
@@ -1745,7 +1762,7 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
   .brand-tagline { display: none; }
-  :root { --fit-logo-fit: 34px; --fit-logo-ka: 40px; --fit-logo-ka-wm: 52px; }
+  :root { --fit-logo-fit: 50px; --fit-logo-ka: 40px; --fit-logo-ka-wm: 52px; }
   .story-stamp { left: 0; padding: 14px 16px; }
   .story-stamp strong { font-size: 32px; }
 }
