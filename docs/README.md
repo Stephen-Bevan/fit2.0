@@ -5,7 +5,7 @@ paths, so it works at a repo subpath (`user.github.io/repo/`) as well as at a
 domain root.
 
 - `index.html` — home page (GitHub Pages serves this automatically)
-- 46 pages in total, all at the top level of this folder
+- 47 pages in total, all at the top level of this folder
 - `styles.css`, `script.js` — site-wide styles and behaviour
 - `assets/` — logos, favicon, `img/` photography, `council/` partner logos
 - `.nojekyll` — tells GitHub Pages to serve the files as-is
@@ -22,7 +22,7 @@ git checkout stephen-fit
 rm -rf docs
 # copy this folder in as docs/
 git add -A
-git commit -m "Latest build: 46 pages"
+git commit -m "Latest build: 47 pages"
 git push origin stephen-fit
 ```
 

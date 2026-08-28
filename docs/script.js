@@ -9,6 +9,45 @@
   var mqDesktop = window.matchMedia("(min-width: 981px)");
   var isDesktop = function () { return mqDesktop.matches; };
 
+  /* ---- 0. Branch + live clock watermark (top-right of header) ----------- */
+  (function () {
+    var BRANCH_NAME = "stephen-fit";
+    var host = document.querySelector("[data-header]");
+    if (!host) return;
+
+    var badge = document.createElement("div");
+    badge.className = "branch-watermark";
+    badge.setAttribute("aria-hidden", "true");
+
+    var branchEl = document.createElement("span");
+    branchEl.className = "branch-watermark__branch";
+    branchEl.textContent = BRANCH_NAME;
+
+    var dtWrap = document.createElement("span");
+    dtWrap.className = "branch-watermark__datetime";
+
+    var dayEl = document.createElement("span");
+    dayEl.className = "branch-watermark__day";
+
+    var timeEl = document.createElement("span");
+    timeEl.className = "branch-watermark__time";
+
+    dtWrap.appendChild(dayEl);
+    dtWrap.appendChild(timeEl);
+    badge.appendChild(branchEl);
+    badge.appendChild(dtWrap);
+    host.insertBefore(badge, host.firstChild);
+
+    function render() {
+      var now = new Date();
+      var day = now.toLocaleDateString("en-IE", { weekday: "short", day: "2-digit", month: "short", year: "numeric" });
+      dayEl.textContent = day + " ·";
+      timeEl.textContent = now.toLocaleTimeString("en-IE", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+    }
+    render();
+    setInterval(render, 1000);
+  })();
+
   /* ---- 1. Header: solid navy on scroll ---------------------------------- */
   var header = document.querySelector("[data-header]");
   if (header) {
@@ -23,16 +62,30 @@
   var toggle = document.querySelector(".menu-toggle");
   var primaryNav = document.getElementById("primary-navigation");
 
+  // Keep the page behind the full-screen menu out of reach of keyboard + AT
+  var backdropEls = function () {
+    return [document.querySelector("main"), document.querySelector(".site-footer"), document.querySelector(".back-to-top")];
+  };
+  function setBackdropInert(on) {
+    backdropEls().forEach(function (el) {
+      if (!el) return;
+      if (on) el.setAttribute("inert", "");
+      else el.removeAttribute("inert");
+    });
+  }
+
   function closeMobileMenu() {
     if (!toggle) return;
     document.body.classList.remove("nav-open");
     toggle.setAttribute("aria-expanded", "false");
+    setBackdropInert(false);
     closeAllGroups();
   }
   function openMobileMenu() {
     if (!toggle) return;
     document.body.classList.add("nav-open");
     toggle.setAttribute("aria-expanded", "true");
+    setBackdropInert(true);
   }
   if (toggle) {
     toggle.addEventListener("click", function () {
@@ -133,7 +186,12 @@
     var tabs = Array.prototype.slice.call(carousel.querySelectorAll("[data-feature-target]"));
     var prevBtn = carousel.querySelector("[data-feature-prev]");
     var nextBtn = carousel.querySelector("[data-feature-next]");
+    var dots = Array.prototype.slice.call(carousel.querySelectorAll("[data-feature-dot]"));
+    var currentEl = carousel.querySelector("[data-feature-current]");
+    var totalEl = carousel.querySelector("[data-feature-total]");
     var current = 0;
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    if (totalEl) totalEl.textContent = pad(slides.length);
 
     function showSlide(i) {
       current = (i + slides.length) % slides.length;
@@ -148,6 +206,8 @@
         t.setAttribute("aria-selected", active ? "true" : "false");
         t.tabIndex = active ? 0 : -1;
       });
+      dots.forEach(function (d, idx) { d.classList.toggle("is-active", idx === current); });
+      if (currentEl) currentEl.textContent = pad(current + 1);
     }
     tabs.forEach(function (t, idx) {
       t.addEventListener("click", function () { showSlide(idx); });
@@ -170,6 +230,17 @@
       btn.setAttribute("aria-expanded", expanded ? "false" : "true");
       if (item) item.classList.toggle("is-open", !expanded);
       if (panel) panel.hidden = expanded;
+    });
+  });
+
+  /* ---- 6b. Logo marquee pause control (WCAG 2.2.2) --------------------- */
+  Array.prototype.slice.call(document.querySelectorAll("[data-marquee-toggle]")).forEach(function (btn) {
+    var marquee = document.querySelector(btn.getAttribute("data-marquee-toggle"));
+    if (!marquee) return;
+    btn.addEventListener("click", function () {
+      var paused = marquee.classList.toggle("is-paused");
+      btn.setAttribute("aria-pressed", paused ? "true" : "false");
+      btn.textContent = paused ? "Play logo scroll" : "Pause logo scroll";
     });
   });
 
