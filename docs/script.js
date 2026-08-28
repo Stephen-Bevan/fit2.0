@@ -9,9 +9,13 @@
   var mqDesktop = window.matchMedia("(min-width: 981px)");
   var isDesktop = function () { return mqDesktop.matches; };
 
-  /* ---- 0. Branch + live clock watermark (top-right of header) ----------- */
+  /* ---- 0. Branch + last-push timestamp watermark (top-right of header) --
+     Fixed at the moment this branch was last pushed — NOT a live clock.
+     Update BRANCH_PUSHED_DAY / BRANCH_PUSHED_TIME by hand on each push. --- */
   (function () {
     var BRANCH_NAME = "stephen-fit";
+    var BRANCH_PUSHED_DAY = "Fri 28 Aug 2026 ·";
+    var BRANCH_PUSHED_TIME = "13:06";
     var host = document.querySelector("[data-header]");
     if (!host) return;
 
@@ -28,24 +32,17 @@
 
     var dayEl = document.createElement("span");
     dayEl.className = "branch-watermark__day";
+    dayEl.textContent = BRANCH_PUSHED_DAY;
 
     var timeEl = document.createElement("span");
     timeEl.className = "branch-watermark__time";
+    timeEl.textContent = BRANCH_PUSHED_TIME;
 
     dtWrap.appendChild(dayEl);
     dtWrap.appendChild(timeEl);
     badge.appendChild(branchEl);
     badge.appendChild(dtWrap);
     host.insertBefore(badge, host.firstChild);
-
-    function render() {
-      var now = new Date();
-      var day = now.toLocaleDateString("en-IE", { weekday: "short", day: "2-digit", month: "short", year: "numeric" });
-      dayEl.textContent = day + " ·";
-      timeEl.textContent = now.toLocaleTimeString("en-IE", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
-    }
-    render();
-    setInterval(render, 1000);
   })();
 
   /* ---- 1. Header: solid navy on scroll ---------------------------------- */

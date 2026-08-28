@@ -308,7 +308,7 @@ select:focus-visible,
   backdrop-filter: blur(14px);
 }
 
-/* Branch + live clock watermark — identifies which deployment/branch/time is being viewed */
+/* Branch + last-push timestamp watermark — identifies which deployment/branch/push this is */
 .branch-watermark {
   position: fixed;
   top: 8px;
@@ -347,7 +347,7 @@ select:focus-visible,
   }
 }
 @media (max-width: 400px) {
-  /* Not enough room for the full date next to the hamburger — keep branch + live time only */
+  /* Not enough room for the full date next to the hamburger — keep branch + time only */
   .branch-watermark__day { display: none; }
 }
 
