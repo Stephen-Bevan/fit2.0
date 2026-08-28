@@ -37,7 +37,7 @@
   --fit-container: 1180px;
   --fit-header-h: 96px;
   --fit-logo-scale: 1;
-  --fit-logo-fit: 84px;
+  --fit-logo-fit: 56px;
   --fit-logo-ka: 66px;
   --fit-logo-ka-wm: 85px;
   --fit-ease: 180ms ease;
@@ -599,6 +599,16 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
   background-size: cover;
   background-position: center 28%;
   color: #fff;
+}
+/* Homepage hero — the card behind .hero-copy provides contrast, so the photo
+   itself stays clear instead of carrying a wash across the whole image. */
+#top.hero-ai { background-image: url('assets/img/home-hero-team.png'); }
+#top.hero-ai .hero-copy {
+  max-width: 620px;
+  background: rgba(0, 20, 45, 0.82);
+  border-left: 6px solid var(--fit-yellow);
+  border-radius: 4px;
+  padding: clamp(28px, 4vw, 44px) clamp(28px, 4vw, 48px);
 }
 .hero-ai::before {
   content: "";
@@ -1660,7 +1670,7 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
 @media (min-width: 1081px) and (max-width: 1280px) {
   .primary-nav { gap: 10px; }
   .nav-link, .nav-trigger { font-size: 14px; }
-  :root { --fit-logo-fit: 70px; --fit-logo-ka: 54px; --fit-logo-ka-wm: 70px; }
+  :root { --fit-logo-fit: 46px; --fit-logo-ka: 54px; --fit-logo-ka-wm: 70px; }
 }
 
 /* Nav collapses to hamburger below 1080px */
@@ -1715,7 +1725,7 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
   .nav-menu__head { padding: 8px 8px 12px; border-color: rgba(255,255,255,0.12); }
   .nav-menu__list a { padding: 12px 10px; font-size: 15px; }
   .header-arena { margin-left: auto; }
-  :root { --fit-logo-fit: 60px; --fit-logo-ka: 47px; --fit-logo-ka-wm: 61px; }
+  :root { --fit-logo-fit: 40px; --fit-logo-ka: 47px; --fit-logo-ka-wm: 61px; }
 }
 
 @media (max-width: 860px) {
@@ -1762,7 +1772,7 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
   .brand-tagline { display: none; }
-  :root { --fit-logo-fit: 50px; --fit-logo-ka: 40px; --fit-logo-ka-wm: 52px; }
+  :root { --fit-logo-fit: 34px; --fit-logo-ka: 40px; --fit-logo-ka-wm: 52px; }
   .story-stamp { left: 0; padding: 14px 16px; }
   .story-stamp strong { font-size: 32px; }
 }
