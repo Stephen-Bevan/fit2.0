@@ -15,7 +15,7 @@
   (function () {
     var BRANCH_NAME = "stephen-fit";
     var BRANCH_PUSHED_DAY = "Fri 28 Aug 2026 ·";
-    var BRANCH_PUSHED_TIME = "13:06";
+    var BRANCH_PUSHED_TIME = "13:54";
     var host = document.querySelector("[data-header]");
     if (!host) return;
 
@@ -96,13 +96,24 @@
 
     function reposition() {
       var vh = window.innerHeight;
+      var cards = Array.prototype.slice.call(document.querySelectorAll(".hero-copy, .ta-hero__copy, .ni-hero__copy, .publications-hero__copy"));
       items.forEach(function (item) {
         var rect = item.target.getBoundingClientRect();
         var visible = rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < vh;
         item.el.style.display = visible ? "" : "none";
         if (!visible) return;
-        item.el.style.top = Math.max(0, Math.min(rect.bottom - 24, vh - 24)) + "px";
-        item.el.style.left = Math.max(0, rect.left + 8) + "px";
+        var top = Math.max(0, Math.min(rect.bottom - 24, vh - 24));
+        var left = Math.max(0, rect.left + 8);
+        // A hero's text card can grow tall enough to reach the bottom of the
+        // photo — if the label would land on the card, move it above instead.
+        var labelBox = { top: top, left: left, bottom: top + 22, right: left + 130 };
+        cards.forEach(function (card) {
+          var cr = card.getBoundingClientRect();
+          var overlaps = labelBox.left < cr.right && cr.left < labelBox.right && labelBox.top < cr.bottom && cr.top < labelBox.bottom;
+          if (overlaps) top = Math.max(0, cr.top - 26);
+        });
+        item.el.style.top = top + "px";
+        item.el.style.left = left + "px";
       });
     }
 
@@ -119,6 +130,23 @@
     }
     window.addEventListener("scroll", onViewportChange, { passive: true });
     window.addEventListener("resize", onViewportChange);
+  })();
+
+  /* ---- 0c. Hero text card — wraps hero copy so the dark card sits behind
+     the text only, leaving the rest of the hero photo clear. Breadcrumbs
+     stay outside the card. Runs once per hero container found; a no-op on
+     the homepage, which already ships this wrapper in its markup. -------- */
+  (function () {
+    Array.prototype.slice.call(document.querySelectorAll(".fit-hero__inner, .hero-ai__inner")).forEach(function (inner) {
+      var toWrap = Array.prototype.filter.call(inner.children, function (el) {
+        return !el.classList.contains("breadcrumb") && !el.classList.contains("hero-copy");
+      });
+      if (!toWrap.length) return;
+      var wrap = document.createElement("div");
+      wrap.className = "hero-copy";
+      inner.insertBefore(wrap, toWrap[0]);
+      toWrap.forEach(function (el) { wrap.appendChild(el); });
+    });
   })();
 
   /* ---- 1. Header: solid navy on scroll ---------------------------------- */

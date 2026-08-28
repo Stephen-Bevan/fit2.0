@@ -299,13 +299,13 @@ select:focus-visible,
   z-index: 100;
   width: 100%;
   color: #fff;
+  background: rgba(0, 26, 56, 0.97);
+  backdrop-filter: blur(14px);
   transition: background-color var(--fit-ease), box-shadow var(--fit-ease);
 }
 .site-header.is-scrolled {
   position: fixed;
-  background: rgba(0, 26, 56, 0.97);
   box-shadow: 0 10px 28px rgba(0, 21, 47, 0.22);
-  backdrop-filter: blur(14px);
 }
 
 /* Branch + last-push timestamp watermark — identifies which deployment/branch/push this is */
@@ -593,22 +593,10 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
   overflow: hidden;
   isolation: isolate;
   background-color: var(--fit-navy-deep);
-  background-image:
-    linear-gradient(90deg, rgba(0,18,40,0.95) 0%, rgba(0,24,52,0.86) 40%, rgba(0,33,72,0.6) 74%, rgba(0,33,72,0.46) 100%),
-    url('assets/img/home-hero-team.png');
+  background-image: url('assets/img/home-hero-team.png');
   background-size: cover;
   background-position: center 28%;
   color: #fff;
-}
-/* Homepage hero — the card behind .hero-copy provides contrast, so the photo
-   itself stays clear instead of carrying a wash across the whole image. */
-#top.hero-ai { background-image: url('assets/img/home-hero-team.png'); }
-#top.hero-ai .hero-copy {
-  max-width: 620px;
-  background: rgba(0, 20, 45, 0.82);
-  border-left: 6px solid var(--fit-yellow);
-  border-radius: 4px;
-  padding: clamp(28px, 4vw, 44px) clamp(28px, 4vw, 48px);
 }
 .hero-ai::before {
   content: "";
@@ -659,12 +647,23 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
   overflow: hidden;
   isolation: isolate;
   background-color: var(--fit-navy-deep);
-  background-image:
-    linear-gradient(90deg, rgba(0,18,40,0.95) 0%, rgba(0,24,52,0.86) 40%, rgba(0,33,72,0.6) 74%, rgba(0,33,72,0.46) 100%),
-    var(--fit-hero-image, linear-gradient(135deg, var(--fit-navy), var(--fit-navy-deep)));
+  background-image: var(--fit-hero-image, linear-gradient(135deg, var(--fit-navy), var(--fit-navy-deep)));
   background-size: cover;
   background-position: center;
   color: #fff;
+}
+/* Hero text card — dark card behind the copy only, so the photo itself stays clear.
+   Unscoped so it covers every hero pattern that uses this wrapper name
+   (homepage, ai-training, cuimsiu-programme, and anywhere script.js injects it).
+   publications-hero is a different split-column design that's already on a
+   solid navy backdrop, so it's deliberately left out of this rule. */
+.hero-copy,
+.ni-hero__copy {
+  max-width: 680px;
+  background: rgba(0, 20, 45, 0.82);
+  border-left: 6px solid var(--fit-yellow);
+  border-radius: 4px;
+  padding: clamp(28px, 4vw, 44px) clamp(28px, 4vw, 48px);
 }
 .fit-hero::before {
   content: "";
