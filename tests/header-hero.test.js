@@ -72,10 +72,16 @@ describe("Hero text card", () => {
   ];
 
   for (const [path, heroSel, copySel] of cases) {
-    test(`${path}: hero photo has no gradient wash, card has the dark background + yellow border`, async () => {
+    test(`${path}: hero has only a narrow left-edge fade (not a full-width wash), card has the dark background + yellow border`, async () => {
       const { context, page } = await open(path);
       const heroBg = await page.locator(heroSel).first().evaluate((el) => getComputedStyle(el).backgroundImage);
-      assert.doesNotMatch(heroBg, /gradient/, "hero background must be the plain photo, no gradient wash");
+      assert.match(heroBg, /gradient/, "expected a narrow left-edge fade gradient layer behind the text card");
+      // The fade exists only to tuck the exposed margin strip (to the left of the
+      // centered container) under the card -- it must fully resolve to transparent
+      // well before mid-image, not wash the whole photo like the old design did.
+      const stopPercents = (heroBg.match(/(\d+)%/g) || []).map((s) => parseInt(s, 10));
+      const lastStop = stopPercents.length ? Math.max(...stopPercents) : 100;
+      assert.ok(lastStop <= 40, `left-edge fade should resolve by ~34% width; found a stop at ${lastStop}% (full value: ${heroBg})`);
       const copy = page.locator(copySel).first();
       const copyBg = await copy.evaluate((el) => getComputedStyle(el).backgroundColor);
       assert.equal(copyBg, "rgba(0, 20, 45, 0.82)");

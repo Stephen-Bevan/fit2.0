@@ -592,7 +592,9 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
   overflow: hidden;
   isolation: isolate;
   background-color: var(--fit-navy-deep);
-  background-image: url('assets/img/home-hero-team.png');
+  background-image:
+    linear-gradient(90deg, rgba(0, 15, 33, 0.6) 0%, rgba(0, 15, 33, 0.3) 14%, rgba(0, 15, 33, 0.08) 24%, transparent 34%),
+    url('assets/img/home-hero-team.png');
   background-size: cover;
   background-position: center 28%;
   color: #fff;
@@ -646,7 +648,9 @@ body.nav-open .menu-toggle span:nth-child(4) { transform: translateY(-8px) rotat
   overflow: hidden;
   isolation: isolate;
   background-color: var(--fit-navy-deep);
-  background-image: var(--fit-hero-image, linear-gradient(135deg, var(--fit-navy), var(--fit-navy-deep)));
+  background-image:
+    linear-gradient(90deg, rgba(0, 15, 33, 0.6) 0%, rgba(0, 15, 33, 0.3) 14%, rgba(0, 15, 33, 0.08) 24%, transparent 34%),
+    var(--fit-hero-image, linear-gradient(135deg, var(--fit-navy), var(--fit-navy-deep)));
   background-size: cover;
   background-position: center;
   color: #fff;
