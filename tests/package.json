@@ -1,0 +1,12 @@
+{
+  "name": "fit-redesign-tests",
+  "private": true,
+  "description": "Playwright-backed regression tests for the docs/ static site. Not part of the deployed site.",
+  "scripts": {
+    "test": "node --test --test-concurrency=1",
+    "install-browser": "playwright install chromium"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
