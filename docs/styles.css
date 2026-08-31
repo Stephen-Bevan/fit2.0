@@ -300,7 +300,6 @@ select:focus-visible,
   width: 100%;
   color: #fff;
   background: rgba(0, 26, 56, 0.97);
-  backdrop-filter: blur(14px);
   transition: background-color var(--fit-ease), box-shadow var(--fit-ease);
 }
 .site-header.is-scrolled {
