@@ -96,3 +96,33 @@ describe("Known one-off structural fixes stay fixed", () => {
     await context.close();
   });
 });
+
+describe("Every page's header markup is byte-identical", () => {
+  // The header (logo, nav, dropdown menus, Knowledge Arena lockup) is global
+  // site navigation duplicated into every static HTML file. Nothing about it
+  // should vary page-to-page -- if one page's copy drifts (e.g. a stale link
+  // left over from before a page was renamed/created), that page's header
+  // silently behaves differently from every other page's.
+  const fs = require("node:fs");
+  const path = require("node:path");
+
+  function extractHeader(html) {
+    const start = html.indexOf('<header class="site-header"');
+    const end = html.indexOf("</header>", start) + "</header>".length;
+    if (start === -1 || end === -1) return null;
+    return html.slice(start, end);
+  }
+
+  test("all pages share one identical <header> block", () => {
+    const headers = {};
+    for (const file of pages) {
+      const html = fs.readFileSync(path.join(server.DOCS_DIR, file), "utf8");
+      headers[file] = extractHeader(html);
+      assert.ok(headers[file], `${file}: could not find a <header class="site-header"> block`);
+    }
+    const [firstFile, ...rest] = pages;
+    const reference = headers[firstFile];
+    const mismatches = rest.filter((file) => headers[file] !== reference);
+    assert.deepEqual(mismatches, [], `these pages' headers differ from ${firstFile}: ${mismatches.join(", ")}`);
+  });
+});
