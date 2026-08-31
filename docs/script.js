@@ -14,8 +14,8 @@
      Update BRANCH_PUSHED_DAY / BRANCH_PUSHED_TIME by hand on each push. --- */
   (function () {
     var BRANCH_NAME = "stephen-fit";
-    var BRANCH_PUSHED_DAY = "Fri 28 Aug 2026 ·";
-    var BRANCH_PUSHED_TIME = "13:54";
+    var BRANCH_PUSHED_DAY = "Mon 31 Aug 2026 ·";
+    var BRANCH_PUSHED_TIME = "12:04";
     var host = document.querySelector("[data-header]");
     if (!host) return;
 

@@ -19,6 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <!-- WORK-IN-PROGRESS DISCLAIMER — remove this line + the matching block/script near the end of <body> to take the popup out entirely -->
+  <link rel="stylesheet" href="wip-disclaimer.css">
 </head>
 <body>
   <div class="fit-ai home">
@@ -614,7 +616,36 @@
 
     <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
   </div>
+
+  <!-- ============================================================================
+       WORK-IN-PROGRESS DISCLAIMER — internal-review popup, homepage only.
+       This entire block is self-contained: to remove it when the site goes
+       live, delete this block, the wip-disclaimer.css <link> in <head>, and
+       the wip-disclaimer.js <script> tag just below. Nothing else on the
+       page references it. Edit the heading/paragraph/list text directly
+       below to change the copy — no JS changes needed.
+       ============================================================================ -->
+  <div class="wip-overlay" id="wip-overlay" hidden>
+    <div class="wip-modal" id="wip-modal" role="dialog" aria-modal="true" aria-labelledby="wip-title" tabindex="-1">
+      <button type="button" class="wip-modal__close" id="wip-close" aria-label="Close">&times;</button>
+      <div class="wip-modal__body">
+        <h2 id="wip-title">This site is a work in progress</h2>
+        <p>Please keep in mind <strong>all images and elements are not finalised and are subject to change</strong>. If you particularly like a certain image, or want more or less images on certain pages, please include this in your feedback with explicit references to the pages or images in question.</p>
+        <ul class="wip-modal__list">
+          <li><strong>Wording has not been proof-read</strong>, so we do not need feedback on any mis-spellings or erroneous words. However, we do welcome feedback on the volume of text, or types of information present. Please include explicit references to specific pages or wordings that you would like to see included, removed, reduced, or increased accordingly.</li>
+          <li><strong>Navigation has been finalised</strong>, we welcome any and all feedback on how you felt navigating the site and whether it was clear for you, or would be clear for visitors looking for specific information. It's vital that all teams undertake a navigation exercise to ensure you're happy with the workflow for your clients.</li>
+          <li><strong>Interactive elements may not be fully functional</strong> due to the hosting of this temporary demo site. Please however do provide feedback on whether the use of certain features like sliders or buttons is justified. For example, if you'd like to see less, more, or different types of functionality, please include this in your feedback, ensuring explicit reference to specific pages or elements also.</li>
+        </ul>
+      </div>
+      <div class="wip-modal__actions">
+        <button type="button" class="fit-btn fit-btn--yellow" id="wip-continue">I understand — continue to the site</button>
+      </div>
+    </div>
+  </div>
+  <!-- ===================================== END WIP DISCLAIMER ===================================== -->
+
   <script src="script.js"></script>
+  <script src="wip-disclaimer.js"></script>
   <script>
     (function () {
       var form = document.querySelector('[data-newsletter]');
