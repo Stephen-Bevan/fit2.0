@@ -126,3 +126,32 @@ describe("Every page's header markup is byte-identical", () => {
     assert.deepEqual(mismatches, [], `these pages' headers differ from ${firstFile}: ${mismatches.join(", ")}`);
   });
 });
+
+describe("Every page's footer markup is byte-identical", () => {
+  // Same rationale as the header check. The one legitimate per-page
+  // difference is aria-current="page" on a page's own footer-legal link to
+  // itself (e.g. safeguarding.html marking its own "Safeguarding" link) --
+  // that's normalized away before comparing, so it doesn't mask a real drift.
+  const fs = require("node:fs");
+  const path = require("node:path");
+
+  function extractFooter(html) {
+    const start = html.indexOf('<footer class="site-footer"');
+    const end = html.indexOf("</footer>", start) + "</footer>".length;
+    if (start === -1 || end === -1) return null;
+    return html.slice(start, end).replace(/\s*aria-current="page"/g, "");
+  }
+
+  test("all pages share one identical <footer> block (ignoring each page's own aria-current marker)", () => {
+    const footers = {};
+    for (const file of pages) {
+      const html = fs.readFileSync(path.join(server.DOCS_DIR, file), "utf8");
+      footers[file] = extractFooter(html);
+      assert.ok(footers[file], `${file}: could not find a <footer class="site-footer"> block`);
+    }
+    const [firstFile, ...rest] = pages;
+    const reference = footers[firstFile];
+    const mismatches = rest.filter((file) => footers[file] !== reference);
+    assert.deepEqual(mismatches, [], `these pages' footers differ from ${firstFile}: ${mismatches.join(", ")}`);
+  });
+});
